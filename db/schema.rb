@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_151948) do
+ActiveRecord::Schema.define(version: 2021_11_22_165410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "title"
+    t.bigint "user_id", null: false
+    t.integer "minutes"
+    t.integer "seconds"
+    t.bigint "work_session_id", null: false
+    t.integer "order"
+    t.boolean "done"
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_tasks_on_user_id"
+    t.index ["work_session_id"], name: "index_tasks_on_work_session_id"
+  end
+
+  create_table "timeboxes", force: :cascade do |t|
+    t.string "title"
+    t.integer "minutes"
+    t.integer "seconds"
+    t.bigint "task_id", null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer "order"
+    t.boolean "active"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["task_id"], name: "index_timeboxes_on_task_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -21,10 +50,20 @@ ActiveRecord::Schema.define(version: 2021_11_22_151948) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "work_sessions", force: :cascade do |t|
+    t.integer "session_duration"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "tasks", "users"
+  add_foreign_key "tasks", "work_sessions"
+  add_foreign_key "timeboxes", "tasks"
 end

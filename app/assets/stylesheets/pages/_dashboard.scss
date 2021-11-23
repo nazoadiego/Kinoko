@@ -1,0 +1,58 @@
+.blue {
+  border: 2px blue solid;
+}
+.red {
+  border: 2px red solid;
+}
+.green {
+  border: 2px green solid;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.container-purple {
+  background-color: #573BC9;
+  height: 90%;
+  width: 98%;
+  border-radius: 25px;
+  box-shadow: 0 0 26px rgba(0,0,0,0.8);
+}
+
+.container-white {
+  background-color: #FFFFFF;
+  color: #000;
+  height: 90%;
+  width: 95%;
+  border-radius: 25px;
+  box-shadow: 0 0 26px rgba(0,0,0,0.8);
+  h1 {
+    color: #573BC9;
+  }
+}
+
+.container-dark-purple {
+  background-color: #150F30;
+  height: 98%;
+  width: 98%;
+  border-radius: 25px;
+}
+
+.card-task {
+  margin: 12px 12px 0;
+  background-color: #FFFFFF;
+  color: #000;
+  border-radius: 25px;
+  box-shadow: 0 0 26px rgba(0,0,0,0.8);
+  height: 20vh;
+  width: 30vh;
+  position: relative;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 0;
+  grid-gap: 0;
+}

@@ -2,6 +2,31 @@
 
 ## Features Today
 
+### Validations
+- [ ] Validations for Tasks
+- [ ] Validations for Timeboxes
+- [ ] Validations for Work Session
+- [ ] References for all of them
+
+# Seed
+- [ ] Create the seed file (hmmm but what should we seed?)
+
+
+### Tasks
+- [ ] Creates a task
+- [ ] Add task to the "shopping list"
+- [ ] Mark Task as done in the work session page
+
+### Timeboxes
+- [ ] Creates a timebox
+- [ ] Update a timebox
+- [ ] Start timebox
+
+### Work Session
+- [ ] Create a Work session
+- [ ] Show a Work session
+
+
 ## Future Features
 - [ ] You can filter task by labels in index (Add that user stories)
 - [ ] Make tasks recurring (maybe a bookmark field for the tasks object)

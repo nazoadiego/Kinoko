@@ -1,12 +1,18 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Zen+Kurenaido&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'oswald'
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+body{
+  overflow-x: hidden;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.container {
+  position: relative;
+  width: 100%;
 }

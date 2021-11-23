@@ -1,0 +1,2 @@
+class TimeboxesController < ApplicationController
+end

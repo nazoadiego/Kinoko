@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_165410) do
+ActiveRecord::Schema.define(version: 2021_11_23_142820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,14 +20,12 @@ ActiveRecord::Schema.define(version: 2021_11_22_165410) do
     t.bigint "user_id", null: false
     t.integer "minutes"
     t.integer "seconds"
-    t.bigint "work_session_id", null: false
     t.integer "order"
-    t.boolean "done"
+    t.boolean "done", default: false
     t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_tasks_on_user_id"
-    t.index ["work_session_id"], name: "index_tasks_on_work_session_id"
   end
 
   create_table "timeboxes", force: :cascade do |t|
@@ -41,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_11_22_165410) do
     t.boolean "active"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "break"
     t.index ["task_id"], name: "index_timeboxes_on_task_id"
   end
 
@@ -59,11 +58,11 @@ ActiveRecord::Schema.define(version: 2021_11_22_165410) do
 
   create_table "work_sessions", force: :cascade do |t|
     t.integer "session_duration"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "task_id", null: false
+    t.index ["task_id"], name: "index_work_sessions_on_task_id"
   end
 
   add_foreign_key "tasks", "users"
-  add_foreign_key "tasks", "work_sessions"
   add_foreign_key "timeboxes", "tasks"
+  add_foreign_key "work_sessions", "tasks"
 end

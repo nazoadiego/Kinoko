@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Task.destroy_all
 
 5.times do
   new_user = User.new(
@@ -15,13 +16,16 @@ User.destroy_all
     password: 123_456
   )
   new_user.save!
+
+  5.times do
+    new_task = Task.new(
+      title: "Learning Korean",
+      minutes: 60,
+      seconds: 0,
+      user: new_user
+    )
+    new_task.save!
+  end
 end
 
-puts 'Users created'
-
-Task.create(
-  title: "Learning Korean",
-  minutes: 60,
-  seconds: 0,
-  user: User.first
-)
+puts "Task created!"

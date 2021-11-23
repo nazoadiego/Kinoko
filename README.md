@@ -2,6 +2,10 @@
 
 ## Features Today
 
+### Routes
+- [ ] Validations for Tasks
+
+
 ### Validations
 - [ ] Validations for Tasks
 - [ ] Validations for Timeboxes
@@ -13,7 +17,8 @@
 
 
 ### Tasks
-- [ ] Creates a task
+- [ ] Display all tasks
+- [ ] Create a Task
 - [ ] Add task to the "shopping list"
 - [ ] Mark Task as done in the work session page
 

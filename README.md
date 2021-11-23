@@ -20,14 +20,14 @@
 ## Features Today
 
 ### Routes
-- [ ] Validations for Tasks
+- [X] Validations for Tasks
 
 
 ### Validations
-- [x] Validations for Tasks
-- [x] Validations for Timeboxes
-- [x] Validations for Work Session
-- [x] References for all of them
+- [X] Validations for Tasks
+- [X] Validations for Timeboxes
+- [X] Validations for Work Session
+- [X] References for all of them
 
 # Seed
 - [x] Create the seed file (hmmm but what should we seed?)

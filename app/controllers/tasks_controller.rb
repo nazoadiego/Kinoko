@@ -1,6 +1,10 @@
 class TasksController < ApplicationController
+  def show
+    @task = Task.find(params[:id])
+  end
+
   def create
-    @tasks = Offer.all
+    @tasks = Task.all
     @task = Task.new(task_params)
     @task.user = current_user
     if @task.save

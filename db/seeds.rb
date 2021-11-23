@@ -24,33 +24,33 @@ Task.create(
   title: "Learning Korean",
   minutes: 60,
   seconds: 0,
-  user: new_user.last
+  user: new_user
 )
 
 Task.create(
   title: "Programming",
   minutes: 120,
   seconds: 80,
-  user: new_user.last
+  user: new_user
 )
 
 Task.create(
   title: "Grocery Shopping",
   minutes: 180,
   seconds: 0,
-  user: new_user.last
+  user: new_user
 )
 
 Task.create(
   title: "Reading",
   minutes: 150,
   seconds: 40,
-  user: new_user.last
+  user: new_user
 )
 
 Task.create(
   title: "Walking Fiona",
   minutes: 140,
   seconds: 50,
-  user: new_user.last
+  user: new_user
 )

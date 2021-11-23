@@ -1,5 +1,22 @@
 # Kinoko Todo List
 
+## Priority
+- [ ] Add task to the "shopping list" (Add task to Work Session)
+- [ ] For creating a task: add a button and a modal in the dashboard
+- [ ] Creates a timebox
+- [ ] Update a timebox
+- [ ] Start timebox
+- [ ] Create a Work session
+- [ ] Show a Work session
+- [ ] Edit a task
+
+## Low priority
+- [ ] Mark Task as done in the work session page
+
+## Check if it works
+- [ ] Display all tasks
+- [ ] Create a Task
+
 ## Features Today
 
 ### Routes
@@ -7,30 +24,15 @@
 
 
 ### Validations
-- [ ] Validations for Tasks
-- [ ] Validations for Timeboxes
-- [ ] Validations for Work Session
-- [ ] References for all of them
+- [x] Validations for Tasks
+- [x] Validations for Timeboxes
+- [x] Validations for Work Session
+- [x] References for all of them
 
 # Seed
-- [ ] Create the seed file (hmmm but what should we seed?)
-
-
-### Tasks
-- [ ] Display all tasks
-- [ ] Create a Task
-- [ ] Add task to the "shopping list"
-- [ ] Mark Task as done in the work session page
-
-### Timeboxes
-- [ ] Creates a timebox
-- [ ] Update a timebox
-- [ ] Start timebox
+- [x] Create the seed file (hmmm but what should we seed?)
 
 ### Work Session
-- [ ] Create a Work session
-- [ ] Show a Work session
-
 
 ## Future Features
 - [ ] You can filter task by labels in index (Add that user stories)

@@ -7,7 +7,7 @@
             <div class="container-purple">
                 <div class="blue d-flex justify-content-between px-4" style="height: 15%"> <%# This height might be wrong because there is no defined height for parent %>
                   <h1>Tasks</h1>
-                  <h1>Add Task</h1>
+                  <%= render "tasks/new", task: @task %>
                 </div>
                 <div class="blue d-flex justify-content-around" style="height: 85%"> <%# This height might be wrong because there is no defined height for parent %>
                   <div class="container-dark-purple">

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  get 'dashboard', to: 'tasks#index'
+  get 'dashboard', to: 'pages#dashboard'
   post 'dashboard', to: 'work_sessions#create'
   resources :tasks, only: [:create] do
     resources :timeboxes, only: [:create]

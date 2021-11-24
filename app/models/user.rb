@@ -5,8 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tasks
-  has_many :timeboxes, through: :tasks
-  has_many :work_sessions, through: :tasks
 
   validates :username, presence: true, uniqueness: true
   validates :email, :password, presence: true

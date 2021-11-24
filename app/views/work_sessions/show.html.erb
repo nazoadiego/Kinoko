@@ -1,4 +1,4 @@
-<div class="full-height">
+<div id="work-session-window" class="full-height">
   <div class="red d-flex justify-content-center h-100">
     <div class="row w-100">
       <div class="green col-6">
@@ -44,38 +44,27 @@
       </div>
       <div class="green col-6">
         <div class="blue d-flex align-items-center justify-content-end" style="height: 10%">
-          <div class="btn btn-primary">
-            Remove
-          </div>
-          <div class="btn btn-primary mx-4">
-            Add
+          <div>
+            <button type="button" class="btn btn-primary mx-4" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add</button>
+            <%= render "timeboxes/form" %>
           </div>
         </div>
         <div class="blue d-flex flex-column justify-content-center align-items-center" style="height: 90%">
-          <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div class="card-timebox">
-              <h1>timebox title</h1>
-              <h1>duration</h1>
+          <% @timeboxes.each do |timebox| %>
+            <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
+              <div class="card-timebox">
+                <h2><%= timebox.title %></h2>
+                <% if timebox.seconds == 0 %>
+                  <h3><%= timebox.minutes %>min</h3>
+                <% else %>
+                  <h3><%= timebox.minutes %>min <%= timebox.seconds %>secs</h3>
+                <% end %>
+                <%= link_to timeboxes_path(timebox), method: :delete, id: timebox.id, data: {confirm: "Are you sure?"}, class: "card-remove-link" do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
+              </div>
             </div>
-          </div>
-          <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div class="card-timebox">
-              <h1>timebox title</h1>
-              <h1>duration</h1>
-            </div>
-          </div>
-          <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div class="card-timebox">
-              <h1>timebox title</h1>
-              <h1>duration</h1>
-            </div>
-          </div>
-          <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div class="card-timebox">
-              <h1>timebox title</h1>
-              <h1>duration</h1>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>

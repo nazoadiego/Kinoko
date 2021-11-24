@@ -8,6 +8,6 @@ class PagesController < ApplicationController
     @tasks = Task.all
     @task = Task.new
     @work_session = WorkSession.new
-    @task = Task.new
+    @timebox = Timebox.new
   end
 end

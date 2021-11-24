@@ -1,0 +1,45 @@
+<div class="page-container">
+  <div class="full-height">
+    <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100">
+      <div class="dash-top red" style="height: 70%">
+        <div class="row" style="height: 70vh">
+          <div class="col-9 green d-flex justify-content-center align-items-center" style="height: 100%">
+            <div class="container-purple">
+                <div class="blue d-flex justify-content-between px-4" style="height: 15%"> <%# This height might be wrong because there is no defined height for parent %>
+                  <h1>Tasks</h1>
+                  <h1>Add Task</h1>
+                </div>
+                <div class="blue d-flex justify-content-around" style="height: 85%"> <%# This height might be wrong because there is no defined height for parent %>
+                  <div class="container-dark-purple">
+                      <div class="task-grid">
+                        <% @tasks.each do |task| %>
+                          <%= link_to controller: "work_sessions", action: "create", id: task.id do %>
+                            <span>
+                              <div class="card-task">
+                                <%= task.title %>
+                              </div>
+                            </span>
+                          <% end %>
+                        <% end  %>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-3 green d-flex justify-content-center align-items-center" style="height: 100%">
+            <div class="container-purple">
+              <h1>Queue</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-bottom red d-flex justify-content-center align-items-center" style="height: 30%">
+        <div class="container-white">
+          <div class="ml-4">
+            <h1>Statistics</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

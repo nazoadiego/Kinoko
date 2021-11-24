@@ -13,7 +13,7 @@
                   <div class="container-dark-purple">
                       <div class="task-grid">
                         <% @tasks.each do |task| %>
-                          <%= button_to controller: "work_sessions", action: "create", id: task.id do %>
+                          <%= link_to controller: "work_sessions", action: "create", id: task.id do %>
                             <span>
                               <div class="card-task">
                                 <%= task.title %>
@@ -28,7 +28,7 @@
           </div>
           <div class="col-3 green d-flex justify-content-center align-items-center" style="height: 100%">
             <div class="container-purple">
-              <h1>Shopping list</h1>
+              <h1>Queue</h1>
             </div>
           </div>
         </div>

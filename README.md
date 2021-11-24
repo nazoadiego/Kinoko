@@ -5,16 +5,18 @@
 - [B] Make the minutes and seconds in a same field in the form
 - [T] Create a timebox
 - [T] Start timebox
-- [L] Remove a task
-- [D] Edit a task
+- [D] Remove a task
+- [X] Edit a task
 - [D] Update a timebox
 - [L] Delete a timebox
 - [X] Create a Work session
 - [X] Show a Work session
+- [L] Work on the toggable navbar
 
 ## Low priority
 - [ ] Add task to the "shopping list" (Add task to Work Session)
 - [ ] Mark Task as done in the work session page
+- [ ] Add edit task modal to partial to improve dashboard.html readability
 
 ## Done
 - [X] Display all tasks

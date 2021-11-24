@@ -14,10 +14,18 @@
 
 .container-purple {
   background-color: #573BC9;
+  color: #FFFFFF;
   height: 90%;
   width: 98%;
   border-radius: 25px;
   box-shadow: 0 0 26px rgba(0,0,0,0.8);
+}
+
+.container-dark-purple {
+  background-color: #150F30;
+  height: 98%;
+  width: 98%;
+  border-radius: 25px;
 }
 
 .container-white {
@@ -32,12 +40,6 @@
   }
 }
 
-.container-dark-purple {
-  background-color: #150F30;
-  height: 98%;
-  width: 98%;
-  border-radius: 25px;
-}
 
 .card-task {
   margin: 12px 12px 0;

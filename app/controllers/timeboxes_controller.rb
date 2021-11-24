@@ -8,6 +8,12 @@ class TimeboxesController < ApplicationController
     redirect_to @work_session
   end
 
+  def destroy
+    @timebox = Timebox.find(params[:id])
+    @timebox.destroy
+    redirect_to work_session_path(@timebox.task.work_session)
+  end
+
   private
 
   def time_params

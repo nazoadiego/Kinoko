@@ -11,20 +11,24 @@
                 </div>
                 <div class="blue d-flex justify-content-around" style="height: 85%"> <%# This height might be wrong because there is no defined height for parent %>
                   <div class="container-dark-purple">
-                    <div class="task-grid">
-                    <% @tasks.each do |task| %>
-                      <div class="card-task">
-                          <%= task.title %>
+                      <div class="task-grid">
+                        <% @tasks.each do |task| %>
+                          <%= link_to controller: "work_sessions", action: "create", id: task.id do %>
+                            <span>
+                              <div class="card-task">
+                                <%= task.title %>
+                              </div>
+                            </span>
+                          <% end %>
+                        <% end  %>
                       </div>
-                    <% end  %>
-                    </div>
                   </div>
                 </div>
             </div>
           </div>
           <div class="col-3 green d-flex justify-content-center align-items-center" style="height: 100%">
             <div class="container-purple">
-              <h1>Shopping list</h1>
+              <h1>Queue</h1>
             </div>
           </div>
         </div>

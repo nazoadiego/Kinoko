@@ -13,20 +13,8 @@
 - [L] Work on the toggable navbar
 
 ### Low priority
-- [ ] Add task to the "shopping list" (Add task to Work Session)
-<<<<<<< HEAD
-- [ ] For creating a task: add a button and a modal in the dashboard
-- [ ] Creates a timebox
-- [ ] Update a timebox
-- [ ] Start timebox
-- [ ] Create a Work session
-- [ ] Show a Work session
-- [ ] Edit a task
 - [ ] Button_to to Link_to
-
-## Low priority
-=======
->>>>>>> master
+- [ ] Add task to the "shopping list" (Add task to Work Session)
 - [ ] Mark Task as done in the work session page
 
 ### Done

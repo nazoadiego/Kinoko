@@ -8,6 +8,12 @@ class TimeboxesController < ApplicationController
     redirect_to @work_session
   end
 
+  def update
+    @work_session = WorkSession.find(params[:work_session_id])
+    @timebox = Timebox.find(params[:id])
+    @timebox = Timebox.update(timebox_params)
+  end
+
   private
 
   def time_params

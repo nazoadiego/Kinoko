@@ -1,9 +1,4 @@
 class TasksController < ApplicationController
-  def index
-    @tasks = Task.all
-    @work_session = WorkSession.new
-  end
-
   def show
     @task = Task.find(params[:id])
   end

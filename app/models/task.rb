@@ -1,7 +1,7 @@
 class Task < ApplicationRecord
+  has_one :work_session, dependent: :destroy
+  has_many :timeboxes, dependent: :destroy
   belongs_to :user
-  has_one :work_session
-  has_many :timeboxes
 
   validates :title, uniqueness: true
   validates :minutes, :title, presence: true

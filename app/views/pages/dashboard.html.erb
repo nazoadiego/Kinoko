@@ -1,43 +1,71 @@
-<div class="page-container">
-  <div class="full-height">
-    <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100">
-      <div class="dash-top red" style="height: 70%">
-        <div class="row" style="height: 70vh">
-          <div class="col-9 green d-flex justify-content-center align-items-center" style="height: 100%">
-            <div class="container-purple">
-                <div class="blue d-flex justify-content-between px-4" style="height: 15%"> <%# This height might be wrong because there is no defined height for parent %>
-                  <h1>Tasks</h1>
-                  <h1>Add Task</h1>
-                </div>
-                <div class="blue d-flex justify-content-around" style="height: 85%"> <%# This height might be wrong because there is no defined height for parent %>
-                  <div class="container-dark-purple">
-                      <div class="task-grid">
-                        <% @tasks.each do |task| %>
-                          <%= button_to controller: "work_sessions", action: "create", id: task.id do %>
-                            <span>
-                              <div class="card-task">
-                                <%= task.title %>
-                              </div>
-                            </span>
-                          <% end %>
-                        <% end  %>
-                      </div>
-                  </div>
-                </div>
+<div class="full-height">
+  <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100">
+    <div class="dash-top red" style="height: 70%">
+      <div class="row" style="height: 70vh">
+        <div class="col-9 green d-flex justify-content-center align-items-center" style="height: 100%">
+          <div class="container-purple">
+            <div class="blue d-flex justify-content-between px-4" style="height: 15%"> <%# This height might be wrong because there is no defined height for parent %>
+              <h1>Tasks</h1>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Create a Task
+              </button>
+              <%= render "tasks/new_modal", task: @task %>
             </div>
-          </div>
-          <div class="col-3 green d-flex justify-content-center align-items-center" style="height: 100%">
-            <div class="container-purple">
-              <h1>Queue</h1>
+            <div class="blue d-flex justify-content-around" style="height: 85%"> <%# This height might be wrong because there is no defined height for parent %>
+              <div class="container-dark-purple">
+                <div class="task-grid">
+                  <% @tasks.each do |task| %>
+                      <% if task.work_session != nil %>
+                        <%= button_to work_sessions_path(task.work_session) do %>
+                          <span>
+                            <div class="card-task">
+                              <%= task.title %>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">
+                              Edit Post
+                            </button>
+                            <%= link_to  task_path(task), method: :delete do %>
+                              <button type="button" class="btn btn-primary" >
+                                Delete
+                              </button>
+                            <% end %>
+                          </span>
+                        <% end %>
+                      <% else %>
+                        <%= button_to controller: "work_sessions", action: "create", id: task.id do %>
+                          <span>
+                            <div class="card-task">
+                              <%= task.title %>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">
+                              Edit Post
+                            </button>
+                            <%= link_to  task_path(task), method: :delete do %>
+                              <button type="button" class="btn btn-primary" >
+                                Delete
+                              </button>
+                            <% end %>
+                          </span>
+                      <% end %>
+                    <% end %>
+                    <%= render "tasks/edit_modal", task: task %>
+                  <% end  %>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="dash-bottom red d-flex justify-content-center align-items-center" style="height: 30%">
-        <div class="container-white">
-          <div class="ml-4">
-            <h1>Statistics</h1>
+        <div class="col-3 green d-flex justify-content-center align-items-center" style="height: 100%">
+          <div class="container-purple">
+            <h1>Queue</h1>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="dash-bottom red d-flex justify-content-center align-items-center" style="height: 30%">
+      <div class="container-white">
+        <div class="ml-4">
+          <h1>Statistics</h1>
         </div>
       </div>
     </div>

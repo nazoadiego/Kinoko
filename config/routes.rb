@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: 'pages#dashboard'
   post 'work_session/:id', to: 'work_sessions#create', as: 'work_sessions'
-  resources :tasks, only: [:create, :update] do
+  resources :tasks, only: [:create, :update, :destroy] do
     resources :timeboxes, only: [:create]
   end
   get 'work_session/:id', to: 'work_sessions#show'

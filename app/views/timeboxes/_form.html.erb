@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for [@work_session, @timebox] do |f| %>
+        <%= simple_form_for [@task, @timebox] do |f| %>
           <div class="form-inputs">
             <%= f.input :title %>
             <%= f.input :minutes, as: :integer %>

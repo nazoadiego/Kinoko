@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :work_sessions, only: [:show] do
     resources :timeboxes, only: [:create, :update]
   end
+  delete 'timeboxes/:id', to: 'timeboxes#destroy', as: 'timeboxes'
   get 'work_session/:id', to: 'work_sessions#show'
   patch 'work_session/:id', to: 'work_sessions#mark_as_done'
   patch 'task/:id', to: 'tasks#update'

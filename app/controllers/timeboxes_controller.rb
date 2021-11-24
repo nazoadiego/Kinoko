@@ -8,10 +8,14 @@ class TimeboxesController < ApplicationController
     redirect_to @work_session
   end
 
-  def update
-    @work_session = WorkSession.find(params[:work_session_id])
+  def destroy
     @timebox = Timebox.find(params[:id])
-    @timebox = Timebox.update(timebox_params)
+    @timebox.destroy
+    redirect_to work_session_path(@timebox.task.work_session)
+  end
+
+  def start
+
   end
 
   private

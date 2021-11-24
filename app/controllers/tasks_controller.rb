@@ -21,6 +21,12 @@ class TasksController < ApplicationController
     redirect_to '/dashboard'
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @task.delete
+    redirect_to '/dashboard'
+  end
+
   private
 
   def task_params

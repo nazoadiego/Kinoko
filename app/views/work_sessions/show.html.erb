@@ -25,9 +25,9 @@
         </div>
         <div class="blue" style="height: 50%">
           <div class="red d-flex align-items-center justify-content-center" style="height: 25%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div class="btn btn-primary mr-3">
+            <%= link_to timeboxes_start_path, method: :start, class: "btn btn-info ml-3" do %>
               Play
-            </div>
+            <% end %>
             <div class="btn btn-danger ml-3">
               Stop
             </div>
@@ -50,7 +50,11 @@
           </div>
         </div>
         <div class="blue d-flex flex-column justify-content-center align-items-center" style="height: 90%">
+          <% order = 1 %>
           <% @timeboxes.each do |timebox| %>
+            <% timebox.order = order %>
+            <% order += 1 %>
+            <%= timebox.id %>
             <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
               <div class="card-timebox">
                 <h2><%= timebox.title %></h2>

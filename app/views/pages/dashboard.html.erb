@@ -23,6 +23,11 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">
                           Edit Post
                         </button>
+                        <%= link_to  task_path(task), method: :delete do%>
+                          <button type="button" class="btn btn-primary" >
+                            Delete
+                          </button>
+                        <% end %>
                       </span>
                     <% end %>
                     <%= render "tasks/edit_modal", task: task %>

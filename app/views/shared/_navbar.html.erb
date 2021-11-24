@@ -1,23 +1,71 @@
 
- <div class="container">
-    <div class="navegation">
+
+<div class="navegation">
       <ul>
         <li>
-          <span class="icon"></span>
-          <span class="title"><h2>Kinoko</h2></span>
+          <span> <i class="far fa-clipboard"></i></span>
+          <span class="title d-flex align-items-center"><h2>Kinoko</h2></span>
         </li>
+
         <li>
-          <span class="icon"></span>
-          <span class="title">Dashboard</span>
+          <a href="">
+            <span><i class="fas fa-home"></i></span>
+            <span class="title d-flex align-items-center">Home</span>
+          </a>
         </li>
+
         <li>
-          <span class="icon"></span>
-          <span class="title">Task</span>
+          <a href="">
+            <span><i class="fal fa-columns"></i></span>
+            <span class="title d-flex align-items-center">akjsdnckajsndc</span>
+          </a>
         </li>
+
         <li>
-          <span class="icon"></span>
-          <span class="title">Action</span>
+          <a href="">
+            <span><i class="fas fa-tasks"></i></span>
+            <span class="title d-flex align-items-center">Task</span>
+          </a>
         </li>
+
+        <li>
+          <a href="">
+            <span><i class="fal fa-briefcase"></i></span>
+            <span class="title d-flex align-items-center">Work session</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <span><i class="fas fa-chart-line"></i></span>
+            <span class="title d-flex align-items-center">Statistics</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <span><i class="fad fa-sign-out"></i></span>
+            <span class="title d-flex align-items-center">Sing out</span>
+          </a>
+        </li>
+
       </ul>
     </div>
-  </div>
+
+  <div class="toggle" onclick="toggleMenu();"> <i class="fas fa-bars"></i></div>
+  <div class="main">
+
+</div>
+
+  <script>
+    function toggleMenu() {
+      let toggle = document.querySelector('.toggle');
+      let navegation = document.querySelector('.navegation');
+      let main = document.querySelector('.main');
+      toggle.classList.toggle('active');
+      navegation.classList.toggle('active');
+      main.classList.toggle('active');
+
+    }
+
+  </script>

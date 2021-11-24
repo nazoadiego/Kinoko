@@ -9,6 +9,7 @@
 - [ ] Create a Work session
 - [ ] Show a Work session
 - [ ] Edit a task
+- [ ] Button_to to Link_to
 
 ## Low priority
 - [ ] Mark Task as done in the work session page

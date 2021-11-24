@@ -13,7 +13,7 @@
                   <div class="container-dark-purple">
                       <div class="task-grid">
                         <% @tasks.each do |task| %>
-                          <%= link_to controller: "work_sessions", action: "create", id: task.id do %>
+                          <%= button_to controller: "work_sessions", action: "create", id: task.id do %>
                             <span>
                               <div class="card-task">
                                 <%= task.title %>

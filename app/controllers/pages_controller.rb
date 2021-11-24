@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
   end
@@ -7,6 +7,6 @@ class PagesController < ApplicationController
   def dashboard
     @tasks = Task.all
     @work_session = WorkSession.new
-    @task = Task.new
+    @timebox = Timebox.new
   end
 end

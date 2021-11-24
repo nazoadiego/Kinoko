@@ -7,5 +7,6 @@ class PagesController < ApplicationController
   def dashboard
     @tasks = Task.all
     @work_session = WorkSession.new
+    @task = Task.new
   end
 end

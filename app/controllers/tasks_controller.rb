@@ -15,6 +15,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def update
+    @task = Task.find(params[:id])
+    @task = Task.update(task_params)
+    redirect_to '/dashboard'
+  end
+
   private
 
   def task_params

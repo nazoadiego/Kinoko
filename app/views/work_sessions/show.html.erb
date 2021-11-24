@@ -50,9 +50,10 @@
           </div>
         </div>
         <div class="blue d-flex flex-column justify-content-center align-items-center" style="height: 90%">
+          <% order = 1 %>
           <% @timeboxes.each do |timebox| %>
-            <% timebox.order = @order %>
-            <% @order += 1 %>
+            <% timebox.order = order %>
+            <% order += 1 %>
             <%= timebox.id %>
             <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
               <div class="card-timebox">

@@ -1,30 +1,26 @@
 # Kinoko Todo List
 
-## Priority
+## Features Today
+
+### Priority
 - [B] Create a task: add a button and a modal in the dashboard
 - [B] Make the minutes and seconds in a same field in the form
 - [T] Create a timebox
 - [T] Start timebox
 - [D] Remove a task
-- [X] Edit a task
 - [D] Update a timebox
 - [L] Delete a timebox
-- [X] Create a Work session
-- [X] Show a Work session
 - [L] Work on the toggable navbar
 
-## Low priority
+### Low priority
 - [ ] Add task to the "shopping list" (Add task to Work Session)
 - [ ] Mark Task as done in the work session page
-- [ ] Add edit task modal to partial to improve dashboard.html readability
 
-## Done
-- [X] Display all tasks
-
-## Features Today
-
-### Routes
-- [X] Validations for Tasks
+### Done
+- [X] Create a Work session
+- [x] Add edit task modal to partial to improve dashboard.html readability
+- [X] Edit a task
+- [X] Show a Work session
 
 
 ### Validations

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   patch 'work_session/:id', to: 'work_sessions#mark_as_done'
   patch 'task/:id', to: 'tasks#update'
   # resources :timeboxes, only: [:create, :update]
-  patch 'timeboxes/:id', to: 'timeboxes#start'
-  patch 'timeboxes/:id', to: 'timeboxes#end'
+  post 'timeboxes/:id', to: 'timeboxes#start', as: 'timeboxes_start'
+  post 'timeboxes/:id', to: 'timeboxes#end', as: 'timeboxes_end'
   get 'statistics', to: 'tasks#stats'
 end

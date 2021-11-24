@@ -14,6 +14,10 @@ class TimeboxesController < ApplicationController
     redirect_to work_session_path(@timebox.task.work_session)
   end
 
+  def start
+
+  end
+
   private
 
   def time_params

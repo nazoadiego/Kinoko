@@ -1,76 +1,50 @@
-<div class="page-container">
-  <div class="full-height">
-    <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100">
-      <div class="dash-top red" style="height: 70%">
-        <div class="row" style="height: 70vh">
-          <div class="col-9 green d-flex justify-content-center align-items-center" style="height: 100%">
-            <div class="container-purple">
-                <div class="blue d-flex justify-content-between px-4" style="height: 15%"> <%# This height might be wrong because there is no defined height for parent %>
-                  <h1>Tasks</h1>
-                  <%= render "tasks/new", task: @task %>
-                </div>
-                <div class="blue d-flex justify-content-around" style="height: 85%"> <%# This height might be wrong because there is no defined height for parent %>
-                  <div class="container-dark-purple">
-                      <div class="task-grid">
-                        <% @tasks.each do |task| %>
-                          <%= button_to controller: "work_sessions", action: "create", id: task.id do %>
-                            <span>
-                              <div class="card-task">
-                                <%= task.title %>
-                              </div>
-                            </span>
-                          <% end %>
-                          <button type="button" class="btn btn-ghost-post" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">Create a Post</button>
-                          <div class="modal fade" id="exampleModal-<%= task.id%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Edit Task</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <%= simple_form_for(task) do |f| %>
-                                    <div class="form-inputs">
-                                      <%= f.input :title %>
-                                      <%= f.input :minutes, as: :integer %>
-                                      <%= f.input :seconds, as: :integer %>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                      <%= f.button :submit, class: "btn btn-primary" %>
-                                    </div>
-                                  <% end %>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <% end  %>
-                      </div>
-                  </div>
-                </div>
+<div class="full-height">
+  <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100">
+    <div class="dash-top red" style="height: 70%">
+      <div class="row" style="height: 70vh">
+        <div class="col-9 green d-flex justify-content-center align-items-center" style="height: 100%">
+          <div class="container-purple">
+            <div class="blue d-flex justify-content-between px-4" style="height: 15%"> <%# This height might be wrong because there is no defined height for parent %>
+              <h1>Tasks</h1>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Create a Task
+              </button>
+              <%= render "tasks/new_modal", task: @task %>
             </div>
-          </div>
-          <div class="col-3 green d-flex justify-content-center align-items-center" style="height: 100%">
-            <div class="container-purple">
-              <h1>Queue</h1>
+            <div class="blue d-flex justify-content-around" style="height: 85%"> <%# This height might be wrong because there is no defined height for parent %>
+              <div class="container-dark-purple">
+                <div class="task-grid">
+                  <% @tasks.each do |task| %>
+                      <%= button_to controller: "work_sessions", action: "create", id: task.id do %>
+                      <span>
+                        <div class="card-task">
+                          <%= task.title %>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">
+                          Edit Post
+                        </button>
+                      </span>
+                    <% end %>
+                    <%= render "tasks/edit_modal", task: task %>
+                  <% end  %>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="dash-bottom red d-flex justify-content-center align-items-center" style="height: 30%">
-        <div class="container-white">
-          <div class="ml-4">
-            <h1>Statistics</h1>
+        <div class="col-3 green d-flex justify-content-center align-items-center" style="height: 100%">
+          <div class="container-purple">
+            <h1>Queue</h1>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="dash-bottom red d-flex justify-content-center align-items-center" style="height: 30%">
+      <div class="container-white">
+        <div class="ml-4">
+          <h1>Statistics</h1>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-<%# FORM %>

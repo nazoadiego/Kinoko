@@ -8,10 +8,10 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.user = current_user
     if @task.save
-      redirect_to @task
+      redirect_to '/dashboard'
     else
       flash[:alert] = 'The task already exists'
-      redirect_to '/tasks'
+      redirect_to '/dashboard'
     end
   end
 

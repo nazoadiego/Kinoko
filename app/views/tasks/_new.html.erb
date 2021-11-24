@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
+  Create a Task
 </button>
 
 <!-- Modal -->
@@ -16,15 +16,15 @@
           <%= simple_form_for(task) do |f| %>
 
             <div class="form-inputs">
-              <%= f.input :title %>
-              <%= f.input :minutes %>
-              <%= f.input :seconds %>
+              <%= f.input :title, label: "Title" %>
+              <%= f.input :minutes, label: "minutes" %>
+              <%= f.input :seconds, label: "seconds" %>
+              <%= f.submit 'Save Changes', class: 'btn btn-primary'%>
             </div>
           <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

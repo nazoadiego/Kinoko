@@ -17,7 +17,6 @@ class TimeboxesController < ApplicationController
 
   def start
     @timebox = Timebox.where(order: 1)
-
   end
 
   private

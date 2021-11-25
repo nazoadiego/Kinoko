@@ -16,79 +16,78 @@
   </head>
 
   <body>
-      <div class="page-container">
-        <%# <%= render 'shared/navbar' %>
-        <div class="navegation">
-              <ul>
-                <li>
-                  <span> <i class="far fa-clipboard"></i></span>
-                  <span class="title d-flex align-items-center"><h2>Kinoko</h2></span>
-                </li>
-
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-home"></i></span>
-                    <span class="title d-flex align-items-center">Home</span>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="">
-                    <span><i class="fal fa-columns"></i></span>
-                    <span class="title d-flex align-items-center">Dashboard</span>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-tasks"></i></span>
-                    <span class="title d-flex align-items-center">Task</span>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="">
-                    <span><i class="fal fa-briefcase"></i></span>
-                    <span class="title d-flex align-items-center">Work session</span>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="">
-                    <span><i class="fas fa-chart-line"></i></span>
-                    <span class="title d-flex align-items-center">Statistics</span>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="">
-                    <span><i class="fad fa-sign-out"></i></span>
-                    <span class="title d-flex align-items-center">Sing out</span>
-                  </a>
-                </li>
-
-              </ul>
+    <div class="page-container">
+      <%# <%= render 'shared/navbar' %>
+      <div class="navegation">
+        <ul>
+          <li>
+            <div class="burger-container" onclick="toggleMenu();">
+              <i class="fas fa-bars"></i>
             </div>
+            <span class="title d-flex align-items-center"><h2>Kinoko</h2></span>
+          </li>
 
-          <div class="toggle" onclick="toggleMenu();"> <i class="fas fa-bars"></i></div>
-          <div class="main">
-            <%= yield %>
-          </div>
-        </div>
+          <li>
+            <a href="">
+              <span><i class="fas fa-home"></i></span>
+              <span class="title d-flex align-items-center">Home</span>
+            </a>
+          </li>
 
-        <%= render 'shared/flashes' %>
+          <li>
+            <a href="">
+              <span><i class="fas fa-tachometer-alt"></i></span>
+              <span class="title d-flex align-items-center">Dashboard</span>
+            </a>
+          </li>
 
+          <li>
+            <a href="">
+              <span><i class="fas fa-tasks"></i></span>
+              <span class="title d-flex align-items-center">Task</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-tablet-alt"></i></span>
+              <span class="title d-flex align-items-center">Work session</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-chart-line"></i></span>
+              <span class="title d-flex align-items-center">Statistics</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-sign-out-alt"></i></span>
+              <span class="title d-flex align-items-center">Sing out</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="main">
+        <%= yield %>
+      </div>
     </div>
 
+    <%= render 'shared/flashes' %>
     <script>
       function toggleMenu() {
-        let toggle = document.querySelector('.toggle');
+        let burger = document.querySelector('.burger-container');
         let navegation = document.querySelector('.navegation');
         let main = document.querySelector('.main');
-        toggle.classList.toggle('active');
+        let title = document.querySelector('.navegation h2');
+        title.classList.toggle('d-none');
+        burger.classList.toggle('active');
         navegation.classList.toggle('active');
         main.classList.toggle('active');
-
       }
 
     </script>

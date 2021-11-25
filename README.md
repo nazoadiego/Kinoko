@@ -18,27 +18,42 @@
 
 ## Features Today
 
+### Working on my own
+- [x] Changed navbar back into a component
+- [x] Changed navbar to black
+- [x] Decided on a font for titles
+- [ ] Dashboard html is hell, break it up into layouts (top and bottom, grid and statistics, cards  )
+- [ ] Progress bar
+- [ ] Snake button (for landing page to dashboard)
+- [ ] Bidimensional button for login
+- [ ] Black square button
+- [ ] Black square button for sign up
+- [ ] Fix the fonts color when needed
+- [ ] Work on the modals appearance
+- [ ] Work on the login and sign up appearance
+- [ ] Replace the tasks cards buttons edit and delete with icons
+- [D] Work on the landing page
+- [ ] Customize the scroll bar
+- [ ] Sign out button doesn't sign you out
+
+
+
+
 ### Priority
 - [ ] Minutes and seconds in the form: make it look nice
 - [T] Add the logic so that when a timebox ends, another one starts
 - [ ] Button_to to Link_to so that the task card displays properly
 - [X] Recover yesterday's navbar and integrate it to the master
-- [D] Work on the landing page
 - [X] Work on the Figma
-- [D] Dashboard html is hell, break it up into layouts
 - [ ] Replace bootstrap buttons with nicer ones.
 - [ ] The Link_to should be inside an actual button
-- [ ] Replace the tasks cards buttons edit and delete with icons
-- [ ] Fix the fonts color when needed
-- [ ] Work on the modals appearance
-- [ ] Work on the login and sign up appearance
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
 
 ### Low priority
 - [ ] Update a timebox
+- [ ] Fix delete a task (it was broken before doing partials it seems)
 - [ ] Active class for current timebox (a glowing border)
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
-- [ ] Customize the scroll bar
 - [ ] Add task to the "shopping list" (Add task to Work Session)
 - [ ] Mark Task as done in the work session page
 

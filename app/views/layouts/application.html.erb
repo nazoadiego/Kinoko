@@ -7,15 +7,89 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Oswald&family=Poppins:wght@200&family=Zen+Kurenaido&display=swap');
+    </style>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
     <div class="page-container">
-      <%= yield %>
+      <%# <%= render 'shared/navbar' %>
+      <div class="navegation">
+        <ul>
+          <li>
+            <div class="burger-container" onclick="toggleMenu();">
+              <i class="fas fa-bars"></i>
+            </div>
+            <span class="title d-flex align-items-center"><h2>Kinoko</h2></span>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-home"></i></span>
+              <span class="title d-flex align-items-center">Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-tachometer-alt"></i></span>
+              <span class="title d-flex align-items-center">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-tasks"></i></span>
+              <span class="title d-flex align-items-center">Task</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-tablet-alt"></i></span>
+              <span class="title d-flex align-items-center">Work session</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-chart-line"></i></span>
+              <span class="title d-flex align-items-center">Statistics</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span><i class="fas fa-sign-out-alt"></i></span>
+              <span class="title d-flex align-items-center">Sing out</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="main">
+        <%= yield %>
+      </div>
     </div>
+
+    <%= render 'shared/flashes' %>
+    <script>
+      function toggleMenu() {
+        let burger = document.querySelector('.burger-container');
+        let navegation = document.querySelector('.navegation');
+        let main = document.querySelector('.main');
+        let title = document.querySelector('.navegation h2');
+        title.classList.toggle('d-none');
+        burger.classList.toggle('active');
+        navegation.classList.toggle('active');
+        main.classList.toggle('active');
+      }
+
+    </script>
   </body>
 </html>

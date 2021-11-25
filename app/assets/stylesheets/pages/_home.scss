@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+.vertical {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+#japanese-title {
+  // font-family: ;
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 40px;
+    color: black;
+  }
+}

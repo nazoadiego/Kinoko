@@ -1,29 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Zen+Kurenaido&display=swap');
 
-*
-{
-  margin: 0px;
-  padding: 0.2px;
-  box-sizing: border-box;
-  font-family: 'poppins';
-}
-
-h2
-{
-  font-family: 'poppins';
-  color: #f5f5f5;
-}
-
-body{
-  overflow-x: hidden;
-
-}
-
-
-.container {
-  position: relative;
-  width: 100%;
-}
+// .container {
+//   position: relative;
+//   width: 100%;
+// }
 
 .navegation
 {
@@ -84,7 +64,6 @@ body{
   height: 60px;
   line-height: 60px;
   text-align: center;
-
 }
 
 .navegation ul li a i
@@ -94,9 +73,10 @@ body{
   font-size: 26px;
   margin: 12px;
   text-align: center;
+
 }
 
-.navegation ul li a title
+.navegation ul li a .title
 {
   position: relative;
   display: block;
@@ -104,7 +84,8 @@ body{
   height: 60px;
   line-height: 60px;
   white-space: nowrap;
-
+  font-family: 'poppins';
+  color: #f5f5f5;
 }
 
 .main

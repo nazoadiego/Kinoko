@@ -1,20 +1,21 @@
 <div class="full-height d-flex align-items-center justify-content-center">
-  <div class="blue" style="height: 50%; width: 50%">
-    <div class="vertical red d-flex flex-column align-items-center justify-content-center" style="height: 80%; width: 100%">
-        <div class="green">
-          <h1 id="japanese-title">
-            茸
-          </h1>
-        </div>
-        <div class="green">
-          <h2 id="japanese-title">
-            きのこ
-          </h2>
-        </div>
+  <div class="blue d-flex" style="width: 80%">
+    <div class="red d-flex flex-column justify-content-around" style="width: 50%">
+      <div>
+        <h1 class="title-segoe text-center">
+          <span class="purple-text">Kinoko.</span> Productivity. For what you love.
+        </h1>
+      </div>
+      <p class="light-subtitle ml-5">
+        A timeboxing app
+      </p>
+      <div class="d-flex justify-content-end mr-5">
+        <%= link_to "Go to dashboard", dashboard_path, class: "btn btn-primary" %>
+      </div>
     </div>
-    <div class="red d-flex align-items-center justify-content-center" style="height: 20%">
-      A timeboxing app
+    <div class="red d-flex justify-content-center" style="width: 50%">
+      <div class="orb">
+      </div>
     </div>
   </div>
-  <%= link_to "Go to dashboard", dashboard_path, class: "btn btn-primary" %>
 </div>

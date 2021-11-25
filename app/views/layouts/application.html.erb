@@ -35,13 +35,13 @@
           </li>
 
           <li>
-            <a href="">
+              <a href="<%= dashboard_path %>">
               <span><i class="fas fa-tachometer-alt"></i></span>
               <span class="title d-flex align-items-center">Dashboard</span>
             </a>
           </li>
 
-          <li>
+          <%# <li>
             <a href="">
               <span><i class="fas fa-tasks"></i></span>
               <span class="title d-flex align-items-center">Task</span>
@@ -49,11 +49,12 @@
           </li>
 
           <li>
-            <a href="">
-              <span><i class="fas fa-tablet-alt"></i></span>
+            <a href="<%= work_sessions_path(work_session) %>
+              <%# <span><i class="fas fa-tablet-alt"></i></span>
               <span class="title d-flex align-items-center">Work session</span>
+
             </a>
-          </li>
+          </li> %>
 
           <li>
             <a href="">

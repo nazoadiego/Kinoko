@@ -1,25 +1,41 @@
 # Kinoko Todo List
 
+## Steps to Git Hub
+
+### I finished my work in my branch, I want to push
+- Start on master and do pull always
+- I was working on my branch after `git co -b branch_name`
+- When finished git add . and git commit
+- I do `git co master` and get the latest master doing `pull`
+- checkout branch
+- I merge my branch to my local master `git merge master`
+- If no conflicts do push from your branch
+- if there are conflicts you resolve them in your vs code
+- Repeat `git add .` and `git commit -m`
+- Push your branch to git hub
+- Then checkout master and do a pull
+- Do `git sweep` to clean out the branches
+
 ## Features Today
 
 ### Priority
-- [?] Make the minutes and seconds in a same field in the form
-- [T] Start timebox
-- [ ] Update a timebox
-- [ ] Delete a timebox
-- [ ] Work on the landing page
-- [ ] Dashboard html is hell, break it up into layouts
+- [T] Make the minutes and seconds in a same field in the form
+- [T] Add the logic so that when a timebox ends, another one starts
+- [T] Button_to to Link_to so that the task card displays properly
+- [X] Recover yesterday's navbar and integrate it to the master
+- [D] Work on the landing page
+- [X] Work on the Figma
+- [D] Dashboard html is hell, break it up into layouts
 - [ ] Replace bootstrap buttons with nicer ones.
-- [ ] Button_to to Link_to so that the task card displays properly
 - [ ] The Link_to should be inside an actual button
 - [ ] Replace the tasks cards buttons edit and delete with icons
 - [ ] Fix the fonts color when needed
 - [ ] Work on the modals appearance
 - [ ] Work on the login and sign up appearance
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
-- [L] Recover yesterday's navbar and integrate it to the master
 
 ### Low priority
+- [ ] Update a timebox
 - [ ] Active class for current timebox (a glowing border)
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
 - [ ] Customize the scroll bar
@@ -28,6 +44,7 @@
 
 ### Done
 - [X] Create a timebox
+- [X] Delete a timebox
 - [X] Create a task: add a button and a modal in the dashboard
 - [X] Remove a task
 - [X] Create a Work session

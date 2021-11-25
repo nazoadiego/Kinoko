@@ -24,9 +24,8 @@
 - [T] Button_to to Link_to so that the task card displays properly
 - [L] Recover yesterday's navbar and integrate it to the master
 - [D] Work on the landing page
-- [D] Work on the Figma
+- [X] Work on the Figma
 - [D] Dashboard html is hell, break it up into layouts
-- [ ] Update a timebox
 - [ ] Replace bootstrap buttons with nicer ones.
 - [ ] The Link_to should be inside an actual button
 - [ ] Replace the tasks cards buttons edit and delete with icons
@@ -36,6 +35,7 @@
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
 
 ### Low priority
+- [ ] Update a timebox
 - [ ] Active class for current timebox (a glowing border)
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
 - [ ] Customize the scroll bar

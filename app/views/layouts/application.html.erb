@@ -17,15 +17,17 @@
 
   <body>
     <div class="page-container">
-      <%# <%= render 'shared/navbar' %>
-      <div class="navegation">
-        <ul>
-          <li>
-            <div class="burger-container" onclick="toggleMenu();">
-              <i class="fas fa-bars"></i>
-            </div>
-            <span class="title d-flex align-items-center"><h2>Kinoko</h2></span>
-          </li>
+      <% if @hide_navbar %>
+          <%= yield %>
+      <% else %>
+        <div class="navegation">
+          <ul>
+            <li>
+              <div class="burger-container" onclick="toggleMenu();">
+                <i class="fas fa-bars"></i>
+              </div>
+              <span class="title d-flex align-items-center"><h2>Kinoko</h2></span>
+            </li>
 
           <li>
             <a href="<%= root_path %> ">
@@ -56,41 +58,44 @@
             </a>
           </li> %>
 
-          <li>
-            <a href="">
-              <span><i class="fas fa-chart-line"></i></span>
-              <span class="title d-flex align-items-center">Statistics</span>
-            </a>
-          </li>
+            <li>
+              <a href="">
+                <span><i class="fas fa-chart-line"></i></span>
+                <span class="title d-flex align-items-center">Statistics</span>
+              </a>
+            </li>
 
-          <li>
-            <a href="">
-              <span><i class="fas fa-sign-out-alt"></i></span>
-              <span class="title d-flex align-items-center">Sing out</span>
-            </a>
-          </li>
+            <li>
+              <a href="">
+                <span><i class="fas fa-sign-out-alt"></i></span>
+                <span class="title d-flex align-items-center">Sing out</span>
+              </a>
+            </li>
 
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-      <div class="main">
-        <%= yield %>
-      </div>
+        <div class="main">
+          <%= yield %>
+        </div>
+      <% end %>
     </div>
 
     <%= render 'shared/flashes' %>
-    <script>
-      function toggleMenu() {
-        let burger = document.querySelector('.burger-container');
-        let navegation = document.querySelector('.navegation');
-        let main = document.querySelector('.main');
-        let title = document.querySelector('.navegation h2');
-        title.classList.toggle('d-none');
-        burger.classList.toggle('active');
-        navegation.classList.toggle('active');
-        main.classList.toggle('active');
-      }
+    <% unless @hide_navbar %>
+      <script>
+        function toggleMenu() {
+          let burger = document.querySelector('.burger-container');
+          let navegation = document.querySelector('.navegation');
+          let main = document.querySelector('.main');
+          let title = document.querySelector('.navegation h2');
+          title.classList.toggle('d-none');
+          burger.classList.toggle('active');
+          navegation.classList.toggle('active');
+          main.classList.toggle('active');
+        }
 
-    </script>
+      </script>
+    <% end %>
   </body>
 </html>

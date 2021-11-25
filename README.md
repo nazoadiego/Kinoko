@@ -22,7 +22,7 @@
 - [T] Make the minutes and seconds in a same field in the form
 - [T] Add the logic so that when a timebox ends, another one starts
 - [T] Button_to to Link_to so that the task card displays properly
-- [L] Recover yesterday's navbar and integrate it to the master
+- [X] Recover yesterday's navbar and integrate it to the master
 - [D] Work on the landing page
 - [X] Work on the Figma
 - [D] Dashboard html is hell, break it up into layouts

@@ -4,7 +4,7 @@ class WorkSessionsController < ApplicationController
     @work_session.task = Task.find(params[:id])
     @work_session.session_duration = (@work_session.task.minutes * 60) + @work_session.task.seconds
     @work_session.save
-    redirect_to work_sessions_path
+    redirect_to work_session_path(@work_session)
   end
 
   def show

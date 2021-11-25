@@ -1,5 +1,21 @@
 # Kinoko Todo List
 
+## Steps to Git Hub
+
+### I finished my work in my branch, I want to push
+- Start on master and do pull always
+- I was working on my branch after `git co -b branch_name`
+- When finished git add . and git commit
+- I do `git co master` and get the latest master doing `pull`
+- checkout branch
+- I merge my branch to my local master `git merge master`
+- If no conflicts do push from your branch
+- if there are conflicts you resolve them in your vs code
+- Repeat `git add .` and `git commit -m`
+- Push your branch to git hub
+- Then checkout master and do a pull
+- Do `git sweep` to clean out the branches
+
 ## Features Today
 
 ### Priority

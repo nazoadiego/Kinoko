@@ -22,11 +22,15 @@ function getTimeDifference(start, end) {
   }
 }
 
-let timer = setInterval(function () {
+const timerCustom = function (timerCustom) {
   const startDate = new Date();
-  const endDate = new Date("Noviembre 22, 2021 17:50:00");
+  const end = document.querySelector(".remainder").textContent
+  const endDate = new Date(end);
+  console.log(endDate);
 
   let timeDifferenceObj = getTimeDifference(startDate, endDate);
   timerMinEl.textContent = timeDifferenceObj.rMinutes;
   timerSecEl.textContent = timeDifferenceObj.rSeconds;
-}, 1000)
+}
+
+export { timerCustom };

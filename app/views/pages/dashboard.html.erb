@@ -32,7 +32,7 @@
                           </span>
                         <% end %>
                       <% else %>
-                        <%= button_to controller: "work_sessions", action: "create", id: task.id do %>
+                        <%= link_to task_work_sessions_path(task), method: :post do %>
                           <span>
                             <div class="card-task">
                               <%= task.title %>

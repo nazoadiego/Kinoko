@@ -41,6 +41,10 @@
 
 ### Priority
 - [ ] Minutes and seconds in the form: make it look nice
+- [D] Write the presentation
+- [D] Push to Heroku
+- [ ] Open Heroku 10 mins before presentation
+- [ ] A timebox can't be created if it's only seconds
 - [T] Add the logic so that when a timebox ends, another one starts
 - [ ] Button_to to Link_to so that the task card displays properly
 - [ ] Replace bootstrap buttons with nicer ones.

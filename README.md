@@ -19,21 +19,20 @@
 ## Features Today
 
 ### Priority
-- [X] Work on the login and sign up appearance
-- [X] Fix the grid of the dashboard so that the space between cards display evenly
-- [X] By default the navbar is open, fix that.
+- [ ] Open Heroku 10 mins before presentation
+- [ ] A timebox can't be created if it's only seconds
 - [ ] Work on the modals appearance
 - [ ] Progress bar
 - [ ] Work on the landing page
-- [ ] A timebox can't be created if it's only seconds
+- [X] Work on the login and sign up appearance
+- [X] Fix the grid of the dashboard so that the space between cards display evenly
+- [X] By default the navbar is open, fix that.
 - [D] Write the presentation
 - [D] Push to Heroku
-- [ ] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
-- [ ] Open Heroku 10 mins before presentation
 - [T] Add the logic so that when a timebox ends, another one starts
-- [ ] Replace bootstrap buttons with nicer ones.
 
 ### Low priority
+- [ ] Replace bootstrap buttons with nicer ones.
 - [ ] Customize the scroll bar
 - [ ] Minutes and seconds in the form: make it look nice
 - [D] Reply to yair
@@ -43,17 +42,18 @@
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
 - [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Update a timebox
-- [ ] Fix delete a task (it was broken before doing partials it seems)
 - [ ] Active class for current timebox (a glowing border)
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
-- [ ] Add task to the "shopping list" (Add task to Work Session)
+- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
 - [ ] Mark Task as done in the work session page
 
 ### Done
+- [X] Fix delete a task (it was broken before doing partials it seems)
 - [X] Sign out button on the navbar doesn't sign you out
 - [x] Changed navbar back into a component
 - [x] Changed navbar to black
 - [x] Decided on a font for titles
+- [X] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
 - [X] Dashboard html is hell, break it up into layouts (top and bottom, grid and statistics, cards  )
 - [X] Replace the tasks cards buttons edit and delete with icons
 - [X] Add the Sign up button

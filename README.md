@@ -18,25 +18,14 @@
 
 ## Features Today
 
-### Working on my own
-- [x] Changed navbar back into a component
-- [x] Changed navbar to black
-- [x] Decided on a font for titles
-- [X] Dashboard html is hell, break it up into layouts (top and bottom, grid and statistics, cards  )
-- [X] Replace the tasks cards buttons edit and delete with icons
-- [D] Work on the landing page
-- [ ] Progress bar
-- [ ] Fix the fonts color when needed
-- [ ] Work on the modals appearance
-- [ ] Work on the login and sign up appearance
-- [ ] Customize the scroll bar
-- [ ] By default the navbar is open, fix that.
-- [ ] Fix the grid of the dashboard so that the space between cards display evenly
-
-
 ### Priority
+- [X] Work on the login and sign up appearance
+- [X] Fix the grid of the dashboard so that the space between cards display evenly
+- [X] By default the navbar is open, fix that.
+- [ ] Work on the modals appearance
+- [ ] Progress bar
+- [ ] Work on the landing page
 - [ ] A timebox can't be created if it's only seconds
-
 - [D] Write the presentation
 - [D] Push to Heroku
 - [ ] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
@@ -45,6 +34,7 @@
 - [ ] Replace bootstrap buttons with nicer ones.
 
 ### Low priority
+- [ ] Customize the scroll bar
 - [ ] Minutes and seconds in the form: make it look nice
 - [D] Reply to yair
 - [ ] Hide navbar on login
@@ -61,6 +51,11 @@
 
 ### Done
 - [X] Sign out button on the navbar doesn't sign you out
+- [x] Changed navbar back into a component
+- [x] Changed navbar to black
+- [x] Decided on a font for titles
+- [X] Dashboard html is hell, break it up into layouts (top and bottom, grid and statistics, cards  )
+- [X] Replace the tasks cards buttons edit and delete with icons
 - [X] Add the Sign up button
 - [X] Recover yesterday's navbar and integrate it to the master
 - [X] Work on the Figma

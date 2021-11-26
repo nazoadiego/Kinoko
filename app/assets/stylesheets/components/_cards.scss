@@ -1,54 +1,76 @@
-/* for demo purposes */
-body {
-  background: grey;
+
+.test-container {
+    -webkit-perspective: 500px;
+            perspective: 500px;
 }
 
-.card-block .btn-outline-primary {
-  width: 100%;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  bottom: 0;
-  left: 0;
+.test-container:hover .test{
+    -webkit-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+}
+
+.test {
+    -webkit-transition: -webkit-transform 0.7s;
+            transition: transform 0.7s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.back {
+    -webkit-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+}
+
+/*Custom Styles*/
+.tests-container{
+   display: -webkit-flex;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-flex-direction: row;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.test {
+  width: 200px;
+	height: 250px;
+  margin: 35px;
+
+
+  h3 {
+    font-family: 'Segoe UI';
+    font-size: 35px;
+    text-align: center;
+  }
+
+  p{
+    font-family: 'Segoe UI';
+    font-size: 20px;
+    text-align: center;
+
+  }
+}
+
+.front, .back {
+  box-shadow: 0 1px 6px 0;
   position: absolute;
-}
-
-.card1 {
-  margin: 20px 0;
-}
-
-/* Flip Cards CSS */
-.card-container {
-  perspective: 700px;
-}
-.card-flip {
-  position: relative;
   width: 100%;
-  transform-style: preserve-3d;
-  height: auto;
-  transition: all 0.5s ease-out;
-  background: white;
-  border: none;
+  top: 0;
+  bottom: 0;
 }
 
-.card-flip div {
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  height: 100%;
-  width: 100%;
-  border: none;
-}
-
-.card-flip .front {
-  position: relative;
-  z-index: 1;
-}
-
-.card-flip .back {
-  position: relative;
-  z-index: 0;
-  transform: rotateY(-180deg);
-}
-
-.card-page-container:hover .card-flip {
-  transform: rotateY(180deg);
+img {
+  display: block;
 }

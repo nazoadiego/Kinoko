@@ -13,8 +13,10 @@
         <%= simple_form_for(task) do |f| %>
           <div class="form-inputs">
             <%= f.input :title %>
-            <%= f.input :minutes, as: :integer %>
-            <%= f.input :seconds, as: :integer %>
+            <%= f.input :minutes, label: 'Min/Sec', input_html: {class: 'span3', maxlength: 1}, wrapper_html: {class: 'controls controls-row'} do %>
+              <%= f.input_field :minutes %>
+              <%= f.input_field :seconds %>
+            <% end %>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">

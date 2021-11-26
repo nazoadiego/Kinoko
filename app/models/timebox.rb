@@ -9,4 +9,8 @@ class Timebox < ApplicationRecord
   def duration
     return (minutes * 60) + seconds
   end
+
+  def end_milliseconds
+    return (((minutes * 60) + seconds) * 1000)
+  end
 end

@@ -18,31 +18,52 @@
 
 ## Features Today
 
-### Priority
-- [T] Make the minutes and seconds in a same field in the form
-- [T] Add the logic so that when a timebox ends, another one starts
-- [T] Button_to to Link_to so that the task card displays properly
-- [X] Recover yesterday's navbar and integrate it to the master
+### Working on my own
+- [x] Changed navbar back into a component
+- [x] Changed navbar to black
+- [x] Decided on a font for titles
+- [X] Dashboard html is hell, break it up into layouts (top and bottom, grid and statistics, cards  )
+- [X] Replace the tasks cards buttons edit and delete with icons
 - [D] Work on the landing page
-- [X] Work on the Figma
-- [D] Dashboard html is hell, break it up into layouts
-- [ ] Replace bootstrap buttons with nicer ones.
-- [ ] The Link_to should be inside an actual button
-- [ ] Replace the tasks cards buttons edit and delete with icons
+- [ ] Progress bar
+- [ ] Snake button (for landing page to dashboard)
+- [ ] Bidimensional button for login
+- [ ] Black square button
+- [ ] Black square button for sign up
 - [ ] Fix the fonts color when needed
 - [ ] Work on the modals appearance
 - [ ] Work on the login and sign up appearance
+- [ ] Customize the scroll bar
+- [ ] By default the navbar is open, fix that.
+- [ ] Fix the grid of the dashboard so that the space between cards display evenly
+- [ ] Sign out button on the navbar doesn't sign you out
+
+
+### Priority
+- [ ] Minutes and seconds in the form: make it look nice
+- [D] Write the presentation
+- [D] Push to Heroku
+- [D] Reply to yair
+- [ ] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
+- [ ] Open Heroku 10 mins before presentation
+- [ ] A timebox can't be created if it's only seconds
+- [T] Add the logic so that when a timebox ends, another one starts
+- [ ] Button_to to Link_to so that the task card displays properly
+- [ ] Replace bootstrap buttons with nicer ones.
+- [ ] The Link_to should be inside an actual button
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
 
 ### Low priority
 - [ ] Update a timebox
+- [ ] Fix delete a task (it was broken before doing partials it seems)
 - [ ] Active class for current timebox (a glowing border)
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
-- [ ] Customize the scroll bar
 - [ ] Add task to the "shopping list" (Add task to Work Session)
 - [ ] Mark Task as done in the work session page
 
 ### Done
+- [X] Recover yesterday's navbar and integrate it to the master
+- [X] Work on the Figma
 - [X] Create a timebox
 - [X] Delete a timebox
 - [X] Create a task: add a button and a modal in the dashboard

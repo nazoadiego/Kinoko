@@ -1,3 +1,21 @@
-
-
-      <%= render 'shared/cards' %>
+<div class="full-height d-flex align-items-center justify-content-center">
+  <div class="blue d-flex" style="width: 80%">
+    <div class="red d-flex flex-column justify-content-around" style="width: 50%">
+      <div>
+        <h1 class="title-segoe text-center">
+          <span class="purple-text">Kinoko.</span> Productivity. For what you love.
+        </h1>
+      </div>
+      <p class="light-subtitle ml-5">
+        A timeboxing app
+      </p>
+      <div class="d-flex justify-content-end mr-5">
+        <%= link_to "Go to dashboard", dashboard_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+    <div class="red d-flex justify-content-center" style="width: 50%">
+      <div class="orb">
+      </div>
+    </div>
+  </div>
+</div>

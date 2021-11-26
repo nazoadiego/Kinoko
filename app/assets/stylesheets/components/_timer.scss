@@ -1,26 +1,24 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
 main {
   margin-top: 1rem;
 }
-.container {
-  max-width: 250px;
+
+.container-timer {
+  max-width: 200px;
   margin: 0 auto;
 }
 .timer {
-  background: black;
-  padding: 2rem;
-  height: 430px;
+  background: white;
+  height: 100%;
 }
 .timer__header {
   text-align: center;
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 .timer__body {
@@ -32,18 +30,26 @@ main {
 .timer__hour,
 .timer__min,
 .timer__sec {
-  font-size: 3rem;
+  font-size: 1rem;
   text-align: center;
-  color: white;
-  border-radius: 30%;
-  border: 1px dashed white;
+  color: black;
+  border-radius: 48%;
+  border: 1px dashed black;
   padding: 1rem;
 }
 .timer__label {
-  color: white;
+  color: black;
   text-align: center;
   margin-top: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 23px;
+  font-size: 12px;
+}
+
+.timer__item1 {
+  width: 50%
+}
+
+.timer__item2 {
+  width: 50%
 }

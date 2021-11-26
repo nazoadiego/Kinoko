@@ -27,8 +27,12 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { timerCustom, statusOnLoadYellow } from '../components/timer';
 
-document.addEventListener('turbolinks:load', () => {
+const play = document.querySelector(".play-button")
+
+play.addEventListener('click', () => {
   // Call your functions here, e.g:
+  setInterval(timerCustom, 1000);
   // initSelect2();
 });

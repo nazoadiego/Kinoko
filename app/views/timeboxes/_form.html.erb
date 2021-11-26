@@ -11,8 +11,10 @@
         <%= simple_form_for [@task, @timebox] do |f| %>
           <div class="form-inputs">
             <%= f.input :title %>
-            <%= f.input :minutes, as: :integer %>
-            <%= f.input :seconds, as: :integer %>
+            <%= f.input :minutes, label: 'Min/Sec', input_html: {class: 'span3', maxlength: 1}, wrapper_html: {class: 'controls controls-row'} do %>
+              <%= f.input_field :minutes %>
+              <%= f.input_field :seconds %>
+            <% end %>
             <fieldset class="form-group boolean optional break">
               <div class="form-check">
                 <input name="break" type="hidden" value="0">

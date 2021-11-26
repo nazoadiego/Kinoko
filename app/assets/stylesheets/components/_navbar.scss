@@ -10,7 +10,7 @@
   position: fixed;
   width: 300px;
   height: 100%;
-  background-color: #622569;
+  background-color: $black;
   transition: 0.5s;
   overflow: hidden;
 }
@@ -24,9 +24,10 @@
 {
   position: absolute;
   top: 8px;
-  left: 10px;
+  left: 0px;
   width: 100%;
-
+  margin: 0;
+  padding: 0;
 }
 
 .navegation ul li

@@ -6,17 +6,22 @@ class TimeboxesController < ApplicationController
     @timebox.task = @work_session.task
     @timebox.break = true if params[:break] == "1"
     @timebox.save
-    redirect_to work_sessions_path(@work_session)
+    redirect_to work_session_path(@work_session)
   end
 
   def destroy
     @timebox = Timebox.find(params[:id])
     @timebox.destroy
-    redirect_to work_sessions_path(@timebox.task.work_session)
+    redirect_to work_session_path(@timebox.task.work_session)
   end
 
   def start
-    @timebox = Timebox.where(order: 1)
+    @work_session = WorkSession.find(params[:id])
+    @timebox = @work_session.task.timeboxes[0]
+    @timebox.start_time = Time.now
+    @timebox.end_time = @timebox.start_time + @timebox.duration
+    @timebox.save
+    redirect_to work_session_path(@timebox.task.work_session)
   end
 
   private

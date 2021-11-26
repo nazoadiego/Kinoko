@@ -26,34 +26,34 @@
 - [X] Replace the tasks cards buttons edit and delete with icons
 - [D] Work on the landing page
 - [ ] Progress bar
-- [ ] Snake button (for landing page to dashboard)
-- [ ] Bidimensional button for login
-- [ ] Black square button
-- [ ] Black square button for sign up
 - [ ] Fix the fonts color when needed
 - [ ] Work on the modals appearance
 - [ ] Work on the login and sign up appearance
 - [ ] Customize the scroll bar
 - [ ] By default the navbar is open, fix that.
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
-- [ ] Sign out button on the navbar doesn't sign you out
 
 
 ### Priority
+- [X] Sign out button on the navbar doesn't sign you out
+- [X] Add the Sign up button
+- [X] Add the login button
+- [ ] Bidimensional button for login
+- [ ] Snake button (for landing page to dashboard)
 - [ ] Minutes and seconds in the form: make it look nice
 - [D] Write the presentation
 - [D] Push to Heroku
 - [D] Reply to yair
+- [ ] Hide navbar on login
 - [ ] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
 - [ ] Open Heroku 10 mins before presentation
 - [ ] A timebox can't be created if it's only seconds
 - [T] Add the logic so that when a timebox ends, another one starts
-- [ ] Button_to to Link_to so that the task card displays properly
 - [ ] Replace bootstrap buttons with nicer ones.
-- [ ] The Link_to should be inside an actual button
-- [ ] A task shouldn't be able to be created with negative minutes or seconds
 
 ### Low priority
+- [ ] A task shouldn't be able to be created with negative minutes or seconds
+- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Update a timebox
 - [ ] Fix delete a task (it was broken before doing partials it seems)
 - [ ] Active class for current timebox (a glowing border)

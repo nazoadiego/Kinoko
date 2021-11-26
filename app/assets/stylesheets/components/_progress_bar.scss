@@ -30,6 +30,9 @@
 .skill-per {
   height: 14px;
   background-color: purple;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
 }
 
 .skill-bar {
@@ -38,4 +41,35 @@
   border-radius: 3px;
 }
 
-// .skill-per
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f1f1f1;
+  top: -20px;
+  right: 0;
+}
+
+@keyframes fillBars{
+  from{
+    width:0;
+  }
+
+  to{
+    width: 100%;
+  }
+}
+

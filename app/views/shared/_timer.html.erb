@@ -1,16 +1,15 @@
 <div class="container-timer">
-      <div class="timer row">
-        <%# <div class="timer__header">
-          <h1 class="timer__title">Do Homework</h1>
-        </div> %>
-        <div class="timer__item1 col">
-          <p class="timer__min">55</p>
-          <p class="timer__label">Min</p>
-        </div>
-        <div class="timer__item2 col">
-          <p class="timer__sec">03</p>
-          <p class="timer__label">Sec</p>
-        </div>
-      </div>
+  <div class="timer row">
+    <%# <div class="timer__header">
+      <h1 class="timer__title">Do Homework</h1>
+    </div> %>
+    <div class="timer__item1 col">
+      <p class="timer__min"><%= timebox.minutes %></p>
+      <p class="timer__label">Min</p>
     </div>
+    <div class="timer__item2 col">
+      <p class="timer__sec"><%= timebox.seconds %></p>
+      <p class="timer__label">Sec</p>
     </div>
+  </div>
+</div>

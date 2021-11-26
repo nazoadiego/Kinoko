@@ -21,12 +21,12 @@
                             <div class="card-task">
                               <%= task.title %>
                             </div>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">
-                              Edit Post
+                            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">
+                              Add to queue
                             </button>
                             <%= link_to  task_path(task), method: :delete do %>
-                              <button type="button" class="btn btn-primary" >
-                                Delete
+                              <button type="button" class="btn btn-ghost-post" >
+                                Timebox
                               </button>
                             <% end %>
                           </span>
@@ -37,12 +37,12 @@
                             <div class="card-task">
                               <%= task.title %>
                             </div>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">
-                              Edit Post
+                            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal-<%= task.id%>" data-whatever="@mdo">
+                              Add to queue
                             </button>
                             <%= link_to  task_path(task), method: :delete do %>
-                              <button type="button" class="btn btn-primary" >
-                                Delete
+                              <button type="button" class="btn btn-ghost-post" >
+                                Timebox
                               </button>
                             <% end %>
                           </span>

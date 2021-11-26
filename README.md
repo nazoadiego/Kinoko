@@ -36,14 +36,18 @@
 - [ ] Customize the scroll bar
 - [ ] By default the navbar is open, fix that.
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
-- [ ] Sign out button on the navbar doesn't sign you out
 
 
 ### Priority
+- [ ] Sign out button on the navbar doesn't sign you out
 - [ ] Minutes and seconds in the form: make it look nice
 - [D] Write the presentation
 - [D] Push to Heroku
 - [D] Reply to yair
+- [ ] Hide navbar on login
+- [ ] Add the login button
+- [ ] Add the Sign up button
+- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
 - [ ] Open Heroku 10 mins before presentation
 - [ ] A timebox can't be created if it's only seconds

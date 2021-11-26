@@ -43,7 +43,8 @@
 - [ ] Minutes and seconds in the form: make it look nice
 - [D] Write the presentation
 - [D] Push to Heroku
-- [ ] Heroku doesn't work, it doesn't allow me to create a db or seed.
+- [D] Reply to yair
+- [ ] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
 - [ ] Open Heroku 10 mins before presentation
 - [ ] A timebox can't be created if it's only seconds
 - [T] Add the logic so that when a timebox ends, another one starts

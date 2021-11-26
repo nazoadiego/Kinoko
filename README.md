@@ -35,23 +35,21 @@
 
 
 ### Priority
-- [X] Sign out button on the navbar doesn't sign you out
-- [X] Add the Sign up button
-- [X] Add the login button
-- [ ] Bidimensional button for login
-- [ ] Snake button (for landing page to dashboard)
-- [ ] Minutes and seconds in the form: make it look nice
+- [ ] A timebox can't be created if it's only seconds
+
 - [D] Write the presentation
 - [D] Push to Heroku
-- [D] Reply to yair
-- [ ] Hide navbar on login
 - [ ] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
 - [ ] Open Heroku 10 mins before presentation
-- [ ] A timebox can't be created if it's only seconds
 - [T] Add the logic so that when a timebox ends, another one starts
 - [ ] Replace bootstrap buttons with nicer ones.
 
 ### Low priority
+- [ ] Minutes and seconds in the form: make it look nice
+- [D] Reply to yair
+- [ ] Hide navbar on login
+- [ ] Snake button (for landing page to dashboard)
+- [ ] Bidimensional button for login
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
 - [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Update a timebox
@@ -62,8 +60,11 @@
 - [ ] Mark Task as done in the work session page
 
 ### Done
+- [X] Sign out button on the navbar doesn't sign you out
+- [X] Add the Sign up button
 - [X] Recover yesterday's navbar and integrate it to the master
 - [X] Work on the Figma
+- [X] Add the login button
 - [X] Create a timebox
 - [X] Delete a timebox
 - [X] Create a task: add a button and a modal in the dashboard

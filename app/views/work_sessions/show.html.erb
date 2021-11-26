@@ -62,11 +62,6 @@
                 <p class="timeminutes" data-minutes="<%= timebox.minutes %>" hidden></p>
                 <p class="timeseconds" data-seconds="<%= timebox.seconds %>" hidden></p>
                 <%= render "shared/timer", timebox: timebox %>
-                <% if timebox.seconds == 0 %>
-                  <h3><%= timebox.minutes %>min</h3>
-                <% else %>
-                  <h3><%= timebox.minutes %>min <%= timebox.seconds %>secs</h3>
-                <% end %>
                 <%= link_to timeboxes_path(timebox), method: :delete, id: timebox.id, data: {confirm: "Are you sure?"}, class: "card-remove-link" do %>
                   <i class="fas fa-trash"></i>
                 <% end %>

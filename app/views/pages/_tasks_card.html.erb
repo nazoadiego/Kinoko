@@ -2,7 +2,9 @@
 
 <div class="card-task d-flex flex-column justify-content-between">
   <div class="d-flex justify-content-between mx-4 mt-2">
-    <%= task.title %>
+    <h5>
+      <%= task.title %>
+    </h5>
     <div>
       <a class="mr-2" data-toggle="modal" data-target="#exampleModal-<%= task.id %>" data-whatever="@mdo">
         Edit
@@ -14,16 +16,19 @@
     </div>
   </div>
   <div>
-    <div class="d-flex justify-content-end align-items-end">
-      <% if task.work_session != nil %>
-        <%= link_to work_session_path(task.work_session), class: "btn btn-primary mr-3 mb-3" do %>
-          Start Timebox
+    <div class="d-flex justify-content-around align-items-center">
+      <div class="mb-4 ml-2">
+        <%= task.minutes %> minutes
+      </div>
+        <% if task.work_session != nil %>
+          <%= link_to work_session_path(task.work_session), class: "btn btn-primary mr-3 mb-3" do %>
+            Start Timebox
+          <% end %>
+        <% else %>
+          <%= link_to task_work_sessions_path(task), method: :post, class: "btn btn-primary mr-3 mb-3" do %>
+            Start Timebox
+          <% end %>
         <% end %>
-      <% else %>
-        <%= link_to task_work_sessions_path(task), method: :post, class: "btn btn-primary mr-3 mb-3" do %>
-          Start Timebox
-        <% end %>
-      <% end %>
     </div>
   </div>
 </div>

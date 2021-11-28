@@ -1,16 +1,17 @@
 .container-purple {
-  background-color: #573BC9;
+  // background-color: #573BC9;
   height: 90%;
   width: 98%;
-  border-radius: 25px;
-  box-shadow: 0 0 26px rgba(0,0,0,0.8);
+  border-radius: 2px;
+  border: $gray 2px solid;
+  box-shadow: 0 0 2x rgba(0,0,0,0.8);
   h1 {
     color: #FFFFFF;
   }
 }
 
 .container-dark-purple {
-  background-color: #150F30;
+  // background-color: #150F30;
   height: 98%;
   width: 98%;
   border-radius: 25px;

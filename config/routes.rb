@@ -8,9 +8,10 @@ Rails.application.routes.draw do
     resources :timeboxes, only: [:create]
   end
   delete 'timeboxes/:id', to: 'timeboxes#destroy', as: 'timeboxes'
-  patch 'work_session/:id', to: 'work_sessions#mark_as_done'
   patch 'task/:id', to: 'tasks#update'
-  resources :work_sessions, only: [:show]
+  resources :work_sessions, only: [:show] do
+    patch '/task/:id', to: 'tasks#mark_as_done'
+  end
   post 'timeboxes/:id', to: 'timeboxes#start', as: 'timeboxes_start'
   post 'timeboxes/:id', to: 'timeboxes#end', as: 'timeboxes_end'
   get 'statistics', to: 'tasks#stats'

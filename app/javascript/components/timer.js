@@ -1,8 +1,3 @@
-const timerDayEl = document.querySelector(".timer__day");
-const timerHourEl = document.querySelector(".timer__hour");
-const timerMinEl = document.querySelector(".timer__min");
-const timerSecEl = document.querySelector(".timer__sec");
-
 function getTimeDifference(start, end) {
   let milliseconds = new Date(end) - new Date(start);
   let seconds = Math.floor(milliseconds / 1000);
@@ -24,6 +19,10 @@ function getTimeDifference(start, end) {
 
 const timerCustom = () => {
   // if first child has timers at 0, move to bottom and then remove
+  let timerDayEl = document.querySelector(".timer__day");
+  let timerHourEl = document.querySelector(".timer__hour");
+  let timerMinEl = document.querySelector(".timer__min");
+  let timerSecEl = document.querySelector(".timer__sec");
   let firstDiv = document.querySelector(".timelist > .red");
   let wholeGrid = document.querySelector(".timelist");
   let timeboxSec = document.querySelector(".timeseconds").dataset.seconds.textContent;
@@ -36,19 +35,32 @@ const timerCustom = () => {
 
   // UPDATE TOP TIMER
   let startDate = new Date();
-  let milliseconds = parseInt(document.querySelector(".timelist > .red > .card-timebox > .remainder").textContent)
-  if (!document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate) {
+  let milliseconds = parseInt(document.querySelector(".timelist > .red > .card-timebox > .remainder").dataset.timeboxduration)
+  if (!document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate)  {
     document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate;
     let endDate = new Date(startDate.getTime() + milliseconds);
     document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate = endDate;
   }
+
+   endDate = document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate
+  if (new Date(endDate) < new Date(startDate)) {
+    document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate;
+     endDate = new Date(startDate.getTime() + milliseconds);
+    document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate = endDate;
+  }
+
+  document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate
+
   let endDate = document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate;
   // console.log(startDate);
   // console.log(endDate);
   let timeDifferenceObj = getTimeDifference(startDate, endDate);
   timerMinEl.textContent = timeDifferenceObj.rMinutes;
   timerSecEl.textContent = timeDifferenceObj.rSeconds;
-  // console.log(timeDifferenceObj);
+
+  // make the div for the active timebox be highlighted
+  const timeboxdiv = document.querySelector(".timelist > .red > .card-timebox");
+  timeboxdiv.classList.add("active-timebox")
 }
 
 // const resetTimer = function (resetTimer) {
@@ -61,4 +73,37 @@ const timerCustom = () => {
 //   }
 // }
 
-export { timerCustom };
+const taskTimer = () => {
+  let startDate = new Date();
+  let taskmins = document.querySelector(".taskmins");
+  let tasksecs = document.querySelector(".tasksecs");
+  let milliseconds = parseInt(document.querySelector(".taskduration").dataset.duration)
+  if (!document.querySelector(".tasktimes").dataset.startDate) {
+    document.querySelector(".tasktimes").dataset.startDate = startDate;
+    let endDate = new Date(startDate.getTime() + milliseconds);
+    document.querySelector(".tasktimes").dataset.endDate = endDate;
+  };
+  let endDate = document.querySelector(".tasktimes").dataset.endDate
+  let timeDiff = getTimeDifference(startDate, endDate);
+  let timeDiffSec = Math.floor((new Date(endDate) - new Date(startDate)) / 1000);
+  console.log(timeDiffSec);
+  console.log(timeDiffSec === 0);
+  taskmins.textContent = `${timeDiff.rMinutes} mins`;
+  tasksecs.textContent = `${timeDiff.rSeconds} secs`;
+  const done = document.getElementById('doneTask');
+  if (timeDiffSec === 0){
+    done.classList.add("canbedone");
+    taskmins.textContent = `0 mins`;
+    tasksecs.textContent = `0 secs`;
+  };
+
+  if (timeDiffSec < 0) {
+    taskmins.textContent = `0 mins`;
+    tasksecs.textContent = `0 secs`;
+  };
+  // return timeDiff;
+  // console.log(timeDiff);
+  // console.log(timeDiff === 0);
+}
+
+export { timerCustom, taskTimer };

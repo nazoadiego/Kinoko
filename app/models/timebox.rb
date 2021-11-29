@@ -1,6 +1,7 @@
 class Timebox < ApplicationRecord
   belongs_to :task
 
+  attribute :minutes, default: 0
   attribute :seconds, default: 0
   attribute :break, default: false
   validates :minutes, :title, presence: true

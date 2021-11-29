@@ -44,10 +44,10 @@
     </li>
 
     <li>
-      <a href="">
+      <%= link_to destroy_user_session_path, method: :delete do %>
         <span><i class="fas fa-sign-out-alt"></i></span>
         <span class="title d-flex align-items-center">Sign out</span>
-      </a>
+      <% end %>
     </li>
 
   </ul>

@@ -7,10 +7,10 @@
         </h1>
       </div>
       <p class="light-subtitle ml-5">
-        A timeboxing app
+        Have the flexibility to work the way you do. A timeboxing app.
       </p>
-      <div class="d-flex justify-content-end mr-5">
-        <%= link_to "Go to dashboard", dashboard_path, class: "btn btn-primary" %>
+      <div class="d-flex justify-content-end mr-5 mt-5">
+        <%= link_to "I want to start working", dashboard_path, class: "btn btn-primary" %>
       </div>
     </div>
     <div class="red d-flex justify-content-center" style="width: 50%">
@@ -19,4 +19,10 @@
     </div>
   </div>
 </div>
-   <%= render 'shared/cards' %>
+
+<% if user_signed_in? %>
+
+<% else %>
+  <%= link_to "Login", new_user_session_path, class: "btn btn-primary login-position d-none" %>
+  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary sign-up-position d-none" %>
+<% end %>

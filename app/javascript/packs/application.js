@@ -25,14 +25,29 @@ require("channels")
 // External imports
 import "bootstrap";
 
+// Sortable
+import { initSortable } from '../plugins/init_sortable'; // <-- add this
+
+initSortable(); // <-- add this
+
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { timerCustom, statusOnLoadYellow } from '../components/timer';
+import { timerCustom, taskTimer } from '../components/timer';
 
 const play = document.querySelector(".play-button")
+const stop = document.querySelector(".stop-button")
 
 play.addEventListener('click', () => {
   // Call your functions here, e.g:
   setInterval(timerCustom, 1000);
+  setInterval(taskTimer, 1000);
+  // initSelect2();
+});
+
+stop.addEventListener('click', () => {
+  // Call your functions here, e.g:
+  location.reload(true);
+  // setInterval(resetTimer, 1000);
   // initSelect2();
 });

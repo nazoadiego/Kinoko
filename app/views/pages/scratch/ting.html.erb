@@ -16,34 +16,27 @@
                 Tags:
                 <%= @work_session.task.category %>
               </h1>
-              <h1 class="taskmins">
+              <h1>
                 <%= @work_session.task.minutes %>
                 minutes
               </h1>
-              <h1 class="tasksecs">
-                <%= @work_session.task.seconds %>
-                seconds
-              </h1>
-              <p class="taskduration" data-duration="<%= (@work_session.task.duration * 1000) %>" hidden></p>
-              <p class="tasktimes" hidden></p>
             </div>
           </div>
         </div>
         <div class="blue" style="height: 50%">
           <div class="red d-flex align-items-center justify-content-center" style="height: 25%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div class="btn btn-info ml-3 play-button">
+            <%= button_to "Play", timeboxes_start_path, class: "btn btn-info ml-3" %>
+            <div class="btn btn-danger ml-3 play-button">
             <%# just testing it on this clean button %>
-              Play
+              Stop
             </div>
-            <%= link_to "Stop", work_session_path(@work_session), class: "btn btn-danger ml-3 stop-button" %>
           </div>
           <div class="red d-flex align-items-center justify-content-center" style="height: 50%">  <%# This height might be wrong because there is no defined height for parent %>
-            <%# <h1>Progress Bar</h1> %>
-          <%= render 'shared/progress_bar' %>
+            <h1>Progress Bar</h1>
           </div>
           <div class="red d-flex align-items-center justify-content-center" style="height: 25%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div id="doneTask">
-              <%= link_to 'Mark as done', "/work_sessions/#{@work_session.id}/task/#{@work_session.task.id}", class: "btn btn-primary", method: :patch %>
+            <div class="btn btn-primary">
+              Mark as done
             </div>
           </div>
         </div>
@@ -55,7 +48,7 @@
             <%= render "timeboxes/form" %>
           </div>
         </div>
-        <div class="blue timelist d-flex flex-column justify-content-center align-items-center" style="height: 90%">
+        <div class="blue d-flex flex-column justify-content-center align-items-center" style="height: 90%">
           <% order = 1 %>
           <% @timeboxes.each do |timebox| %>
             <% timebox.order = order %>
@@ -64,11 +57,17 @@
             <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
               <div class="card-timebox">
                 <h2><%= timebox.title %></h2>
-                <p class="remainder" data-timeboxduration="<%= (timebox.duration * 1000) %>" hidden></p>
-                <p class="settimes" hidden></p>
+                <p class="remainder" data-end-time="<%= timebox.end_time %>" hidden></p>
+                <p class="start-time" data-start-time="<%= timebox.start_time %>" hidden></p>
+                <p class="timemilliseconds" data-milliseconds="<%= (timebox.duration * 1000)/ %>" hidden></p>
                 <p class="timeminutes" data-minutes="<%= timebox.minutes %>" hidden></p>
                 <p class="timeseconds" data-seconds="<%= timebox.seconds %>" hidden></p>
                 <%= render "shared/timer", timebox: timebox %>
+                <% if timebox.seconds == 0 %>
+                  <h3><%= timebox.minutes %>min</h3>
+                <% else %>
+                  <h3><%= timebox.minutes %>min <%= timebox.seconds %>secs</h3>
+                <% end %>
                 <%= link_to timeboxes_path(timebox), method: :delete, id: timebox.id, data: {confirm: "Are you sure?"}, class: "card-remove-link" do %>
                   <i class="fas fa-trash"></i>
                 <% end %>

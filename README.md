@@ -14,46 +14,48 @@
 - Repeat `git add .` and `git commit -m`
 - Push your branch to git hub
 - Then checkout master and do a pull
-- Do `git sweep` to clean out the branches
+- Do `git sweep` to clean out the branches, if you want.
 
 ## Features Today
 
 ### Priority
-- [ ] Open Heroku 10 mins before presentation
-- [ ] A timebox can't be created if it's only seconds
+- [T] After the queue of timeboxes is completed and it restarts, the duration of the first time box is overwritten to 1 hour.
+- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Work on the modals appearance
-- [ ] Progress bar
-- [ ] Work on the landing page
-- [X] Work on the login and sign up appearance
-- [X] Fix the grid of the dashboard so that the space between cards display evenly
-- [X] By default the navbar is open, fix that.
-- [D] Write the presentation
-- [D] Push to Heroku
-- [T] Add the logic so that when a timebox ends, another one starts
+- [X] Sortable JS
+- [ ] Anime.js for mushroom forest, but more importantly for the background
+- [ ] Change the name of the containers css class of the dashboard
+- [ ] Fix the grid of the dashboard so that the space between cards display evenly
+- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
+
 
 ### Low priority
+- [D] Write the presentation
+- [D] Reply to yair
+- [ ] Work on the landing page
 - [ ] Replace bootstrap buttons with nicer ones.
 - [ ] Customize the scroll bar
 - [ ] Minutes and seconds in the form: make it look nice
-- [D] Reply to yair
 - [ ] Hide navbar on login
 - [ ] Snake button (for landing page to dashboard)
 - [ ] Bidimensional button for login
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
-- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Update a timebox
 - [ ] Active class for current timebox (a glowing border)
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
-- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
 - [ ] Mark Task as done in the work session page
 
 ### Done
 - [X] Fix delete a task (it was broken before doing partials it seems)
+- [X] Work on the login and sign up appearance
+- [X] Progress bar
 - [X] Sign out button on the navbar doesn't sign you out
 - [x] Changed navbar back into a component
 - [x] Changed navbar to black
+- [X] Add the logic so that when a timebox ends, another one starts
 - [x] Decided on a font for titles
 - [X] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
+- [X] By default the navbar is open, fix that.
 - [X] Dashboard html is hell, break it up into layouts (top and bottom, grid and statistics, cards  )
 - [X] Replace the tasks cards buttons edit and delete with icons
 - [X] Add the Sign up button
@@ -70,32 +72,21 @@
 - [X] Show a Work session
 
 
-### Validations
-- [X] Validations for Tasks
-- [X] Validations for Timeboxes
-- [X] Validations for Work Session
-- [X] References for all of them
 
 # Seed
-- [x] Create the seed file (hmmm but what should we seed?)
-
-### Work Session
-
-## Future Features
-- [ ] You can filter task by labels in index (Add that user stories)
-- [ ] Make tasks recurring (maybe a bookmark field for the tasks object)
+- [x] Edit the seed file to include Tags and hours
 
 ### Styling
 - [ ] Use CSS variables
-- [ ] Purple Theme (Dark Theme)
-- [ ] Red Theme (Light Theme)
-- [ ] CSS Snippets
+- [ ] Purple Theme
+- [ ] Red Theme
+- [ ] Optional CSS Snippets
 
 ### Tags
+- [ ] You can filter task by labels in index (Add that user stories)
 - [ ] Convert tags to lowercase when adding them
 - [ ] Tags have individual show pages
 
-### Task
 
 ### Login
 - [ ] A user should be able to use the timeboxing page without login in.
@@ -104,7 +95,6 @@
 
 ### Tasks Dashboard Page
 - [ ] Sortable.js for dashboard cards
-
 
 ### Timeboxes Page
 - [ ] Set time boxes by writing on top of the card (not another page or a modal)

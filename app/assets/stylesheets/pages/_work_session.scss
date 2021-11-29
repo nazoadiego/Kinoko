@@ -1,11 +1,32 @@
 .card-timebox {
+  h1 {
+    color: #573BC9;
+  }
   padding-top: 10px;
   padding-left: 10px;
   color: #000;
   height: 95%;
   border: black 2px solid;
   border-radius: 2px;
-  h1 {
-    color: #573BC9;
+  animation: appear-timebox 1.5s ease;
+}
+
+.timebox-top {
+  height: 50%;
+  width: 100%;
+}
+.timebox-bottom {
+  height: 50%;
+  width: 100%;
+}
+
+@keyframes appear-timebox {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+  100% {
+    opacity: 1;
+    height: 95%;
   }
 }

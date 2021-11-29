@@ -1,0 +1,23 @@
+.btn-ghost-post {
+  background-color: black;
+  color: white;
+  border: 1px solid #FFFF;
+  padding: 0.45rem 0.45rem;
+  border-radius: 0px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: all 0.3s ease;
+  // display: inline-block;
+  font-family: monospace;
+}
+
+.btn-ghost-post:hover {
+  font-family: monospace;
+  background-color: #573BC9;
+  color:white;
+  opacity: 1;
+}
+
+.btn-light {
+  border: 1px solid black;
+}

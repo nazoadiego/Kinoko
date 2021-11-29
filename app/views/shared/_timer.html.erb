@@ -1,15 +1,8 @@
-<div class="container-timer">
-  <div class="timer row">
-    <%# <div class="timer__header">
-      <h1 class="timer__title">Do Homework</h1>
-    </div> %>
-    <div class="timer__item1 col">
-      <p class="timer__min"><%= timebox.minutes %></p>
-      <p class="timer__label">Min</p>
-    </div>
-    <div class="timer__item2 col">
-      <p class="timer__sec"><%= timebox.seconds %></p>
-      <p class="timer__label">Sec</p>
-    </div>
-  </div>
+<div class="timer__items">
+  <span>0</span><span class="timer__min"><%= timebox.minutes %></span>
+  <span>:</span>
+  <% if timebox.seconds < 10 %>
+    <span>0</span>
+  <% end %>
+  <span class="timer__sec"><%= timebox.seconds %></span>
 </div>

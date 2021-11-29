@@ -25,6 +25,12 @@ require("channels")
 // External imports
 import "bootstrap";
 
+// Sortable
+import { initSortable } from '../plugins/init_sortable'; // <-- add this
+
+initSortable(); // <-- add this
+
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { timerCustom } from '../components/timer';

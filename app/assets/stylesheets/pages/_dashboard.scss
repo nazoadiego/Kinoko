@@ -1,4 +1,16 @@
-.container-purple {
+.container-queue {
+  // background-color: #573BC9;
+  height: 90%;
+  width: 98%;
+  border-radius: 2px;
+  border: black 2px solid;
+  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+  h1 {
+    color: #573BC9;
+  }
+}
+
+.container-tasks {
   // background-color: #573BC9;
   height: 90%;
   width: 98%;
@@ -12,6 +24,7 @@
 
 .container-dark-purple {
   // background-color: #150F30;
+  position: relative;
   height: 98%;
   width: 98%;
   border-radius: 25px;

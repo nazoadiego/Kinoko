@@ -19,11 +19,15 @@
 ## Features Today
 
 ### Priority
-- [ ] After the queue of timeboxes is completed and it restarts, the duration of the first time box is overwritten to 1 hour.
+- [T] After the queue of timeboxes is completed and it restarts, the duration of the first time box is overwritten to 1 hour.
+- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Work on the modals appearance
-- [ ] Progress bar
+- [X] Sortable JS
+- [ ] Anime.js for mushroom forest, but more importantly for the background
 - [ ] Change the name of the containers css class of the dashboard
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
+- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
+
 
 ### Low priority
 - [D] Write the presentation
@@ -36,16 +40,15 @@
 - [ ] Snake button (for landing page to dashboard)
 - [ ] Bidimensional button for login
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
-- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Update a timebox
 - [ ] Active class for current timebox (a glowing border)
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
-- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
 - [ ] Mark Task as done in the work session page
 
 ### Done
 - [X] Fix delete a task (it was broken before doing partials it seems)
 - [X] Work on the login and sign up appearance
+- [X] Progress bar
 - [X] Sign out button on the navbar doesn't sign you out
 - [x] Changed navbar back into a component
 - [x] Changed navbar to black

@@ -1,5 +1,6 @@
 .orb {
-  animation: spin 4s linear infinite;
+  animation: spin 8s ease-in-out infinite;
+  position: absolute;
   width: 300px;
   height: 300px;
   margin-bottom: 40px;
@@ -51,5 +52,14 @@
 
 @keyframes spin
 {
-  100%{-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+  0% {
+    top: 270px;
+  }
+  50% {
+    top: 230px;
+  }
+  100% {
+    -webkit-transform: rotate(360deg); transform: rotate(360deg);
+    top: 270px;
+  }
 }

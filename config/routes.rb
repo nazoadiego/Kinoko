@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   post 'timeboxes/:id', to: 'timeboxes#start', as: 'timeboxes_start'
   post 'timeboxes/:id', to: 'timeboxes#end', as: 'timeboxes_end'
   get 'statistics', to: 'tasks#stats'
+  get 'help', to: 'pages#help'
+  get 'login', to: 'pages#login'
 end

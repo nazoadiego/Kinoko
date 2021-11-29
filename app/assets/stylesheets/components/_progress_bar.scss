@@ -15,7 +15,7 @@
 
 .skills {
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   padding: 0 20px;
 }
 
@@ -29,7 +29,7 @@
 
 .skill-per {
   height: 14px;
-  background-color: purple;
+  background-color: wheat;
   border-radius: 3px;
   position: relative;
   animation: fillBars 2.5s 1;
@@ -57,7 +57,7 @@
   content: "";
   position: absolute;
   width: 10px;
-  height: 10px;
+  // height: 10px;
   background: #f1f1f1;
   top: -20px;
   right: 0;
@@ -72,4 +72,3 @@
     width: 100%;
   }
 }
-

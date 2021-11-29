@@ -27,7 +27,7 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { timerCustom } from '../components/timer';
+import { timerCustom, taskTimer } from '../components/timer';
 
 const play = document.querySelector(".play-button")
 const stop = document.querySelector(".stop-button")
@@ -35,7 +35,7 @@ const stop = document.querySelector(".stop-button")
 play.addEventListener('click', () => {
   // Call your functions here, e.g:
   setInterval(timerCustom, 1000);
-  // setInterval(resetTimer, 1000);
+  setInterval(taskTimer, 1000);
   // initSelect2();
 });
 

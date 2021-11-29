@@ -27,6 +27,14 @@ class TasksController < ApplicationController
     redirect_to '/dashboard'
   end
 
+  def mark_as_done
+    @task = Task.find(params[:id])
+    @work_session = WorkSession.find(params[:work_session_id])
+    @task.done = true
+    @task.save
+    redirect_to work_session_path(@work_session)
+  end
+
   private
 
   def task_params

@@ -28,7 +28,7 @@ import "bootstrap";
 // Sortable
 import { initSortable } from '../plugins/init_sortable'; // <-- add this
 
-initSortable(); // <-- add this
+; // <-- add this
 
 
 // Internal imports, e.g:
@@ -38,16 +38,27 @@ import { timerCustom, taskTimer } from '../components/timer';
 const play = document.querySelector(".play-button")
 const stop = document.querySelector(".stop-button")
 
-play.addEventListener('click', () => {
-  // Call your functions here, e.g:
-  setInterval(timerCustom, 1000);
-  setInterval(taskTimer, 1000);
-  // initSelect2();
-});
+if(play){
+  play.addEventListener('click', () => {
+    // Call your functions here, e.g:
+    setInterval(timerCustom, 1000);
+    setInterval(taskTimer, 1000);
+    // initSelect2();
+  });
+}
 
-stop.addEventListener('click', () => {
-  // Call your functions here, e.g:
-  location.reload(true);
-  // setInterval(resetTimer, 1000);
-  // initSelect2();
+
+if(stop){
+  stop.addEventListener('click', () => {
+    // Call your functions here, e.g:
+    location.reload(true);
+    // setInterval(resetTimer, 1000);
+    // initSelect2();
+  });
+};
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  // [...]
+  initSortable;
 });

@@ -6,4 +6,8 @@ class Task < ApplicationRecord
   validates :title, uniqueness: true
   validates :minutes, :title, presence: true
   attribute :seconds, default: 0
+
+  def duration
+    return (minutes * 60) + seconds
+  end
 end

@@ -1,10 +1,34 @@
+.backborders {
+  height: 150px;
+  width: 300px;
+  margin: 16px 8px 0;
+  padding: 0;
+  border-radius: 2px;
+  border: 2px solid #000;
+}
+
 .card-task {
-  height: 14vh;
-  width: 34vh;
+  height: 150px;
+  width: 300px;
   position: relative;
-  margin: 12px 8px 0;
+  margin-top: -2px;
+  margin-left: -2px;
   background-color: #FFFFFF;
   color: #000;
   border-radius: 2px;
-  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+  border: 2px solid #000;
+}
+
+.card-task:hover{
+  transform: translate(10px,10px);
+  transition: 0.3s ease;
+}
+
+.snake-border:hover {
+  content: "";
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform .6s cubic-bezier(.19,1,.22,1);
 }

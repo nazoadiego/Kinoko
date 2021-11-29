@@ -3,10 +3,10 @@
   height: 90%;
   width: 98%;
   border-radius: 2px;
-  border: $gray 2px solid;
-  box-shadow: 0 0 2x rgba(0,0,0,0.8);
+  border: black 2px solid;
+  box-shadow: 0 0 2px rgba(0,0,0,0.8);
   h1 {
-    color: #FFFFFF;
+    color: #573BC9;
   }
 }
 
@@ -18,12 +18,12 @@
 }
 
 .container-white {
-  background-color: #FFFFFF;
-  color: #000;
+  background-color: white;
+  color: black;
   height: 90%;
   width: 95%;
-  border-radius: 25px;
-  box-shadow: 0 0 26px rgba(0,0,0,0.8);
+  border: black 2px solid;
+  border-radius: 2px;
   h1 {
     color: #573BC9;
   }

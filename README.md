@@ -22,6 +22,7 @@
 - [ ] After the queue of timeboxes is completed and it restarts, the duration of the first time box is overwritten to 1 hour.
 - [ ] Work on the modals appearance
 - [ ] Progress bar
+- [ ] Change the name of the containers css class of the dashboard
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
 
 ### Low priority

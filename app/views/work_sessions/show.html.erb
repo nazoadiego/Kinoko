@@ -32,7 +32,8 @@
             <%= link_to "Stop", work_session_path(@work_session), class: "btn btn-danger ml-3 stop-button" %>
           </div>
           <div class="red d-flex align-items-center justify-content-center" style="height: 50%">  <%# This height might be wrong because there is no defined height for parent %>
-            <h1>Progress Bar</h1>
+            <%# <h1>Progress Bar</h1> %>
+          <%= render 'shared/progress_bar' %>
           </div>
           <div class="red d-flex align-items-center justify-content-center" style="height: 25%">  <%# This height might be wrong because there is no defined height for parent %>
             <div class="btn btn-primary">

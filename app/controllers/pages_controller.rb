@@ -11,4 +11,10 @@ class PagesController < ApplicationController
     @work_session = WorkSession.new
     @timebox = Timebox.new
   end
+
+  def help
+  end
+
+  def login
+  end
 end

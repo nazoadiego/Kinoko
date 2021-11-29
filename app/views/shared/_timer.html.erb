@@ -1,8 +1,9 @@
 <div class="timer__items">
   <span>0</span><span class="timer__min"><%= timebox.minutes %></span>
   <span>:</span>
-  <% if timebox.seconds < 10 %>
-    <span>0</span>
+  <% if timebox.seconds > 10 %>
+    <span class="timer__sec"><%= timebox.seconds %></span>
+  <% else %>
+    <span>0</span><span class="timer__sec"><%= timebox.seconds %></span>
   <% end %>
-  <span class="timer__sec"><%= timebox.seconds %></span>
 </div>

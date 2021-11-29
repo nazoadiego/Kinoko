@@ -5,7 +5,7 @@
       <%= task.title %>
     </h5>
     <div>
-      <a class="mr-2 snake-border" data-toggle="modal" data-target="#exampleModal-<%= task.id %>" data-whatever="@mdo">
+      <a class="mr-2" data-toggle="modal" data-target="#exampleModal-<%= task.id %>" data-whatever="@mdo">
         Edit
       </a>
       <%= render "tasks/edit_modal", task: task %>

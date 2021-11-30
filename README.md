@@ -18,36 +18,54 @@
 
 ## Features Today
 
+
+### Front-end
+
 ### Priority
-- [T] After the queue of timeboxes is completed and it restarts, the duration of the first time box is overwritten to 1 hour.
-- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
-- [ ] Work on the modals appearance
+- [ ] Home icon should redirect you to dashboard
+- [ ] Add animation to statistics black container
+- [ ] Do the animation for the title on dashboard
+- [ ] Do the animation for the underline of the title on dashboard
+- [ ] Redesign work session view
+- [ ] Design statistics view
+- [ ] Design help view
+- [ ] Make the graphs look nice
 - [ ] Fix the timeboxes so that if it's 9 seconds it looks like this: 00:09 (temporary fix in place, gets messed up when js starts counting down)
+- [ ] Work on the modals appearance
 - [ ] Sortable JS, add it again to the cards
 - [ ] Anime.js for mushroom forest, but more importantly for the background
 - [ ] Change the name of the containers css class of the dashboard
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
+- [ ] Active class for current timebox
+
+### Low priority
+- [ ] Mushroom forest orbs
+- [ ] Make the grid of tasks and and title/logo more responsive
+- [ ] Replace bootstrap buttons with nicer ones.
+- [ ] Work on the landing page
+- [ ] Customize the scroll bar
+- [ ] Hide navbar on login
+- [ ] Minutes and seconds in the form: make it look nice
+- [ ] Snake button
+- [ ] Hide overflow-x just for dashboard, maybe work sessions
+
+#### Back-end
+- [ ] Implement a js chart library
+- [ ] Once a timebox takes on the "active" css class, it doesn't switch back to normal.
+- [ ] A task shouldn't be able to be created with negative minutes or seconds
+- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
+- [ ] Update a timebox
+
 
 
 ### Low priority
 - [D] Write the presentation
 - [D] Reply to yair
-- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
-- [ ] Work on the landing page
-- [ ] Replace bootstrap buttons with nicer ones.
-- [ ] Customize the scroll bar
-- [ ] Minutes and seconds in the form: make it look nice
-- [ ] Hide navbar on login
-- [ ] Snake button (for landing page to dashboard)
-- [ ] Bidimensional button for login
-- [ ] A task shouldn't be able to be created with negative minutes or seconds
-- [ ] Update a timebox
-- [ ] Active class for current timebox (a glowing border)
-- [ ] Hide overflow-x just for dashboard, maybe work sessions
-- [ ] Mark Task as done in the work session page
+
 
 ### Done
 - [X] Fix delete a task (it was broken before doing partials it seems)
+- [X] Mark Task as done in the work session page
 - [X] Work on the login and sign up appearance
 - [X] Progress bar
 - [X] Sign out button on the navbar doesn't sign you out
@@ -72,7 +90,8 @@
 - [X] Edit a task
 - [X] Show a Work session
 
-
+### Future Features
+- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
 
 # Seed
 - [x] Edit the seed file to include Tags and hours

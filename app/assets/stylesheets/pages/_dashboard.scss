@@ -15,14 +15,12 @@
   height: 90%;
   width: 98%;
   border-radius: 2px;
-  border: black 2px solid;
-  box-shadow: 0 0 2px rgba(0,0,0,0.8);
   h1 {
     color: #573BC9;
   }
 }
 
-.container-dark-purple {
+.container-tasks-grid {
   // background-color: #150F30;
   position: relative;
   height: 98%;
@@ -60,4 +58,3 @@
     grid-template-columns: auto;
   }
 }
-

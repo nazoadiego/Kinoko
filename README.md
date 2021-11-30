@@ -22,16 +22,17 @@
 - [T] After the queue of timeboxes is completed and it restarts, the duration of the first time box is overwritten to 1 hour.
 - [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Work on the modals appearance
-- [X] Sortable JS
+- [ ] Fix the timeboxes so that if it's 9 seconds it looks like this: 00:09 (temporary fix in place, gets messed up when js starts counting down)
+- [ ] Sortable JS, add it again to the cards
 - [ ] Anime.js for mushroom forest, but more importantly for the background
 - [ ] Change the name of the containers css class of the dashboard
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
-- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
 
 
 ### Low priority
 - [D] Write the presentation
 - [D] Reply to yair
+- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
 - [ ] Work on the landing page
 - [ ] Replace bootstrap buttons with nicer ones.
 - [ ] Customize the scroll bar

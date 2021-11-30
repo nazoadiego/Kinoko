@@ -8,6 +8,16 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.user = current_user
     if @task.save
+      params[:task][:label_ids].shift
+      params[:task][:label_ids].each do |label_id|
+        @task.labels << Label.find(label_id)
+        # TaskLabel.create(
+        #   label_id: label_id,
+        #   task: @task
+        # )
+      end
+      new_label_name = params[:task][:new_label]
+      @task.labels << Label.create!(name: new_label_name)
       redirect_to '/dashboard'
     else
       flash[:alert] = 'The task already exists'
@@ -38,6 +48,9 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :minutes, :seconds)
+    params.require(:task).permit(
+      :title, :minutes, :seconds,
+      labels_attributes: []
+    )
   end
 end

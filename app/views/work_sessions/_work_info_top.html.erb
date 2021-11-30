@@ -1,0 +1,25 @@
+<div class="red d-flex justify-content-center align-items-center" style="height: 50%">  <%# This height might be wrong because there is no defined height for parent %>
+  <div>
+    <h1>
+      <%= @work_session.task.title %>
+    </h1>
+  </div>
+</div>
+<div class="red d-flex justify-content-center align-items-center" style="height: 50%"> <%# This height might be wrong because there is no defined height for parent %>
+  <div>
+    <h1>
+      Tags:
+      <%= @work_session.task.category %>
+    </h1>
+    <h1 class="taskmins">
+      <%= @work_session.task.minutes %>
+      minutes
+    </h1>
+    <h1 class="tasksecs">
+      <%= @work_session.task.seconds %>
+      seconds
+    </h1>
+    <p class="taskduration" data-duration="<%= (@work_session.task.duration * 1000) %>" hidden></p>
+    <p class="tasktimes" hidden></p>
+  </div>
+</div>

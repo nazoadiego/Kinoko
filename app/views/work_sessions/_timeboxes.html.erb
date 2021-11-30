@@ -1,0 +1,23 @@
+<% order = 1 %>
+<% @timeboxes.each do |timebox| %>
+  <% timebox.order = order %>
+  <% timebox.save %>
+  <% order += 1 %>
+  <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
+    <div class="card-timebox d-flex flex-column">
+      <div class="timebox-top red d-flex justify-content-between pr-4">
+        <h2><%= timebox.title %></h2>
+        <%= link_to timeboxes_path(timebox), method: :delete, id: timebox.id, data: {confirm: "Are you sure?"}, class: "card-remove-link" do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
+      </div>
+      <p class="remainder" data-timeboxduration="<%= (timebox.duration * 1000) %>" hidden></p>
+      <p class="settimes" hidden></p>
+      <p class="timeminutes" data-minutes="<%= timebox.minutes %>" hidden></p>
+      <p class="timeseconds" data-seconds="<%= timebox.seconds %>" hidden></p>
+      <div class="timebox-bottom red d-flex justify-content-end pr-4">
+        <%= render "shared/timer", timebox: timebox %>
+      </div>
+    </div>
+  </div>
+<% end %>

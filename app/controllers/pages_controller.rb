@@ -17,4 +17,13 @@ class PagesController < ApplicationController
 
   def login
   end
+
+  def mushroom_forest
+    @tasks = Task.where(user: current_user, done: true )
+    @total_duration = 0
+    @tasks.each do |task|
+      @total_duration += task.minutes * 60
+      @total_duration += task.seconds
+    end
+  end
 end

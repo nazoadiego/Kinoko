@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   get 'statistics', to: 'tasks#stats'
   get 'help', to: 'pages#help'
   get 'login', to: 'pages#login'
+  get 'mushroom_forest', to:'pages#mushroom_forest', as: :mushroom_forest
 end

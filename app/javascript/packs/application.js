@@ -28,17 +28,17 @@ import "bootstrap";
 // Sortable
 import { initSortable } from '../plugins/init_sortable'; // <-- add this
 
-; // <-- add this
 
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { timerCustom, taskTimer } from '../components/timer';
+import { initAnimeJs } from "../plugins/animejs";
 
 const play = document.querySelector(".play-button")
 const stop = document.querySelector(".stop-button")
 
-if(play){
+if (play) {
   play.addEventListener('click', () => {
     // Call your functions here, e.g:
     setInterval(timerCustom, 1000);
@@ -48,7 +48,7 @@ if(play){
 }
 
 
-if(stop){
+if (stop) {
   stop.addEventListener('click', () => {
     // Call your functions here, e.g:
     location.reload(true);
@@ -61,4 +61,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
   initSortable;
+  initAnimeJs();
 });

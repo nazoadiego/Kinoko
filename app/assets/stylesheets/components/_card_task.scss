@@ -9,6 +9,16 @@
   border: 2px solid #000;
   animation: appear 1.5s ease;
   position: relative;
+
+  p {
+    font-weight: lighter;
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    margin-top: 2px;
+  }
 }
 
 @keyframes appear {

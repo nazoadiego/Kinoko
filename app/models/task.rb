@@ -12,4 +12,8 @@ class Task < ApplicationRecord
   def duration
     return (minutes * 60) + seconds
   end
+
+  def dur_hours
+    return ((minutes.to_f / 60.0) + (seconds.to_f / 3600.0))
+  end
 end

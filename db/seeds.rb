@@ -22,13 +22,15 @@ Task.create(
   title: "Learning Korean",
   minutes: 60,
   seconds: 0,
+  durhours: 60.0 / 60,
   user: User.last
 )
 
 Task.create(
   title: "Programming",
   minutes: 120,
-  seconds: 80,
+  seconds: 40,
+  durhours: (120.0 / 60) + (40.0 / 3600),
   user: User.last
 )
 
@@ -36,6 +38,7 @@ Task.create(
   title: "Grocery Shopping",
   minutes: 180,
   seconds: 0,
+  durhours: 180.0 / 60,
   user: User.last
 )
 
@@ -43,6 +46,7 @@ Task.create(
   title: "Reading",
   minutes: 150,
   seconds: 40,
+  durhours: (150.0 / 60) + (40.0 / 3600),
   user: User.last
 )
 
@@ -50,6 +54,7 @@ Task.create(
   title: "Walking Fiona",
   minutes: 140,
   seconds: 50,
+  durhours: (140.0 / 60) + (50.0 / 3600),
   user: User.last
 )
 

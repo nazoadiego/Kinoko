@@ -3,6 +3,7 @@
     <div class="row w-100">
       <div class="green col-6">
         <div class="blue d-flex flex-column justify-content-center" style="height: 50%">
+<<<<<<< HEAD
           <div class="red d-flex justify-content-center align-items-center" style="height: 50%">  <%# This height might be wrong because there is no defined height for parent %>
             <div>
               <h1>
@@ -14,7 +15,9 @@
             <div>
               <h1>
                 Tags:
-                <%= @work_session.task.category %>
+                <% @work_session.task.labels.each do |label| %>
+                  <h3><%= label.name %></h3>
+                <% end %>
               </h1>
               <h1 class="taskmins">
                 <%= @work_session.task.minutes %>
@@ -28,24 +31,12 @@
               <p class="tasktimes" hidden></p>
             </div>
           </div>
+=======
+          <%= render "work_info_top" %>
+>>>>>>> master
         </div>
         <div class="blue" style="height: 50%">
-          <div class="red d-flex align-items-center justify-content-center" style="height: 25%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div class="btn btn-info ml-3 play-button">
-            <%# just testing it on this clean button %>
-              Play
-            </div>
-            <%= link_to "Stop", work_session_path(@work_session), class: "btn btn-danger ml-3 stop-button" %>
-          </div>
-          <div class="red d-flex align-items-center justify-content-center" style="height: 50%">  <%# This height might be wrong because there is no defined height for parent %>
-            <%# <h1>Progress Bar</h1> %>
-          <%= render 'shared/progress_bar' %>
-          </div>
-          <div class="red d-flex align-items-center justify-content-center" style="height: 25%">  <%# This height might be wrong because there is no defined height for parent %>
-            <div id="doneTask">
-              <%= link_to 'Mark as done', "/work_sessions/#{@work_session.id}/task/#{@work_session.task.id}", class: "btn btn-primary", method: :patch %>
-            </div>
-          </div>
+          <%= render "work_info_bottom" %>
         </div>
       </div>
       <div class="green col-6">
@@ -56,29 +47,7 @@
           </div>
         </div>
         <div class="blue timelist d-flex flex-column justify-content-center align-items-center" style="height: 90%">
-          <% order = 1 %>
-          <% @timeboxes.each do |timebox| %>
-            <% timebox.order = order %>
-            <% timebox.save %>
-            <% order += 1 %>
-            <div class="red" style="height: 25%; width: 95%">  <%# This height might be wrong because there is no defined height for parent %>
-              <div class="card-timebox d-flex flex-column">
-                <div class="timebox-top red d-flex justify-content-between pr-4">
-                  <h2><%= timebox.title %></h2>
-                  <%= link_to timeboxes_path(timebox), method: :delete, id: timebox.id, data: {confirm: "Are you sure?"}, class: "card-remove-link" do %>
-                    <i class="fas fa-trash"></i>
-                  <% end %>
-                </div>
-                <p class="remainder" data-timeboxduration="<%= (timebox.duration * 1000) %>" hidden></p>
-                <p class="settimes" hidden></p>
-                <p class="timeminutes" data-minutes="<%= timebox.minutes %>" hidden></p>
-                <p class="timeseconds" data-seconds="<%= timebox.seconds %>" hidden></p>
-                <div class="timebox-bottom red d-flex justify-content-end pr-4">
-                  <%= render "shared/timer", timebox: timebox %>
-                </div>
-              </div>
-            </div>
-          <% end %>
+          <%= render "timeboxes" %>
         </div>
       </div>
     </div>

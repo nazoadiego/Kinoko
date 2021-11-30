@@ -10,7 +10,7 @@
           <%= render "tasks/new_modal", task: @task %>
         </div>
         <div class="blue d-flex justify-content-around" style="height: 85%"> <%# This height might be wrong because there is no defined height for parent %>
-          <div class="container-dark-purple">
+          <div class="container-tasks-grid">
             <div class="task-grid">
               <% @tasks.each do |task| %>
                 <%= render "tasks_card", task: task %>

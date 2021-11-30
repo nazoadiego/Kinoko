@@ -14,7 +14,9 @@
             <div>
               <h1>
                 Tags:
-                <%= @work_session.task.category %>
+                <% @work_session.task.labels.each do |label| %>
+                  <h3><%= label.name %></h3>
+                <% end %>
               </h1>
               <h1 class="taskmins">
                 <%= @work_session.task.minutes %>

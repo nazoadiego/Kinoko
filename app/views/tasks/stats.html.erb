@@ -1,0 +1,40 @@
+<h1>Statistics</h1>
+
+<div class="chart1">
+  <h3>Hours per Label</h3>
+  <div class="hrsperlabel">
+    <%= line_chart @labels.map { |label|
+      {name: label.name, data: label.tasks.group_by_day(:timestamp).sum(:durhours)}
+    }, round: 2, zeros: true, xtitle: "Time", ytitle: "Hours Worked" %>
+  </div>
+</div>
+
+<div class="chart2">
+  <h3>Hours per Day</h3>
+  <div class="hrsperday">
+    <%= line_chart @task_durations, round: 2, zeros: true, xtitle: "Time", ytitle: "Hours Worked"  %>
+  </div>
+</div>
+
+<div class="chart3">
+  <h3>Labels</h3>
+  <div class="labelpie">
+    <%= pie_chart @labeltasks, donut: true, round: 2, zeros: true %>
+  </div>
+</div>
+
+<div class="chart4">
+  <h3>Progress per Label towards Goal</h3>
+  <div class="labelprogress">
+    <% @labels.each do |label| %>
+      <div class="skills">
+        <div class="skill">
+          <div class="skill-name"><%= label.name %></div>
+            <div class="skill-bar">
+            <div class="skill-per" per="<%= ((label.donetasksdur / (label.donetasksdur + 10)) * 100).to_i %>%" style="max-width:<%= ((label.donetasksdur / (label.donetasksdur + 10)) * 100).to_i %>%"></div>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

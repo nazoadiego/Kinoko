@@ -1,17 +1,17 @@
-<div class="full-height">
-  <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100">
-    <%= render "dashboard_top" %>
-    <div class="dash-bottom red d-flex justify-content-center align-items-center" style="height: 30%">
-      <div class="container-white">
-        <div class="slider">
-          <div class="ml-4">
-            <h1 class="mt-1">Statistics</h1>
-            <h3>Programming: 1 hour</h2>
-            <h3>Korean: 1 hour</h2>
-            <h3>Find purpose: it's a life long journey</h2>
-          </div>
+<div class="full-height d-flex justify-content-center align-items-center">
+  <div class="row blue"style="width: 95%">
+    <div class="col-8 red" style="padding-right: 0">
+      <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100 green">
+        <div class="blue d-flex align-items-center justify-content-center" style="height: 35vh">
+          <%= render "dashboard_top" %>
+        </div>
+        <div class="blue" style="height: 65vh">
+          <%= render "dashboard_bottom" %>
         </div>
       </div>
+    </div>
+    <div class="col-4 red pl-0">
+      <%= render "tasks_stats" %>
     </div>
   </div>
 </div>

@@ -9,7 +9,6 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.user = current_user
     @task.durhours = @task.dur_hours
-    s
     if @task.save
       params[:task][:label_ids].shift
       params[:task][:label_ids].each do |label_id|

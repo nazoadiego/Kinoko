@@ -7,8 +7,13 @@
 </div>
 <div class="red d-flex justify-content-center align-items-center" style="height: 50%"> <%# This height might be wrong because there is no defined height for parent %>
   <div>
+    <h4>
+      <% @work_session.task.labels.each do |label| %>
+      #<%= label.name %>
+      <% end %>
+    </h4>
+
     <h1>
-      Tags:
       <%= @work_session.task.category %>
     </h1>
     <h1 class="taskmins">

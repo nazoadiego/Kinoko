@@ -18,6 +18,7 @@ class TasksController < ApplicationController
         #   task: @task
         # )
       end
+
       new_label_name = params[:task][:new_label]
       new_label_goal = params[:task][:new_label_goal]
       @task.labels << Label.create!(name: new_label_name, goal: new_label_goal) if new_label_name != ""

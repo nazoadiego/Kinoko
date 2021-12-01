@@ -62,5 +62,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
   // initSortable();
-  // initAnimeJs();
+  initAnimeJs();
 });

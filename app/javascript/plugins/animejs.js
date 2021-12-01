@@ -6,7 +6,7 @@ const initAnimeJs = () => {
   if (forest) {
     for (let i = 1; i <= forest.dataset.duration / 3600; i++) {
       const blocks = document.createElement('div');
-      blocks.classList.add('block');
+      blocks.classList.add('forest-orb');
       forest.appendChild(blocks);
     }
     console.log(forest.dataset.duration)
@@ -14,15 +14,15 @@ const initAnimeJs = () => {
     let button = document.querySelector("#grow-forest");
     button.addEventListener('click', (event) => {
       anime({
-        targets: '.block',
+        targets: '.forest-orb',
         translateX: function () {
-          return anime.random(-700, 700)
+          return anime.random(-400, 400)
         },
         translateY: function () {
-          return anime.random(-700, 700)
+          return anime.random(-400, 400)
         },
         scale: function () {
-          return anime.random(1, 5)
+          return anime.random(1, 2)
         }
       })
     })

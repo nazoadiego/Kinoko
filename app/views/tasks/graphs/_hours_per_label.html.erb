@@ -1,0 +1,8 @@
+<div class="chart1">
+  <h3>Hours per Label</h3>
+  <div class="hrsperlabel">
+    <%= line_chart @labels.map { |label|
+      {name: label.name, data: label.tasks.group_by_day(:timestamp).sum(:durhours)}
+    }, round: 2, zeros: true, xtitle: "Time", ytitle: "Hours Worked" %>
+  </div>
+</div>

@@ -4,31 +4,37 @@
     <h5>
       <%= task.title %>
     </h5>
-    <div>
-      <a class="mr-2" data-toggle="modal" data-target="#exampleModal-<%= task.id %>" data-whatever="@mdo">
-        Edit
-      </a>
-      <%= render "tasks/edit_modal", task: task %>
-      <%= link_to task_path(task), method: :delete, data: {confirm: "Are you sure?"} do %>
-        <i class="fas fa-trash"></i>
+  <div>
+  <div style="position:absolute; left:10px; top:40px;">
+    <h6>
+      <% task.labels.each do |label| %>
+     #<%= label.name %>
       <% end %>
+    </h6>
+  </div>
+
+        <%= render "shared/dropdown_menu", task: task%>
+
+        <%= render "tasks/edit_modal", task: task %>
+
+
+
     </div>
   </div>
   <div>
-    <div class="d-flex justify-content-around align-items-center">
-      <div class="mb-4 ml-2">
-        <%= task.minutes %> minutes
+    <div class="d-flex justify-content-sm-between ">
+      <div class="mb-4 ml-4">
+        <p> <%= task.minutes %> mins </p>
       </div>
         <% if task.work_session != nil %>
-          <%= link_to work_session_path(task.work_session), class: "btn btn-primary mr-2 mb-3" do %>
+          <%= link_to work_session_path(task.work_session), class: "btn btn-primary btn-sm" do %>
             Start Timebox
           <% end %>
         <% else %>
-          <%= link_to task_work_sessions_path(task), method: :post, class: "btn btn-primary mr-2 mb-3" do %>
+          <%= link_to task_work_sessions_path(task), method: :post, class: "btn btn-primary btn-sm" do %>
             Start Timebox
           <% end %>
         <% end %>
     </div>
-          <%= render 'shared/label_icon' %>
   </div>
 </div>

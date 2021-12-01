@@ -27,12 +27,12 @@ import "bootstrap";
 import "chartkick/chart.js";
 
 // Sortable
-import { initSortable } from '../plugins/init_sortable'; // <-- add this
 
 
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { initSortable } from '../plugins/init_sortable'; // <-- add this
 import { timerCustom, taskTimer } from '../components/timer';
 import { initAnimeJs } from "../plugins/animejs";
 
@@ -61,6 +61,6 @@ if (stop) {
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
-  initSortable();
-  initAnimeJs();
+  // initSortable();
+  // initAnimeJs();
 });

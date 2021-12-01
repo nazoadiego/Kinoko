@@ -51,8 +51,9 @@ class TasksController < ApplicationController
   end
 
   def stats
-    @labels = Label.all
-    @tasks = Task.all
+    @tasks = current_user.tasks
+    @labels = @tasks.map { |task| task.labels }
+    @labels = @labels.flatten.uniq
     @task_durations = @tasks.map do |task|
       if task.done == true
         [task.timestamp, task.dur_hours]
@@ -61,12 +62,12 @@ class TasksController < ApplicationController
       end
     end
     @labeltasks = @labels.map do |label|
-      [label.name, tasks(label).sum { |task| task.durhours }]
+      [label.name, tasks(label, current_user).sum { |task| task.durhours }]
     end
   end
 
-  def tasks(label)
-    @labeltasks = label.tasks.filter { |task| task if task.done }
+  def tasks(label, user)
+    @labeltasks = label.tasks.filter { |task| task if task.done && (task.user == user) }
   end
 
   private

@@ -79,3 +79,11 @@
     </div>
   </div>
 </div>
+
+
+
+              <%= f.input :title, label: "Title" %>
+              <%= f.input :minutes, label: 'Min/Sec', input_html: {class: 'span3', maxlength: 1}, wrapper_html: {class: 'controls controls-row'} do %>
+                <%= f.input_field :minutes %>
+                <%= f.input_field :seconds %>
+              <% end %>

@@ -4,7 +4,7 @@ User.destroy_all
 labels = %w[House\ Chores Languages School Painting Exercise Break]
 
 labels.each do |label|
-  Label.create!(name: label)
+  Label.create!(name: label, goal: rand(6..10))
 end
 
 5.times do

@@ -90,16 +90,38 @@ const taskTimer = () => {
   console.log(timeDiffSec === 0);
   taskmins.textContent = `${timeDiff.rMinutes} mins`;
   tasksecs.textContent = `${timeDiff.rSeconds} secs`;
+
+  // progress bar
+  let skillper = document.querySelector(".skill-per");
+  let dur = (timeDiff.rMinutes * 60) + timeDiff.rSeconds;
+  let tasksec = document.querySelector(".tasksecss").dataset.tasksecs;
+  if (skillper) {
+    skillper.setAttribute("per", `${parseInt((1 - (dur / tasksec)) * 100)}%`);
+    skillper.setAttribute("style", `max-width:${(1 - (dur / tasksec)) * 100}%`);
+  } else {
+    let newDiv = document.createElement("div");
+    newDiv.classList.add("skill-per");
+    newDiv.setAttribute("per", `${parseInt((1 - (dur / tasksec)) * 100)}%`);
+    newDiv.setAttribute("style", `max-width:${(1 - (dur / tasksec)) * 100}%`);
+    const skill = document.querySelector(".skill-bar");
+    skill.insertAdjacentElement('beforeend', newDiv);
+  };
+  //
+
+
   const done = document.getElementById('doneTask');
   if (timeDiffSec === 0){
-    done.classList.add("canbedone");
     taskmins.textContent = `0 mins`;
     tasksecs.textContent = `0 secs`;
+    skillper.setAttribute("per", `100%`);
+    skillper.setAttribute("style", `max-width:100%`);
   };
 
   if (timeDiffSec < 0) {
     taskmins.textContent = `0 mins`;
     tasksecs.textContent = `0 secs`;
+    skillper.setAttribute("per", `100%`);
+    skillper.setAttribute("style", `max-width:100%`);
   };
   // return timeDiff;
   // console.log(timeDiff);

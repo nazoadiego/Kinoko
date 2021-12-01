@@ -18,7 +18,8 @@ class TasksController < ApplicationController
         # )
       end
       new_label_name = params[:task][:new_label]
-      @task.labels << Label.create!(name: new_label_name) if new_label_name != ""
+      new_label_goal = params[:task][:new_label_goal]
+      @task.labels << Label.create!(name: new_label_name, goal: new_label_goal) if new_label_name != ""
       redirect_to '/dashboard'
     else
       flash[:alert] = 'The task already exists'
@@ -59,8 +60,12 @@ class TasksController < ApplicationController
       end
     end
     @labeltasks = @labels.map do |label|
-      [label.name, label.tasks.sum { |task| task.durhours }]
+      [label.name, tasks(label).sum { |task| task.durhours }]
     end
+  end
+
+  def tasks(label)
+    @labeltasks = label.tasks.filter { |task| task if task.done }
   end
 
   private

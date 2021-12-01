@@ -1,40 +1,23 @@
-<h1>Statistics</h1>
-
-<div class="chart1">
-  <h3>Hours per Label</h3>
-  <div class="hrsperlabel">
-    <%= line_chart @labels.map { |label|
-      {name: label.name, data: label.tasks.group_by_day(:timestamp).sum(:durhours)}
-    }, round: 2, zeros: true, xtitle: "Time", ytitle: "Hours Worked" %>
-  </div>
-</div>
-
-<div class="chart2">
-  <h3>Hours per Day</h3>
-  <div class="hrsperday">
-    <%= line_chart @task_durations, round: 2, zeros: true, xtitle: "Time", ytitle: "Hours Worked"  %>
-  </div>
-</div>
-
-<div class="chart3">
-  <h3>Labels</h3>
-  <div class="labelpie">
-    <%= pie_chart @labeltasks, donut: true, round: 2, zeros: true %>
-  </div>
-</div>
-
-<div class="chart4">
-  <h3>Progress per Label towards Goal</h3>
-  <div class="labelprogress">
-    <% @labels.each do |label| %>
-      <div class="skills">
-        <div class="skill">
-          <div class="skill-name"><%= label.name %></div>
-            <div class="skill-bar">
-            <div class="skill-per" per="<%= ((label.donetasksdur / (label.goal)) * 100).to_i %>%" style="max-width:<%= ((label.donetasksdur / (label.goal)) * 100).to_i %>%"></div>
-            </div>
-        </div>
+<div class="full-height d-flex justify-content-center align-items-center">
+  <div class="row blue"style="width: 90vw; height: 100vh">
+    <div class="col-8 red">
+      <div class="green pl-4 pt-2" style="height: 10vh; width: 90%">
+        <h1 class="purple-text">Statistics</h1>
       </div>
-    <% end %>
+      <div class="green pl-4" style="height: 40vh; width: 90%">
+        <%= render "tasks/graphs/hours_per_label" %>
+      </div>
+      <div class="green pl-4" style="height: 60vh; width: 90%">
+        <%= render "tasks/graphs/hours_per_day" %>
+      </div>
+    </div>
+    <div class="col-4 red">
+      <div class="green pr-4 pt-4" style="height: 50%">
+        <%= render "tasks/graphs/labels_comparison" %>
+      </div>
+      <div class="green pr-4 pt-4" style="height: 50%">
+        <%= render "tasks/graphs/labels_progress_bar" %>
+      </div>
+    </div>
   </div>
 </div>

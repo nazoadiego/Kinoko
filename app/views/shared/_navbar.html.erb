@@ -9,15 +9,28 @@
 
   <li>
     <a href="<%= dashboard_path %> ">
-      <span><i class="fas fa-home"></i></span>
+      <div class="navbar-icon d-flex justify-content-center">
+        <span><i class="fas fa-home"></i></span>
+      </div>
       <span class="title d-flex align-items-center">Home</span>
     </a>
   </li>
 
   <li>
-    <a href="<%=  %>">
-      <span><i class="fas fa-tree"></i></span>
-      <span class="title d-flex align-items-center">Dashboard</span>
+    <a href="<%= statistics_path %>">
+      <div class="navbar-icon d-flex justify-content-center">
+        <span><i class="fas fa-chart-line"></i></span>
+      </div>
+      <span class="title d-flex align-items-center">Statistics</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="<%= mushroom_forest_path %>">
+      <div class="navbar-icon d-flex justify-content-center">
+        <span><i class="fas fa-tree"></i></span>
+      </div>
+      <span class="title d-flex align-items-center">Mushroom Forest</span>
     </a>
   </li>
 
@@ -36,16 +49,12 @@
     </a>
   </li> %>
 
-    <li>
-      <a href="<%= statistics_path %>">
-        <span><i class="fas fa-chart-line"></i></span>
-        <span class="title d-flex align-items-center">Statistics</span>
-      </a>
-    </li>
 
     <li>
       <%= link_to destroy_user_session_path, method: :delete do %>
-        <span><i class="fas fa-sign-out-alt"></i></span>
+        <div class="navbar-icon d-flex justify-content-center" style="padding-left: 4px;">
+          <span><i class="fas fa-sign-out-alt"></i></span>
+        </div>
         <span class="title d-flex align-items-center">Sign out</span>
       <% end %>
     </li>

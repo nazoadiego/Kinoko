@@ -25,8 +25,8 @@
 - [ ] Redesign work session view
 - [ ] Design statistics view
 - [ ] Design help view
-- [ ] Home icon should redirect you to dashboard (remove landing page from navbar)
-- [ ] Add icons to help and mushroom forest
+- [ ] Fix the direction of the dropdown of the task card
+- [ ] Add icons to help
 - [ ] Do the animation for the title on dashboard
 - [ ] Do the animation for the underline of the title on dashboard
 - [ ] Check the margin/padding of the task cards
@@ -34,13 +34,13 @@
 - [ ] Help page the grid are boxes that grow from top to bottom, but also left to right and such
 - [ ] Statistics task boxes grow one after another (animation-delay)
 - [ ] Make the graphs look nice
-- [ ] Fix the timeboxes so that if it's 9 seconds it looks like this: 00:09 (temporary fix in place, gets messed up when js starts counting down)
 - [ ] Sortable JS, add it again to the cards
 - [ ] Anime.js for the background and maybe effects
 - [ ] Change the name of the containers css class of the dashboard
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
 - [ ] Active class for current timebox
 - [ ] Mushroom forest orbs
+- [ ] Add overflow scroll to the task grid
 - [ ] Check that it looks good on fanny's laptop (we could just look at the dimensions of her screen)
 
 ### Low priority
@@ -56,19 +56,25 @@
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
 
 #### Back-end
+- [T] Fix the timeboxes so that if it's 9 seconds it looks like this: 00:09 (temporary fix in place, gets messed up when js starts counting down)
+- [T] Dashboard should show the tasks for the current user, not all tasks
+- [ ] Edit a task should allow you edit the tags.
 - [ ] Once a timebox takes on the "active" css class, it doesn't switch back to normal.
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
 - [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
-- [ ] Update a timebox
-
+- [B] Update a timebox
 
 
 ### Low priority
+- [X] Home icon should redirect you to dashboard (remove landing page from navbar)
+- [X] Add icons mushroom forest
+- [X] Align navbar icons correctly
 - [D] Write the presentation
 - [D] Reply to yair
 
 
 ### Done
+- [X] Do the backend to display tags on dashboard
 - [X] Anime.js for mushroom forest
 - [X] Implement a js chart library
 - [X] Fix delete a task (it was broken before doing partials it seems)

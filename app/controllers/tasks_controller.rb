@@ -38,7 +38,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to '/dashboard'
+    redirect_to dashboard_path
   end
 
   def mark_as_done

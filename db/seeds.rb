@@ -1,6 +1,12 @@
 Label.destroy_all
 User.destroy_all
 
+User.create!(
+  email: "admin@mail.kinoko",
+  password: "123123",
+  username: "MaxSettings"
+)
+
 labels = %w[House\ Chores Languages School Painting Exercise Break]
 
 labels.each do |label|

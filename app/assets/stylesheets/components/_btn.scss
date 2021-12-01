@@ -25,7 +25,27 @@
 .btn-primary {
   font-weight: lighter;
   // margin-left: 140px;
+  // margin-bottom: 15px;
+  // margin-right: 20px;
+  // margin-top: 2px;
+}
+
+.btn1-primary {
+  font-weight: lighter;
+  // margin-left: 140px;
   margin-bottom: 15px;
   margin-right: 20px;
   margin-top: 2px;
+}
+
+.btn1-primary {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  cursor: none;
+
+}
+.btn1-primary:hover {
+  color: white;
+
 }

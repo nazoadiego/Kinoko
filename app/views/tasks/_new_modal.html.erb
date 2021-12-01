@@ -17,6 +17,7 @@
                 <%= f.input_field :seconds %>
               <% end %>
               <%= text_field_tag 'task[new_label]', nil, placeholder: 'Name of new Label' %>
+              <%= number_field_tag 'task[new_label_goal]', nil, placeholder: 'Goal of new Label' %>
               <%= f.collection_check_boxes :label_ids, Label.all, :id, :name %>
               <div class="modal-footer">
                 <%= f.submit 'Save Changes', class: 'btn btn-primary'%>

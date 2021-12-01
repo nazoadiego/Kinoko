@@ -31,7 +31,7 @@
         <div class="skill">
           <div class="skill-name"><%= label.name %></div>
             <div class="skill-bar">
-            <div class="skill-per" per="<%= ((label.donetasksdur / (label.donetasksdur + 10)) * 100).to_i %>%" style="max-width:<%= ((label.donetasksdur / (label.donetasksdur + 10)) * 100).to_i %>%"></div>
+            <div class="skill-per" per="<%= ((label.donetasksdur / (label.goal)) * 100).to_i %>%" style="max-width:<%= ((label.donetasksdur / (label.goal)) * 100).to_i %>%"></div>
             </div>
         </div>
       </div>

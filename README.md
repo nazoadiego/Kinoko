@@ -63,6 +63,7 @@
 - [ ] Update a timebox
 - [ ] Dashboard should show the tasks for the current user, not all tasks
 - [ ] Edit a task should allow you edit the tags.
+- [ ] Do the backend to display tags on dashboard
 
 
 ### Low priority

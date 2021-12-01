@@ -62,7 +62,7 @@ class TasksController < ApplicationController
       end
     end
     @labeltasks = @labels.map do |label|
-      [label.name, tasks(label, current_user).sum { |task| task.dur_hours }]
+      [label.name, tasks(label, current_user).sum { |task| task.durhours }]
     end
   end
 

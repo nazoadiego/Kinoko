@@ -6,7 +6,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @tasks = Task.all
+    @user = current_user
+    @tasks = @user.tasks
     @task = Task.new
     @work_session = WorkSession.new
     @timebox = Timebox.new

@@ -4,7 +4,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    @tasks = Task.all
+    @user = current_user
+    @tasks = @user.tasks
     @task = Task.new(task_params)
     @task.user = current_user
     @task.durhours = @task.dur_hours

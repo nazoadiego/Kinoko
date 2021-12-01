@@ -19,18 +19,23 @@ function getTimeDifference(start, end) {
 
 const timerCustom = () => {
   // if first child has timers at 0, move to bottom and then remove
-  let timerDayEl = document.querySelector(".timer__day");
-  let timerHourEl = document.querySelector(".timer__hour");
   let timerMinEl = document.querySelector(".timer__min");
   let timerSecEl = document.querySelector(".timer__sec");
-  let firstDiv = document.querySelector(".timelist > .red");
+  let firsttimerMinEl = document.querySelector(".timer__min");
+  let firsttimerSecEl = document.querySelector(".timer__sec");
   let wholeGrid = document.querySelector(".timelist");
-  let timeboxSec = document.querySelector(".timeseconds").dataset.seconds.textContent;
-  let timeboxMin = document.querySelector(".timeminutes").dataset.minutes.textContent;
+  let timeboxSec = document.querySelector(".timeseconds").dataset.seconds;
+  let timeboxMin = document.querySelector(".timeminutes").dataset.minutes;
   if (timerMinEl.textContent == 0 && timerSecEl.textContent == 0) {
+    firsttimerMinEl.textContent = timeboxMin;
+    firsttimerSecEl.textContent = timeboxSec;
+    let firstDiv = document.querySelector(".timelist > .red");
     wholeGrid.insertAdjacentElement('beforeend', firstDiv);
-    timerMinEl.textContent = timeboxMin;
-    timerSecEl.textContent = timeboxSec;
+    console.log(firsttimerMinEl.textContent);
+    console.log(firsttimerSecEl.textContent);
+    console.log(firstDiv);
+    console.log(firsttimerSecEl.textContent);
+    console.log(timeboxSec);
   };
 
   // UPDATE TOP TIMER

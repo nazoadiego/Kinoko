@@ -13,8 +13,8 @@
             <div class="form-inputs">
               <%= f.input :title, label: "Title" %>
               <%= f.input :minutes, label: 'Min/Sec', input_html: {class: 'span3', maxlength: 1}, wrapper_html: {class: 'controls controls-row'} do %>
-                <%= f.input_field :minutes %>
-                <%= f.input_field :seconds %>
+                <%= f.input_field :minutes, value: 0  %>
+                <%= f.input_field :seconds, value: 0 %>
               <% end %>
               <%= text_field_tag 'task[new_label]', nil, placeholder: 'Name of new Label' %>
               <%= number_field_tag 'task[new_label_goal]', nil, placeholder: 'Goal of new Label' %>

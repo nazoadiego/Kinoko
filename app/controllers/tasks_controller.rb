@@ -23,7 +23,7 @@ class TasksController < ApplicationController
       @task.labels << Label.create!(name: new_label_name, goal: new_label_goal) if new_label_name != ""
       redirect_to '/dashboard'
     else
-      flash[:alert] = 'The task already exists'
+      flash[:alert] = "#{@task.errors.messages}"
       redirect_to '/dashboard'
     end
   end

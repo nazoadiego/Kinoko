@@ -56,9 +56,9 @@ class TasksController < ApplicationController
     @labels = @labels.flatten.uniq
     @task_durations = @tasks.map do |task|
       if task.done == true
-        [task.timestamp, task.dur_hours]
+        [task.timestamp.strftime("%B %d, %Y"), task.dur_hours]
       else
-        [task.timestamp, 0.0]
+        ["", 0.0]
       end
     end
     @labeltasks = @labels.map do |label|

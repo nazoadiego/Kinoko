@@ -16,9 +16,14 @@
                 <%= f.input_field :minutes, value: 0  %>
                 <%= f.input_field :seconds, value: 0 %>
               <% end %>
+              <h5>Labels</h5>
               <%= text_field_tag 'task[new_label]', nil, placeholder: 'Name of new Label' %>
-              <%= number_field_tag 'task[new_label_goal]', nil, placeholder: 'Goal of new Label' %>
-              <%= f.collection_check_boxes :label_ids, Label.all, :id, :name %>
+              <%= number_field_tag 'task[new_label_goal]', nil, placeholder: 'Goal Hrs for new Label' %>
+              <p class="mt-2">
+                <%= f.collection_check_boxes :label_ids, Label.all, :id, :name do |b| %>
+                  <div class="mr-2"><%= b.check_box %><%= b.label %></div>
+                <% end %>
+              </p>
               <div class="modal-footer">
                 <%= f.submit 'Save Changes', class: 'btn btn-primary'%>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -22,35 +22,40 @@
 ### Front-end
 
 ### Priority
-- [ ] Home icon should redirect you to dashboard
-- [ ] Add animation to statistics black container
-- [ ] Do the animation for the title on dashboard
-- [ ] Do the animation for the underline of the title on dashboard
 - [ ] Redesign work session view
 - [ ] Design statistics view
 - [ ] Design help view
+- [ ] Home icon should redirect you to dashboard (remove landing page from navbar)
+- [ ] Add icons to help and mushroom forest
+- [ ] Do the animation for the title on dashboard
+- [ ] Do the animation for the underline of the title on dashboard
+- [ ] Check the margin/padding of the task cards
+- [ ] Add margin to the dashboard body (top and maybe center it better? could also use some padding)
+- [ ] Help page the grid are boxes that grow from top to bottom, but also left to right and such
+- [ ] Statistics task boxes grow one after another (animation-delay)
 - [ ] Make the graphs look nice
 - [ ] Fix the timeboxes so that if it's 9 seconds it looks like this: 00:09 (temporary fix in place, gets messed up when js starts counting down)
-- [ ] Work on the modals appearance
 - [ ] Sortable JS, add it again to the cards
-- [ ] Anime.js for mushroom forest, but more importantly for the background
+- [ ] Anime.js for the background and maybe effects
 - [ ] Change the name of the containers css class of the dashboard
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
 - [ ] Active class for current timebox
+- [ ] Mushroom forest orbs
+- [ ] Check that it looks good on fanny's laptop (we could just look at the dimensions of her screen)
 
 ### Low priority
-- [ ] Mushroom forest orbs
+- [ ] Work on the modals appearance
 - [ ] Make the grid of tasks and and title/logo more responsive
 - [ ] Replace bootstrap buttons with nicer ones.
 - [ ] Work on the landing page
 - [ ] Customize the scroll bar
 - [ ] Hide navbar on login
+- [ ] Add task could be better
 - [ ] Minutes and seconds in the form: make it look nice
 - [ ] Snake button
 - [ ] Hide overflow-x just for dashboard, maybe work sessions
 
 #### Back-end
-- [ ] Implement a js chart library
 - [ ] Once a timebox takes on the "active" css class, it doesn't switch back to normal.
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
 - [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
@@ -64,6 +69,8 @@
 
 
 ### Done
+- [X] Anime.js for mushroom forest
+- [X] Implement a js chart library
 - [X] Fix delete a task (it was broken before doing partials it seems)
 - [X] Mark Task as done in the work session page
 - [X] Work on the login and sign up appearance

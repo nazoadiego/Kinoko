@@ -1,9 +1,5 @@
 <div class="timer__items">
-  <span>0</span><span class="timer__min"><%= number_with_precision(timebox.minutes, :precision => 0) %></span>
+  <span class="timer__min"><%= format('%02d', timebox.minutes) %></span>
   <span>:</span>
-  <% if timebox.seconds > 10 %>
-    <span class="timer__sec"><%= timebox.seconds %></span>
-  <% else %>
-    <span>0</span><span class="timer__sec"><%= number_with_precision(timebox.seconds, :precision => 0) %></span>
-  <% end %>
+  <span class="timer__sec"><%= format('%02d', timebox.seconds) %></span>
 </div>

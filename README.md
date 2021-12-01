@@ -41,6 +41,7 @@
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
 - [ ] Active class for current timebox
 - [ ] Mushroom forest orbs
+- [ ] Add overflow scroll to the task grid
 - [ ] Check that it looks good on fanny's laptop (we could just look at the dimensions of her screen)
 
 ### Low priority
@@ -60,7 +61,8 @@
 - [ ] A task shouldn't be able to be created with negative minutes or seconds
 - [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
 - [ ] Update a timebox
-
+- [ ] Dashboard should show the tasks for the current user, not all tasks
+- [ ] Edit a task should allow you edit the tags.
 
 
 ### Low priority

@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import "chartkick/chart.js"
+import "chartkick/chart.js";
 
 // Sortable
 import { initSortable } from '../plugins/init_sortable'; // <-- add this
@@ -61,6 +61,6 @@ if (stop) {
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
-  initSortable;
+  initSortable();
   initAnimeJs();
 });

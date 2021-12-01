@@ -22,28 +22,34 @@
 ### Front-end
 
 ### Priority
-- [ ] Redesign work session view
-- [ ] Design statistics view
-- [ ] Design help view
+- [ ] Make the statistics view look more complete
+- [ ] Progress bar small window goes on top of the title (stats view)
 - [ ] Fix the direction of the dropdown of the task card
-- [ ] Add icons to help
 - [ ] Do the animation for the title on dashboard
 - [ ] Do the animation for the underline of the title on dashboard
 - [ ] Check the margin/padding of the task cards
 - [ ] Add margin to the dashboard body (top and maybe center it better? could also use some padding)
 - [ ] Help page the grid are boxes that grow from top to bottom, but also left to right and such
+- [ ] Make the graphs look nice (change color)
+- [ ] Create the container for the statistics on dashboard
+- [ ] Add task.done duration to dashboard
 - [ ] Statistics task boxes grow one after another (animation-delay)
-- [ ] Make the graphs look nice
-- [ ] Sortable JS, add it again to the cards
-- [ ] Anime.js for the background and maybe effects
-- [ ] Change the name of the containers css class of the dashboard
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
 - [ ] Active class for current timebox
 - [ ] Mushroom forest orbs
-- [ ] Add overflow scroll to the task grid
+- [ ] Work session view, the elements in the left can be put closer together if there is too much space
+- [ ] Landing page, center the subtitle
+- [ ] Make the Create task modal more user friendly (specially the labels/goal)
+- [ ] Redesign work session's timeboxes cards
 - [ ] Check that it looks good on fanny's laptop (we could just look at the dimensions of her screen)
 
 ### Low priority
+- [ ] Change the name of the containers css class of the dashboard
+- [ ] Add overflow scroll to the task grid
+- [ ] Anime.js for the background and maybe effects
+- [ ] Sortable JS, add it again to the cards
+- [ ] Add icons to help
+- [ ] Design help view
 - [ ] Work on the modals appearance
 - [ ] Make the grid of tasks and and title/logo more responsive
 - [ ] Replace bootstrap buttons with nicer ones.

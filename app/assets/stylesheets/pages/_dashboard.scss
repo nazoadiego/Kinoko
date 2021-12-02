@@ -20,41 +20,21 @@
   }
 }
 
-.container-tasks-grid {
-  // background-color: #150F30;
-  position: relative;
-  height: 98%;
-  width: 98%;
-  border-radius: 25px;
-}
-
-.container-white {
-  background-color: white;
-  color: black;
-  height: 90%;
-  width: 95%;
-  border: black 2px solid;
-  border-radius: 2px;
-  h1 {
-    color: #573BC9;
-  }
-}
-
 .task-grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   row-gap: 0;
   grid-gap: 0;
 }
 
 @media(max-width: 1100px) {
   .task-grid {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
   }
 }
 
 @media(max-width: 800px) {
   .task-grid {
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
   }
 }

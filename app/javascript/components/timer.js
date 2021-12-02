@@ -18,36 +18,43 @@ function getTimeDifference(start, end) {
 }
 
 const timerCustom = () => {
-  // if first child has timers at 0, move to bottom and then remove
   let timerMinEl = document.querySelector(".timer__min");
   let timerSecEl = document.querySelector(".timer__sec");
-  let firsttimerMinEl = document.querySelector(".timer__min");
-  let firsttimerSecEl = document.querySelector(".timer__sec");
-  let wholeGrid = document.querySelector(".timelist");
+
+  resetTopTimebox();
+  // UPDATE TOP TIMER
+  updateTimer(timerMinEl, timerSecEl);
+}
+
+
+const resetTopTimebox = () => {
+  let timerMinEl = document.querySelector(".timer__min");
+  let timerSecEl = document.querySelector(".timer__sec");
   let timeboxSec = document.querySelector(".timeseconds").dataset.seconds;
   let timeboxMin = document.querySelector(".timeminutes").dataset.minutes;
-  if (timerMinEl.textContent == 0 && timerSecEl.textContent == 0) {
-    firsttimerMinEl.textContent = timeboxMin;
-    firsttimerSecEl.textContent = timeboxSec;
-    let firstDiv = document.querySelector(".timelist > .red");
-    wholeGrid.insertAdjacentElement('beforeend', firstDiv);
-    console.log(firsttimerMinEl.textContent);
-    console.log(firsttimerSecEl.textContent);
-    console.log(firstDiv);
-    console.log(firsttimerSecEl.textContent);
-    console.log(timeboxSec);
+  if (timerMinEl.textContent == 0 && timerSecEl.textContent == 1) {
+    moveTopTimeboxToBottom();
   };
+};
 
-  // UPDATE TOP TIMER
+const moveTopTimeboxToBottom = () => {
+  const wholeGrid = document.querySelector(".timelist");
+  const firstDiv = document.querySelector(".timelist > .red");
+  wholeGrid.insertAdjacentElement('beforeend', firstDiv);
+};
+
+const updateTimer = (timerMinEl, timerSecEl) => {
   let startDate = new Date();
   let milliseconds = parseInt(document.querySelector(".timelist > .red > .card-timebox > .remainder").dataset.timeboxduration)
+
   if (!document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate)  {
     document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate;
     let endDate = new Date(startDate.getTime() + milliseconds);
     document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate = endDate;
-  }
+  };
 
-   endDate = document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate
+  endDate = document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate
+
   if (new Date(endDate) < new Date(startDate)) {
     document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate;
      endDate = new Date(startDate.getTime() + milliseconds);
@@ -57,27 +64,20 @@ const timerCustom = () => {
   document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate
 
   let endDate = document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate;
-  // console.log(startDate);
-  // console.log(endDate);
   let timeDifferenceObj = getTimeDifference(startDate, endDate);
-  timerMinEl.textContent = timeDifferenceObj.rMinutes;
-  timerSecEl.textContent = timeDifferenceObj.rSeconds;
+  timerMinEl.textContent = (timeDifferenceObj.rMinutes).toString().padStart(2, 0);
+  timerSecEl.textContent = (timeDifferenceObj.rSeconds + 1).toString().padStart(2, 0);
+};
 
-  // make the div for the active timebox be highlighted
+// style methods
+const activeTimerStyle = () => {
   const timeboxdiv = document.querySelector(".timelist > .red > .card-timebox");
-  timeboxdiv.classList.add("active-timebox")
-}
+  timeboxdiv.classList.add("active-timebox");
+};
 
-// const resetTimer = function (resetTimer) {
-//   const mins = document.querySelector(".timeminutes").dataset.minutes
-//   const secs = document.querySelector(".timeseconds").dataset.seconds
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-//   if (timerMinEl === 0 && timerSecEl === 0) {
-//     timerMinEl.textContent = mins;
-//     timerSecEl.textContent = secs;
-//   }
-// }
-
+// TASK TIMER STUFF
 const taskTimer = () => {
   let startDate = new Date();
   let taskmins = document.querySelector(".taskmins");
@@ -91,8 +91,6 @@ const taskTimer = () => {
   let endDate = document.querySelector(".tasktimes").dataset.endDate
   let timeDiff = getTimeDifference(startDate, endDate);
   let timeDiffSec = Math.floor((new Date(endDate) - new Date(startDate)) / 1000);
-  console.log(timeDiffSec);
-  console.log(timeDiffSec === 0);
   taskmins.textContent = `${timeDiff.rMinutes} mins`;
   tasksecs.textContent = `${timeDiff.rSeconds} secs`;
 

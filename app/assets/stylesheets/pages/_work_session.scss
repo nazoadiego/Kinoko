@@ -1,24 +1,41 @@
 .card-timebox {
   h1 {
     color: #573BC9;
+    text-align: center;
   }
-  padding-top: 10px;
+  padding-top: 7px;
   padding-left: 10px;
   color: #000;
-  height: 95%;
+  height: 90%;
   border: black 2px solid;
-  border-radius: 2px;
+  // border-radius: 4px;
   animation: appear-timebox 1.5s ease;
 
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+
+}
+
+.blue {}
+
+.card-remove-link {
+  height: 10px;
+  margin-right: 10px;
 }
 
 .timebox-top {
   height: 50%;
   width: 100%;
+  text-align: start;
 }
 .timebox-bottom {
   height: 50%;
   width: 100%;
+  text-align: center;
 }
 
 @keyframes appear-timebox {

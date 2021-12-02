@@ -22,19 +22,16 @@
 ### Front-end
 
 #### Ticket Isa
-- [ ] Scroll on the task grid
-- [ ] fix the statistics view, it breaks when it scrolls (a quick fix would be overflow hidden maybe, but i think the main problem is the sizes of the divs)
+- [X] Scroll on the task grid
+- [X] fix the statistics view, it breaks when it scrolls (a quick fix would be overflow hidden maybe, but i think the main problem is the sizes of the divs)
+- [ ] Progress bar small window goes on top of the title (stats view)
 - [ ] Make the Create task modal more user friendly (specially the labels/goal)
 
-### Solution
-Make the fullheight div - css overflow: scroll
 
-First create a big div, that contains two div (width:100%) on top of each other. Don't define the height of the graphs on a div or otherwise
 
 
 ### Priority
 - [ ] Make the statistics view look more complete
-- [ ] Progress bar small window goes on top of the title (stats view)
 - [ ] Fix the direction of the dropdown of the task card
 - [ ] Do the animation for the title on dashboard
 - [ ] Do the animation for the underline of the title on dashboard

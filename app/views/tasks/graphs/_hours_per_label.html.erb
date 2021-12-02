@@ -3,6 +3,6 @@
   <div class="hrsperlabel">
     <%= line_chart @labels.map { |label|
       {name: label.name, data: label.tasks.group_by_day(:timestamp).sum(:durhours)}
-    }, round: 2, zeros: true, xtitle: "Time", ytitle: "Hours Worked", colors: ['#573BC9', 'red', 'yellow', 'blue', 'orange', 'violet'] %>
+    }, round: 2, zeros: true, xtitle: "Time", ytitle: "Hours Worked", colors: [ '#573BC9', '#573BC9', '#573BC9', '#573BC9' ] %>
   </div>
 </div>

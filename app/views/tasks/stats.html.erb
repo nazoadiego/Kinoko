@@ -1,23 +1,32 @@
-<div class="full-height d-flex justify-content-center align-items-center">
-  <div class="row blue"style="width: 90vw; height: 100vh">
-    <div class="col-8 red">
-      <div class="green pl-4 pt-2" style="height: 10vh; width: 90%">
-        <h1 class="purple-text">Statistics</h1>
-      </div>
-      <div class="green pl-4" style="height: 40vh; width: 90%">
-        <%= render "tasks/graphs/hours_per_label" %>
-      </div>
-      <div class="green pl-4" style="height: 60vh; width: 90%">
-        <%= render "tasks/graphs/hours_per_day" %>
-      </div>
-    </div>
-    <div class="col-4 red">
-      <div class="green pr-4 pt-4" style="height: 50%">
-        <%= render "tasks/graphs/labels_comparison" %>
-      </div>
-      <div class="green pr-4 pt-4" style="height: 50%">
-        <%= render "tasks/graphs/labels_progress_bar" %>
+<div class="full-height">
+  <div class="red d-flex justify-content-center h-100">
+    <div class="row blue" style="width: 90vw; height: 100vh">
+      <div class="d-flex flex-column">
+        <div class="row w-100">
+          <div class="red col-12">
+            <div class="d-flex flex-row">
+              <div class="col-8 green">
+                <%= render "tasks/graphs/hours_per_day" %>
+              </div>
+              <div class="col-4 green">
+                <%= render "tasks/graphs/labels_progress_bar" %>
+              </div>
+            </div>
+          </div>
+          <div class="red col-12">
+            <div class="d-flex flex-row">
+              <div class="col-8 green">
+                <%= render "tasks/graphs/hours_per_label" %>
+              </div>
+              <div class="col-4 green">
+                <%= render "tasks/graphs/labels_comparison" %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<%# <h1 class="purple-text">Statistics</h1> %>

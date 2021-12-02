@@ -17,6 +17,7 @@
   width: 100%;
   max-width: 400px;
   padding: 0 20px;
+  height: 140px;
 }
 
 .skill-name {
@@ -37,8 +38,9 @@
 
 .skill-bar {
   height: 14px;
-  background-color: black;
+  background-color: darkgrey;
   border-radius: 3px;
+  margin-bottom: -40px;
 }
 
 .skill-per::before {

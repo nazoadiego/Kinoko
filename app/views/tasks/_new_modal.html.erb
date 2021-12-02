@@ -11,19 +11,32 @@
           <%= simple_form_for(task) do |f| %>
 
             <div class="form-inputs">
-              <%= f.input :title, label: "Title" %>
+            <div class="taskform">
+              <%= f.input :title %>
               <%= f.input :minutes, label: 'Min/Sec', input_html: {class: 'span3', maxlength: 1}, wrapper_html: {class: 'controls controls-row'} do %>
                 <%= f.input_field :minutes, value: 0  %>
                 <%= f.input_field :seconds, value: 0 %>
               <% end %>
-              <h5>Labels</h5>
-              <%= text_field_tag 'task[new_label]', nil, placeholder: 'Name of new Label' %>
-              <%= number_field_tag 'task[new_label_goal]', nil, placeholder: 'Goal Hrs for new Label' %>
-              <p class="mt-2">
-                <%= f.collection_check_boxes :label_ids, Label.all, :id, :name do |b| %>
-                  <div class="mr-2"><%= b.check_box %><%= b.label %></div>
-                <% end %>
-              </p>
+            </div>
+              <div class="labels">
+                <div data-tooltip="Assign labels to your tasks to track your progress">
+                  <span class="assign-label">Assign Labels</span>
+                </div>
+                <p class="d-flex justify-content-around">
+                  <%= f.collection_check_boxes :label_ids, Label.all, :id, :name do |b| %>
+                    <%= b.check_box(class: "mr-2 tag-selector") %><%= b.label %>
+                  <% end %>
+                </p>
+                <div class="newlabel">
+                  <p class="mb-2">New label</p>
+                  <div class="labelname d-flex justify-content-between mb-1" style="font-weight: lighter">
+                    Name<%= text_field_tag 'task[new_label]', nil, placeholder: '', class:"align-right" %>
+                  </div>
+                  <div class="labelgoal d-flex justify-content-between mb-1" style="font-weight: lighter">
+                    Goal Hours<%= number_field_tag 'task[new_label_goal]', nil, placeholder: '' %>
+                  </div>
+                </div>
+              </div>
               <div class="modal-footer">
                 <%= f.submit 'Save Changes', class: 'btn btn-primary'%>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -1,6 +1,7 @@
 class Label < ApplicationRecord
   has_many :task_labels, dependent: :destroy
   has_many :tasks, through: :task_labels
+  attribute :seconds, default: 1
 
   def donetasksdur
     durations = tasks.map do |task|

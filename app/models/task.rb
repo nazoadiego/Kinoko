@@ -5,7 +5,6 @@ class Task < ApplicationRecord
   has_many :labels, through: :task_labels
   belongs_to :user
 
-  validates :title, uniqueness: true
   validates :minutes, :title, presence: true
   attribute :seconds, default: 0
 

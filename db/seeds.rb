@@ -65,3 +65,87 @@ Task.create(
 )
 
 puts "Tasks created"
+
+# User for demo
+
+user = User.create(
+  email: "admin@kinoko.app",
+  password: "123456",
+  username: "Admin"
+)
+
+user.save!
+
+Task.create(
+  title: "Learning Korean",
+  minutes: 60,
+  seconds: 0,
+  durhours: 60.0 / 60,
+  user: user
+)
+
+Task.create(
+  title: "Water Plants",
+  minutes: 10,
+  seconds: 0,
+  durhours: 10.0 / 60,
+  user: user,
+  done: true,
+  timestamp: (Time.now - 300_000),
+  labels: Label.where(name: "House Chores")
+)
+
+Task.create(
+  title: "Grocery Shopping",
+  minutes: 100,
+  seconds: 0,
+  durhours: 100.0 / 60,
+  user: user,
+  done: true,
+  timestamp: (Time.now - 500_000),
+  labels: Label.where(name: "House Chores")
+)
+
+Task.create(
+  title: "Learning Korean",
+  minutes: 60,
+  seconds: 0,
+  durhours: 60.0 / 60,
+  user: user,
+  done: true,
+  timestamp: (Time.now - 600_000),
+  labels: Label.where(name: "Languages")
+)
+
+Task.create(
+  title: "Japanese Reading",
+  minutes: 70,
+  seconds: 0,
+  durhours: 70.0 / 60,
+  user: user,
+  done: true,
+  timestamp: (Time.now - 400_000),
+  labels: Label.where(name: "Languages")
+)
+
+Task.create(
+  title: "Dirty Dishes",
+  minutes: 20,
+  seconds: 0,
+  durhours: 20.0 / 60,
+  user: user,
+  done: true,
+  timestamp: (Time.now - 1_000_000),
+  labels: Label.where(name: "House Chores")
+)
+
+Task.create(
+  title: "Cleaning Toilet",
+  minutes: 10,
+  seconds: 0,
+  durhours: 10.0 / 60,
+  user: user,
+  done: true,
+  timestamp: (Time.now - 1_000_000),
+  labels: Label.where(name: "House Chores")
+)

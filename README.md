@@ -32,9 +32,9 @@
 - [X] Styling on dashboard page
 - [X] Landing page, center the subtitle to the left
 - [X] Add margin to the dashboard body (top and maybe center it better? could also use some padding)
+- [X] Check the margin/padding of the task cards
 - [T] Make the Create task modal more user friendly (specially the labels/goal)
 - [ ] Make the statistics view look more complete
-- [ ] Check the margin/padding of the task cards
 
 
 

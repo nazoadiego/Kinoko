@@ -5,19 +5,15 @@
       <%= task.title %>
     </h5>
   <div>
-  <div style="position:absolute; left:10px; top:40px;">
+  <div style="position:absolute; left:24px; top:40px;">
     <h6>
       <% task.labels.each do |label| %>
      #<%= label.name %>
       <% end %>
     </h6>
   </div>
-
-        <%= render "shared/dropdown_menu", task: task%>
-        <%= render "tasks/edit_modal", task: task %>
-
-
-
+      <%= render "shared/dropdown_menu", task: task%>
+      <%= render "tasks/edit_modal", task: task %>
     </div>
   </div>
   <div>

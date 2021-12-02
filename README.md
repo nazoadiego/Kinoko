@@ -21,17 +21,20 @@
 
 ### Front-end
 
-#### Ticket Isa
+#### Work today
 - [X] Scroll on the task grid
 - [X] fix the statistics view, it breaks when it scrolls (a quick fix would be overflow hidden maybe, but i think the main problem is the sizes of the divs)
-- [ ] Progress bar small window goes on top of the title (stats view)
+- [X] Progress bar small window goes on top of the title (stats view)
+- [X] Make the text on the buttons "bolder"
+- [X] Mushroom forest orbs
+- [X] Landing page, center the subtitle to the left
 - [ ] Make the Create task modal more user friendly (specially the labels/goal)
+- [ ] Make the statistics view look more complete
 
 
 
 
 ### Priority
-- [ ] Make the statistics view look more complete
 - [ ] Fix the direction of the dropdown of the task card
 - [ ] Do the animation for the title on dashboard
 - [ ] Do the animation for the underline of the title on dashboard
@@ -43,17 +46,13 @@
 - [ ] Add task.done duration to dashboard
 - [ ] Statistics task boxes grow one after another (animation-delay)
 - [ ] Graphs appear from opacity 0 to opacity 1
-- [ ] Make the text on the buttons "bolder"
-- [ ] Make the text on the buttons "bolder"
-- [ ] Fix the grid of the dashboard so that the space between cards display evenly
 - [ ] Active class for current timebox
-- [ ] Mushroom forest orbs
 - [ ] Work session view, the elements in the left can be put closer together if there is too much space
-- [ ] Landing page, center the subtitle
 - [ ] Redesign work session's timeboxes cards
 - [ ] Check that it looks good on fanny's laptop (we could just look at the dimensions of her screen)
 
 ### Low priority
+- [ ] Fix the grid of the dashboard so that the space between cards display evenly
 - [ ] Change the name of the containers css class of the dashboard
 - [ ] Add overflow scroll to the task grid
 - [ ] Anime.js for the background and maybe effects

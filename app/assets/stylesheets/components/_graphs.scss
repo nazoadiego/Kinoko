@@ -1,0 +1,17 @@
+.graphs {
+  color: white;
+  position: absolute;
+  top: 20%;
+  animation: appear 10s ease;
+  opacity: 0
+}
+
+@keyframes appear
+  {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

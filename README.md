@@ -27,9 +27,14 @@
 - [X] Progress bar small window goes on top of the title (stats view)
 - [X] Make the text on the buttons "bolder"
 - [X] Mushroom forest orbs
+- [X] Changed the color of the dropdown menu background color
+- [X] Changed the colors of the stats graph
+- [X] Styling on dashboard page
 - [X] Landing page, center the subtitle to the left
-- [ ] Make the Create task modal more user friendly (specially the labels/goal)
+- [X] Add margin to the dashboard body (top and maybe center it better? could also use some padding)
+- [T] Make the Create task modal more user friendly (specially the labels/goal)
 - [ ] Make the statistics view look more complete
+- [ ] Check the margin/padding of the task cards
 
 
 
@@ -38,21 +43,18 @@
 - [ ] Fix the direction of the dropdown of the task card
 - [ ] Do the animation for the title on dashboard
 - [ ] Do the animation for the underline of the title on dashboard
-- [ ] Check the margin/padding of the task cards
-- [ ] Add margin to the dashboard body (top and maybe center it better? could also use some padding)
 - [ ] Help page the grid are boxes that grow from top to bottom, but also left to right and such
-- [ ] Make the graphs look nice (change color)
-- [ ] Create the container for the statistics on dashboard
-- [ ] Add task.done duration to dashboard
 - [ ] Statistics task boxes grow one after another (animation-delay)
-- [ ] Graphs appear from opacity 0 to opacity 1
 - [ ] Active class for current timebox
 - [ ] Work session view, the elements in the left can be put closer together if there is too much space
 - [ ] Redesign work session's timeboxes cards
 - [ ] Check that it looks good on fanny's laptop (we could just look at the dimensions of her screen)
 
 ### Low priority
+- [ ] Graphs appear from opacity 0 to opacity 1
+- [ ] Add task.done duration to dashboard
 - [ ] Fix the grid of the dashboard so that the space between cards display evenly
+- [ ] Create the container for the statistics on dashboard
 - [ ] Change the name of the containers css class of the dashboard
 - [ ] Add overflow scroll to the task grid
 - [ ] Anime.js for the background and maybe effects

@@ -10,7 +10,7 @@ User.create!(
 labels = %w[House\ Chores Languages School Exercise]
 
 labels.each do |label|
-  Label.create!(name: label, goal: 6)
+  Label.create!(name: label, goal: 2)
 end
 
 # 5.times do
@@ -99,28 +99,6 @@ Task.create(
 )
 
 Task.create(
-  title: "Reading Korean",
-  minutes: 60,
-  seconds: 0,
-  durhours: 60.0 / 60,
-  user: user,
-  done: true,
-  timestamp: (Time.now - 600_000),
-  labels: Label.where(name: "Languages")
-)
-
-Task.create(
-  title: "Reading Japanese",
-  minutes: 70,
-  seconds: 0,
-  durhours: 70.0 / 60,
-  user: user,
-  done: true,
-  timestamp: (Time.now - 400_000),
-  labels: Label.where(name: "Languages")
-)
-
-Task.create(
   title: "Dirty Dishes",
   minutes: 20,
   seconds: 0,
@@ -140,4 +118,15 @@ Task.create(
   done: true,
   timestamp: (Time.now - 1_000_000),
   labels: Label.where(name: "House Chores")
+)
+
+Task.create(
+  title: "Reading Korean",
+  minutes: 60,
+  seconds: 0,
+  durhours: 60.0 / 60,
+  user: user,
+  done: true,
+  timestamp: (Time.now - 600_000),
+  labels: Label.where(name: "Languages")
 )

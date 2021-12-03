@@ -89,9 +89,9 @@ Task.create(
 
 Task.create(
   title: "Cleaning my room",
-  minutes: 100,
+  minutes: 20,
   seconds: 0,
-  durhours: 100.0 / 60,
+  durhours: 20.0 / 60,
   user: user,
   done: true,
   timestamp: (Time.now - 500_000),

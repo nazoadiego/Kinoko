@@ -7,64 +7,64 @@ User.create!(
   username: "MaxSettings"
 )
 
-labels = %w[House\ Chores Languages School Painting Exercise Break]
+labels = %w[House\ Chores Languages School Exercise]
 
 labels.each do |label|
-  Label.create!(name: label, goal: rand(6..10))
+  Label.create!(name: label, goal: 6)
 end
 
-5.times do
-  new_user = User.new(
-    username: Faker::Name.name,
-    email: Faker::Internet.email,
-    password: "123_456"
-  )
-  new_user.save!
-end
+# 5.times do
+#   new_user = User.new(
+#     username: Faker::Name.name,
+#     email: Faker::Internet.email,
+#     password: "123_456"
+#   )
+#   new_user.save!
+# end
 
-puts "User created!"
+# puts "User created!"
 
-Task.create(
-  title: "Learning Korean",
-  minutes: 60,
-  seconds: 0,
-  durhours: 60.0 / 60,
-  user: User.last
-)
+# Task.create(
+#   title: "Learning Korean",
+#   minutes: 60,
+#   seconds: 0,
+#   durhours: 60.0 / 60,
+#   user: User.last
+# )
 
-Task.create(
-  title: "Programming",
-  minutes: 120,
-  seconds: 40,
-  durhours: (120.0 / 60) + (40.0 / 3600),
-  user: User.last
-)
+# Task.create(
+#   title: "Programming",
+#   minutes: 120,
+#   seconds: 40,
+#   durhours: (120.0 / 60) + (40.0 / 3600),
+#   user: User.last
+# )
 
-Task.create(
-  title: "Grocery Shopping",
-  minutes: 180,
-  seconds: 0,
-  durhours: 180.0 / 60,
-  user: User.last
-)
+# Task.create(
+#   title: "Grocery Shopping",
+#   minutes: 180,
+#   seconds: 0,
+#   durhours: 180.0 / 60,
+#   user: User.last
+# )
 
-Task.create(
-  title: "Reading",
-  minutes: 150,
-  seconds: 40,
-  durhours: (150.0 / 60) + (40.0 / 3600),
-  user: User.last
-)
+# Task.create(
+#   title: "Reading",
+#   minutes: 150,
+#   seconds: 40,
+#   durhours: (150.0 / 60) + (40.0 / 3600),
+#   user: User.last
+# )
 
-Task.create(
-  title: "Walking Fiona",
-  minutes: 140,
-  seconds: 50,
-  durhours: (140.0 / 60) + (50.0 / 3600),
-  user: User.last
-)
+# Task.create(
+#   title: "Walking Fiona",
+#   minutes: 140,
+#   seconds: 50,
+#   durhours: (140.0 / 60) + (50.0 / 3600),
+#   user: User.last
+# )
 
-puts "Tasks created"
+# puts "Tasks created"
 
 # User for demo
 
@@ -75,14 +75,6 @@ user = User.create(
 )
 
 user.save!
-
-Task.create(
-  title: "Learning Korean",
-  minutes: 60,
-  seconds: 0,
-  durhours: 60.0 / 60,
-  user: user
-)
 
 Task.create(
   title: "Water Plants",
@@ -96,7 +88,7 @@ Task.create(
 )
 
 Task.create(
-  title: "Grocery Shopping",
+  title: "Cleaning my room",
   minutes: 100,
   seconds: 0,
   durhours: 100.0 / 60,
@@ -107,7 +99,7 @@ Task.create(
 )
 
 Task.create(
-  title: "Learning Korean",
+  title: "Reading Korean",
   minutes: 60,
   seconds: 0,
   durhours: 60.0 / 60,
@@ -118,7 +110,7 @@ Task.create(
 )
 
 Task.create(
-  title: "Japanese Reading",
+  title: "Reading Japanese",
   minutes: 70,
   seconds: 0,
   durhours: 70.0 / 60,

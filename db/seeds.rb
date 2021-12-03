@@ -7,7 +7,7 @@ User.create!(
   username: "MaxSettings"
 )
 
-labels = %w[House\ Chores Languages School Exercise]
+labels = %w[House\ Chores Languages School Exercise Programming]
 
 labels.each do |label|
   Label.create!(name: label, goal: 2)

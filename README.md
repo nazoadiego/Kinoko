@@ -24,7 +24,7 @@ In other words, it's fine to ignore tags completely.
 
 Numbers can be a huge motivator for working everyday, because it's something that is very tangible. You can clearly exactly how much you are working, if you are putting more hours in than usually or maybe if you are slacking off and need to take it more seriously. They provide for a way of correcting our work habits or just to alleviate our doubts of whether we are making progress or not.
 
-But tracking itself takes time, and for that reason Kinoko aims to make things easier and do it for you. So that you can phocus just on working. And it does so by using a tag system for all of your different tasks.
+But tracking itself takes time, and for that reason Kinoko aims to make things easier and do it for you. So that you can focus just on working. And it does so by using a tag system for all of your different tasks.
 
 ### Tags
 

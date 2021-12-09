@@ -1,5 +1,5 @@
 # Kinoko
-![[kinoko.jpg]]
+<img src="kinoko.jpg" width="100%">
 Kinoko is a timeboxing web application that allows you to work for long periods of time without getting distracted or burning out. You can set intervals of working and resting as you prefer.
 
 Kinoko uses a tag system that allows you to track your work time in a more flexible and intelligent way. You can see a visual representation of your hours of work in the "Mushroom Forest" or you can access an statistics dashboard.
@@ -52,9 +52,9 @@ A visual representation of your hard work, the total amount of hours you have wo
 
 If you haven't done timeboxing before I would say that is completely normal. Here is an example:
 
-Task: Read Murakami - Duration: 1 hour - Tags: #Japanese #Reading
-Timebox 1: 10 mins work
-Timebox 2: 10 mins break
+Task: Read Murakami - Duration: 1 hour - Tags: #Japanese #Reading.
+Timebox 1: 10 mins work.
+Timebox 2: 10 mins break.
 
 A task is the particular activity you are doing at the moment, something concrete. This activity can enter in one or several categories, which we call tags. You will do a task for a total duration of an hour, but it will be in intervals of 10 mins. 10...20...30...40... until you are done.
 

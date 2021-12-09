@@ -1,8 +1,11 @@
+
 # Kinoko
+
 <img src="kinoko.jpg" width="100%">
+
 Kinoko is a timeboxing web application that allows you to work for long periods of time without getting distracted or burning out. You can set intervals of working and resting as you prefer.
 
-Kinoko uses a tag system that allows you to track your work time in a more flexible and intelligent way. You can see a visual representation of your hours of work in the "Mushroom Forest" or you can access an statistics dashboard.
+The tag system allows you to track your work time in a more flexible and intelligent way. You can see a visual representation of your hours of work in the "Mushroom Forest" or you can access an statistics dashboard.
 
 ## Table of Contents
 

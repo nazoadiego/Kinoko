@@ -1,164 +1,67 @@
-# Kinoko Todo List
+# Kinoko
 
-## Steps to Git Hub
+Kinoko is a timeboxing web application that allows you to work for long periods of time without getting distracted or burning out. You can set intervals of working and resting as you prefer.
 
-### I finished my work in my branch, I want to push
-- Start on master and do pull always
-- I was working on my branch after `git co -b branch_name`
-- When finished git add . and git commit
-- I do `git co master` and get the latest master doing `pull`
-- checkout branch
-- I merge my branch to my local master `git merge master`
-- If no conflicts do push from your branch
-- if there are conflicts you resolve them in your vs code
-- Repeat `git add .` and `git commit -m`
-- Push your branch to git hub
-- Then checkout master and do a pull
-- Do `git sweep` to clean out the branches, if you want.
+Kinoko uses a tag system that allows you to track your work time in a more flexible and intelligent way. You can see a visual representation of your hours of work in the "Mushroom Forest" or you can access an statistics dashboard.
 
-## Features Today
+## Table of Contents
 
+*   [Basic Usage](#basic-usage)
+*   [Tracking your time](#tracking-your-time)
+    *   [Tags](#tags)
+    *   [Goals](#goals)
+    *   [Mushroom Forest](#mushroom-forest)
+*   [Frequently Asked Questions](#frequently-asked-questions)
+<!-- *   [Screenshots](#screenshots) -->
 
-### Front-end
+## Basic Usage
 
-#### Work today
-- [X] Scroll on the task grid
-- [X] fix the statistics view, it breaks when it scrolls (a quick fix would be overflow hidden maybe, but i think the main problem is the sizes of the divs)
-- [X] Progress bar small window goes on top of the title (stats view)
-- [X] Make the text on the buttons "bolder"
-- [X] Mushroom forest orbs
-- [X] Changed the color of the dropdown menu background color
-- [X] Changed the colors of the stats graph
-- [X] Styling on dashboard page
-- [X] Landing page, center the subtitle to the left
-- [X] Add margin to the dashboard body (top and maybe center it better? could also use some padding)
-- [X] Check the margin/padding of the task cards
-- [T] Make the Create task modal more user friendly (specially the labels/goal)
-- [ ] Make the statistics view look more complete
+Kinoko can be used as a very straightforward timeboxing application, for those that aren't interested in logging their time. In this case, all you need to do is create a new task, set the duration and go straight in to "Start Timeboxing". After creating your timeboxes, you can start working normally.
 
+In other words, it's fine to ignore tags completely.
 
+## Tracking your time
 
+Numbers can be a huge motivator for working everyday, because it's something that is very tangible. You can clearly exactly how much you are working, if you are putting more hours in than usually or maybe if you are slacking off and need to take it more seriously. They provide for a way of correcting our work habits or just to alleviate our doubts of whether we are making progress or not.
 
-### Priority
-- [ ] Fix the direction of the dropdown of the task card
-- [ ] Do the animation for the title on dashboard
-- [ ] Do the animation for the underline of the title on dashboard
-- [ ] Help page the grid are boxes that grow from top to bottom, but also left to right and such
-- [ ] Statistics task boxes grow one after another (animation-delay)
-- [ ] Active class for current timebox
-- [ ] Work session view, the elements in the left can be put closer together if there is too much space
-- [ ] Redesign work session's timeboxes cards
-- [ ] Check that it looks good on fanny's laptop (we could just look at the dimensions of her screen)
-
-### Low priority
-- [ ] Graphs appear from opacity 0 to opacity 1
-- [ ] Add task.done duration to dashboard
-- [ ] Fix the grid of the dashboard so that the space between cards display evenly
-- [ ] Create the container for the statistics on dashboard
-- [ ] Change the name of the containers css class of the dashboard
-- [ ] Add overflow scroll to the task grid
-- [ ] Anime.js for the background and maybe effects
-- [ ] Sortable JS, add it again to the cards
-- [ ] Add icons to help
-- [ ] Design help view
-- [ ] Work on the modals appearance
-- [ ] Make the grid of tasks and and title/logo more responsive
-- [ ] Replace bootstrap buttons with nicer ones.
-- [ ] Work on the landing page
-- [ ] Customize the scroll bar
-- [ ] Hide navbar on login
-- [ ] Add task could be better
-- [ ] Minutes and seconds in the form: make it look nice
-- [ ] Snake button
-- [ ] Hide overflow-x just for dashboard, maybe work sessions
-
-#### Back-end
-- [T] Fix the timeboxes so that if it's 9 seconds it looks like this: 00:09 (temporary fix in place, gets messed up when js starts counting down)
-- [T] Dashboard should show the tasks for the current user, not all tasks
-- [ ] Edit a task should allow you edit the tags.
-- [ ] Once a timebox takes on the "active" css class, it doesn't switch back to normal.
-- [ ] A task shouldn't be able to be created with negative minutes or seconds
-- [ ] There is some strange behavior with the if of the creation and show of the task. It seems to be affected whether you refresh or not that the if/else works.
-- [B] Update a timebox
-
-
-### Low priority
-- [X] Home icon should redirect you to dashboard (remove landing page from navbar)
-- [X] Add icons mushroom forest
-- [X] Align navbar icons correctly
-- [D] Write the presentation
-- [D] Reply to yair
-
-
-### Done
-- [X] Do the backend to display tags on dashboard
-- [X] Anime.js for mushroom forest
-- [X] Implement a js chart library
-- [X] Fix delete a task (it was broken before doing partials it seems)
-- [X] Mark Task as done in the work session page
-- [X] Work on the login and sign up appearance
-- [X] Progress bar
-- [X] Sign out button on the navbar doesn't sign you out
-- [x] Changed navbar back into a component
-- [x] Changed navbar to black
-- [X] Add the logic so that when a timebox ends, another one starts
-- [x] Decided on a font for titles
-- [X] Heroku doesn't work, doesn't allow me to create a db (guess this is normal) or seed (this is not).
-- [X] By default the navbar is open, fix that.
-- [X] Dashboard html is hell, break it up into layouts (top and bottom, grid and statistics, cards  )
-- [X] Replace the tasks cards buttons edit and delete with icons
-- [X] Add the Sign up button
-- [X] Recover yesterday's navbar and integrate it to the master
-- [X] Work on the Figma
-- [X] Add the login button
-- [X] Create a timebox
-- [X] Delete a timebox
-- [X] Create a task: add a button and a modal in the dashboard
-- [X] Remove a task
-- [X] Create a Work session
-- [x] Add edit task modal to partial to improve dashboard.html readability
-- [X] Edit a task
-- [X] Show a Work session
-
-### Future Features
-- [ ] Add task to the "shopping list" Queue (Add task to Work Session)
-
-# Seed
-- [x] Edit the seed file to include Tags and hours
-
-### Styling
-- [ ] Use CSS variables
-- [ ] Purple Theme
-- [ ] Red Theme
-- [ ] Optional CSS Snippets
+But tracking itself takes time, and for that reason Kinoko aims to make things easier and do it for you. So that you can phocus just on working. And it does so by using a tag system for all of your different tasks.
 
 ### Tags
-- [ ] You can filter task by labels in index (Add that user stories)
-- [ ] Convert tags to lowercase when adding them
-- [ ] Tags have individual show pages
+
+Tracking is easy when it is one single thing. But once you start tracking several things, or worse, when you want to track things that are related to each other, you quickly realize how quickly things get messy.
+
+In other words, tracking how much time you spent reading 1Q84 by Haruki Murakami is easy. But what happens when the next book you read is by Mishima, a different author. And let's say, for example, that you want to know how many hours you spent reading japanese. Your best option is to create an excel sheet and log it there. That's a bit cumbersome, but fine.
+
+But what happens if you read a novel in english and you want to know how many hours have you read, no matter the language? What happens when we go from 3 books to 300 books read? Logging each one of them, knowing how much time we spent in a particular book, in a particular language or reading in general becomes a much more demanding task.
+
+Kinoko tag system precisely tackles that issue. When you are doing a task like "Reading Murakami's 1Q84", you are logging your hours in three different tags: #Reading, #Japanese, and #Murakami. You have the flexibility to log your work in any way you want to, targetting the statistics that you consider most relevant.
+
+### Goals
+
+When you create a task in your dashboard, you have the option to set a goal for a particular tag. You can see your progress in each of them when you access your statistics page.
 
 
-### Login
-- [ ] A user should be able to use the timeboxing page without login in.
 
-## Pages
+## Mushroom Forest
 
-### Tasks Dashboard Page
-- [ ] Sortable.js for dashboard cards
+A visual representation of your hard work, the total amount of hours you have worked inside the app. For every new hour of work, you will see a new "kinoko" (mushroom). Their size and color are randomized.
 
-### Timeboxes Page
-- [ ] Set time boxes by writing on top of the card (not another page or a modal)
-- [ ] Total runtime (including previous task)
-- [ ] Time left (on current task)
-- [ ] Mark task as done button to jump to the next task
-- [ ] (Ability to jump to a different task, so you aren't stuck to the next task)
+## Frequently Asked Questions
 
-### Statistics page
-- [ ] Find a way to register the information of WHEN did you work x number of hours
-- [ ] Daily, weekly and monthly goals
-- [ ] Streak of days worked (either an anki-like grid or just the number of days)
-- [ ] Skill bars for progress
+**Task, timeboxes, tags... I am having a hard time understanding the difference between the three**
 
-### Mushroom Forest
-- [ ] ??? (Secret)
-- [ ] Easter egg red theme
+If you haven't done timeboxing before I would say that is completely normal. Here is an example:
+
+Task: Read Murakami - Duration: 1 hour - Tags: #Japanese #Reading
+Timebox 1: 10 mins work
+Timebox 2: 10 mins break
+
+A task is the particular activity you are doing at the moment, something concrete. This activity can enter in one or several categories, which we call tags. You will do a task for a total duration of an hour, but it will be in intervals of 10 mins. 10...20...30...40... until you are done.
+
+In the end, that hour of work will be logged inside the tag or tags associated with it.
+
+**How long should my timeboxes be?**
+
+This is completely personal preference, and it depends on the activity you are doing. Personally, I prefer 7 mins of work and 3 minutes of break. Because I enjoy the constant switching between working and resting, I feel like it keeps me on my toes. Most people seem to like doing Pomodoro, which is 25 minutes of work and 5 resting. Whatever is the most comfortable to you and keeps you in the zone is fine.
+
+<!-- ## Screenshots -->

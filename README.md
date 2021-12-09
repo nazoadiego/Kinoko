@@ -48,7 +48,7 @@ A visual representation of your hard work, the total amount of hours you have wo
 
 ## Frequently Asked Questions
 
-**Task, timeboxes, tags... I am having a hard time understanding the difference between the three**
+##### Task, timeboxes, tags... I am having a hard time understanding the difference between the three
 
 If you haven't done timeboxing before I would say that is completely normal. Here is an example:
 
@@ -60,7 +60,7 @@ A task is the particular activity you are doing at the moment, something concret
 
 In the end, that hour of work will be logged inside the tag or tags associated with it.
 
-**How long should my timeboxes be?**
+##### How long should my timeboxes be?
 
 This is completely personal preference, and it depends on the activity you are doing. Personally, I prefer 7 mins of work and 3 minutes of break. Because I enjoy the constant switching between working and resting, I feel like it keeps me on my toes. Most people seem to like doing Pomodoro, which is 25 minutes of work and 5 resting. Whatever is the most comfortable to you and keeps you in the zone is fine.
 

@@ -1,5 +1,7 @@
+# config/meta.yml
+
 meta_product_name: "Kinoko"
 meta_title: "Kinoko - Productivity for what you love"
 meta_description: "A timeboxing app with time logging and a nice little forest to track your progress."
-meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
 twitter_account: "@KinokoTimeboxin"   # required for Twitter Cards

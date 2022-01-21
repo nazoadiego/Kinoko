@@ -33,34 +33,36 @@ import "chartkick/chart.js";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initSortable } from '../plugins/init_sortable'; // <-- add this
-import { timerCustom, taskTimer } from '../components/timer';
+import { initTimebox, getTimeDifference, initTaskTimer } from '../components/timer';
 import { initAnimeJs } from "../plugins/animejs";
 
-const play = document.querySelector(".play-button")
-const stop = document.querySelector(".stop-button")
 
-if (play) {
-  play.addEventListener('click', () => {
-    // Call your functions here, e.g:
-    setInterval(timerCustom, 1000);
-    setInterval(taskTimer, 1000);
-    // initSelect2();
-  });
-}
-
-
-if (stop) {
-  stop.addEventListener('click', () => {
-    // Call your functions here, e.g:
-    location.reload(true);
-    // setInterval(resetTimer, 1000);
-    // initSelect2();
-  });
-};
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
   // initSortable();
+  const play = document.querySelector(".play-button")
+  const stop = document.querySelector(".stop-button")
+
+  if (play) {
+    play.addEventListener('click', () => {
+      getTimeDifference
+      // Call your functions here, e.g:
+      setInterval(initTimebox, 1000);
+      setInterval(initTaskTimer, 1000);
+      // initSelect2();
+    });
+  }
+
+
+  if (stop) {
+    stop.addEventListener('click', () => {
+      // Call your functions here, e.g:
+      location.reload(true);
+      // setInterval(resetTimer, 1000);
+      // initSelect2();
+    });
+  };
   initAnimeJs();
 });

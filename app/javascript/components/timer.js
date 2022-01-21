@@ -34,8 +34,14 @@ const resetTopTimebox = () => {
   let timeboxMin = document.querySelector(".timeminutes").dataset.minutes;
   if (timerMinEl.textContent == 0 && timerSecEl.textContent == 1) {
     moveTopTimeboxToBottom();
+    playAudio();
   };
 };
+
+const playAudio = () => {
+  const audio = document.getElementById("shien")
+  audio.play()
+}
 
 const moveTopTimeboxToBottom = () => {
   const wholeGrid = document.querySelector(".timelist");

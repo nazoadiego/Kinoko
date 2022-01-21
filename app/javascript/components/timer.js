@@ -46,24 +46,25 @@ const moveTopTimeboxToBottom = () => {
 const updateTimer = (timerMinEl, timerSecEl) => {
   let startDate = new Date();
   let milliseconds = parseInt(document.querySelector(".timelist > .red > .card-timebox > .remainder").dataset.timeboxduration)
+  let selectedClass = ".timelist > .red > .card-timebox > .settimes"
 
-  if (!document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate)  {
-    document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate;
+  if (!document.querySelector(selectedClass).dataset.startDate)  {
+    document.querySelector(selectedClass).dataset.startDate = startDate;
     let endDate = new Date(startDate.getTime() + milliseconds);
-    document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate = endDate;
+    document.querySelector(selectedClass).dataset.endDate = endDate;
   };
 
-  endDate = document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate
+  endDate = document.querySelector(selectedClass).dataset.endDate
 
   if (new Date(endDate) < new Date(startDate)) {
-    document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate;
+    document.querySelector(selectedClass).dataset.startDate = startDate;
      endDate = new Date(startDate.getTime() + milliseconds);
-    document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate = endDate;
+    document.querySelector(selectedClass).dataset.endDate = endDate;
   }
 
-  document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.startDate = startDate
+  document.querySelector(selectedClass).dataset.startDate = startDate
 
-  let endDate = document.querySelector(".timelist > .red > .card-timebox > .settimes").dataset.endDate;
+  let endDate = document.querySelector(selectedClass).dataset.endDate;
   let timeDifferenceObj = getTimeDifference(startDate, endDate);
   timerMinEl.textContent = (timeDifferenceObj.rMinutes).toString().padStart(2, 0);
   timerSecEl.textContent = (timeDifferenceObj.rSeconds + 1).toString().padStart(2, 0);

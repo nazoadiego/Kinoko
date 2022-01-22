@@ -42,11 +42,11 @@ document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
   // initSortable();
-  const play = document.querySelector(".play-button")
-  const stop = document.querySelector(".stop-button")
+  const playButton = document.querySelector(".play-button")
+  const stopButton = document.querySelector(".stop-button")
 
-  if (play) {
-    play.addEventListener('click', () => {
+  if (playButton) {
+    playButton.addEventListener('click', () => {
       getTimeDifference
       // Call your functions here, e.g:
       setInterval(initTimebox, 1000);
@@ -56,8 +56,8 @@ document.addEventListener('turbolinks:load', () => {
   }
 
 
-  if (stop) {
-    stop.addEventListener('click', () => {
+  if (stopButton) {
+    stopButton.addEventListener('click', () => {
       // Call your functions here, e.g:
       location.reload(true);
       // setInterval(resetTimer, 1000);

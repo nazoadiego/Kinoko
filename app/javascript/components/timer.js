@@ -94,8 +94,6 @@ const initTimebox = () => {
   timerCustom();
 };
 
-let test1 = "string";
-let test2 = "string";
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 

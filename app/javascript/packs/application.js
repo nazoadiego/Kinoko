@@ -48,6 +48,7 @@ document.addEventListener("turbolinks:load", () => {
 
 		let taskInterval;
 		let timeboxInterval;
+
 		playButton.addEventListener("click", () => {
 			getTimeDifference;
 			console.log("I am playing!");

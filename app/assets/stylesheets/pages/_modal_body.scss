@@ -18,7 +18,7 @@
 }
 
 .toggle + label::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   cursor: pointer;
@@ -26,16 +26,16 @@
   height: 20px;
   top: 0;
   left: 0;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   border-radius: 50rem;
 }
 
 .toggle:checked + label::before {
-  background-color: #1EDD88;
+  background-color: #1edd88;
 }
 
 .toggle + label::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   cursor: pointer;

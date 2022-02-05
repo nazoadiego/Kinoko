@@ -4,9 +4,9 @@
   width: 98%;
   border-radius: 2px;
   border: black 2px solid;
-  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   h1 {
-    color: #573BC9;
+    color: #573bc9;
   }
 }
 
@@ -16,7 +16,7 @@
   width: 98%;
   border-radius: 2px;
   h1 {
-    color: #573BC9;
+    color: #573bc9;
   }
 }
 
@@ -27,13 +27,13 @@
   grid-gap: 0;
 }
 
-@media(max-width: 1500px) {
+@media (max-width: 1500px) {
   .task-grid {
     grid-template-columns: auto auto auto;
   }
 }
 
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   .task-grid {
     grid-template-columns: auto auto;
   }

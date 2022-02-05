@@ -1,15 +1,8 @@
-.card-task {
-  height: 150px;
-  width: 300px;
-  margin-top: 20px;
-  margin-left: -2px;
-  background-color: #FFFFFF;
-  color: #000;
+.task-card {
+  position: relative;
   border-radius: 8px;
   border: 2px solid #000;
   animation: appear 1.5s ease;
-  position: relative;
-
   p {
     font-weight: lighter;
     margin-top: 2px;
@@ -20,10 +13,9 @@
     margin-top: 2px;
   }
 
-  h6{
+  h6 {
     font-weight: lighter;
     font-size: 14px;
-
   }
 }
 

@@ -1,3 +1,23 @@
 .card-timebox {
+  padding-top: 7px;
+  padding-left: 10px;
+  color: #000;
   border-radius: 8px;
+  border: black 2px solid;
+  // border-radius: 4px;
+  animation: appear-timebox 1.5s ease;
+}
+
+.card-remove-link {
+  height: 10px;
+  margin-right: 10px;
+}
+
+@keyframes appear-timebox {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

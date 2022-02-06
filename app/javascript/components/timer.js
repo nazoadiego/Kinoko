@@ -19,18 +19,18 @@ const getTimeDifference = (start, end) => {
 
 const initTimebox = () => {
   const timerCustom = () => {
-    let timerMinEl = document.querySelector(".timer__min");
-    let timerSecEl = document.querySelector(".timer__sec");
+    let timerMinEl = document.querySelector(".timer-min");
+    let timerSecEl = document.querySelector(".timer-sec");
     resetTopTimebox();
     // UPDATE TOP TIMER
     updateTimer(timerMinEl, timerSecEl);
   };
 
   const resetTopTimebox = () => {
-    let timerMinEl = document.querySelector(".timer__min");
-    let timerSecEl = document.querySelector(".timer__sec");
-    let timeboxSec = document.querySelector(".timeseconds").dataset.seconds;
-    let timeboxMin = document.querySelector(".timeminutes").dataset.minutes;
+    let timerMinEl = document.querySelector(".timer-min");
+    let timerSecEl = document.querySelector(".timer-sec");
+    let timeboxSec = document.querySelector(".time-seconds").dataset.seconds;
+    let timeboxMin = document.querySelector(".time-minutes").dataset.minutes;
     if (timerMinEl.textContent == 0 && timerSecEl.textContent == 1) {
       moveTopTimeboxToBottom();
       playAudio();
@@ -43,18 +43,18 @@ const initTimebox = () => {
   };
 
   const moveTopTimeboxToBottom = () => {
-    const wholeGrid = document.querySelector(".timelist");
-    const firstDiv = document.querySelector(".timelist > .red");
+    const wholeGrid = document.querySelector(".timeboxes-list");
+    const firstDiv = document.querySelector(".timeboxes-list > .card-timebox");
     wholeGrid.insertAdjacentElement("beforeend", firstDiv);
   };
 
   const updateTimer = (timerMinEl, timerSecEl) => {
     let startDate = new Date();
     let milliseconds = parseInt(
-      document.querySelector(".timelist > .red > .card-timebox > .remainder")
-        .dataset.timeboxduration
+      document.querySelector(".card-timebox > .remainder").dataset
+        .timeboxduration
     );
-    let selectedClass = ".timelist > .red > .card-timebox > .settimes";
+    let selectedClass = ".card-timebox > .settimes";
 
     if (!document.querySelector(selectedClass).dataset.startDate) {
       document.querySelector(selectedClass).dataset.startDate = startDate;
@@ -84,9 +84,7 @@ const initTimebox = () => {
 
   // style methods
   const activeTimerStyle = () => {
-    const timeboxdiv = document.querySelector(
-      ".timelist > .red > .card-timebox"
-    );
+    const timeboxdiv = document.querySelector(".timelist > .card-timebox");
     timeboxdiv.classList.add("active-timebox");
   };
 };
@@ -152,3 +150,10 @@ const initTaskTimer = () => {
 };
 
 export { initTimebox, initTaskTimer, getTimeDifference };
+
+let timerSecEl = document.querySelector(".timer-sec");
+let timeboxSec = document.querySelector(".time-seconds").dataset.seconds;
+let timeboxMin = document.querySelector(".time-minutes").dataset.minutes;
+const firstDiv = document.querySelector(".timeboxes-list > .card-timebox");
+document.querySelector(".card-timebox > .remainder");
+const timeboxdiv = document.querySelector(".timelist > .card-timebox");

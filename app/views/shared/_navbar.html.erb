@@ -4,47 +4,47 @@
       <div class="burger-container" onclick="toggleMenu();">
         <i class="fas fa-bars"></i>
       </div>
-      <span class="title d-none"><h2>Kinoko</h2></span>
+      <span class="title hidden"><h2>Kinoko</h2></span>
     </li>
 
   <li>
     <a href="<%= dashboard_path %> ">
-      <div class="navbar-icon d-flex justify-content-center">
+      <div class="navbar-icon flex justify-center">
         <span><i class="fas fa-home"></i></span>
       </div>
-      <span class="title d-flex align-items-center">Home</span>
+      <span class="title flex items-center">Home</span>
     </a>
   </li>
 
   <li>
     <a href="<%= statistics_path %>">
-      <div class="navbar-icon d-flex justify-content-center">
+      <div class="navbar-icon flex justify-center">
         <span><i class="fas fa-chart-line"></i></span>
       </div>
-      <span class="title d-flex align-items-center">Statistics</span>
+      <span class="title flex items-center">Statistics</span>
     </a>
   </li>
 
   <li>
     <a href="<%= mushroom_forest_path %>">
-      <div class="navbar-icon d-flex justify-content-center">
+      <div class="navbar-icon flex justify-center">
         <span><i class="fas fa-tree"></i></span>
       </div>
-      <span class="title d-flex align-items-center">Mushroom Forest</span>
+      <span class="title flex items-center">Mushroom Forest</span>
     </a>
   </li>
 
   <%# <li>
     <a href="">
       <span><i class="fas fa-tasks"></i></span>
-      <span class="title d-flex align-items-center">Task</span>
+      <span class="title flex items-center">Task</span>
     </a>
   </li>
 
   <li>
     <a href="<%= work_sessions_path(work_session) %>
       <%# <span><i class="fas fa-tablet-alt"></i></span>
-      <span class="title d-flex align-items-center">Work session</span>
+      <span class="title flex items-center">Work session</span>
 
     </a>
   </li> %>
@@ -52,10 +52,10 @@
 
     <li>
       <%= link_to destroy_user_session_path, method: :delete do %>
-        <div class="navbar-icon d-flex justify-content-center" style="padding-left: 4px;">
+        <div class="navbar-icon flex justify-center" style="padding-left: 4px;">
           <span><i class="fas fa-sign-out-alt"></i></span>
         </div>
-        <span class="title d-flex align-items-center">Sign out</span>
+        <span class="title flex items-center">Sign out</span>
       <% end %>
     </li>
 

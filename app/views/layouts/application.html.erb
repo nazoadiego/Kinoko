@@ -6,25 +6,22 @@
 
     <%= display_meta_tags(default_meta_tags) %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-      <% if @hide_navbar %>
-        <main class="">
-          <%= yield %>
-        </main>
-      <% else %>
-        <%= render "shared/navbar" %>
-        <div class="main active">
-        <main class="">
-                <%= yield %>
-        </main>
-        </div>
-      <% end %>
-    </div>
+    <% if @hide_navbar %>
+      <main class="">
+        <%= yield %>
+      </main>
+    <% else %>
+      <%= render "shared/navbar" %>
+      <main class="main active">
+              <%= yield %>
+      </main>
+    <% end %>
 
     <%= render 'shared/flashes' %>
     <% unless @hide_navbar %>

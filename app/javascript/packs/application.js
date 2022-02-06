@@ -37,7 +37,7 @@ document.addEventListener("turbolinks:load", () => {
   // Call your JS functions here
   // [...]
   // initSortable();
-  const workSession = document.getElementById("work-session-window");
+  const workSession = document.getElementById("work-session");
 
   if (workSession) {
     const playButton = document.querySelector(".play-button");

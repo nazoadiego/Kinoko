@@ -1,24 +1,26 @@
-<div class="full-height d-flex align-items-center justify-content-center">
-  <div class="blue d-flex" style="width: 80%">
-    <div class="red d-flex flex-column justify-content-around" style="width: 50%">
-      <div>
-        <h1 class="title-segoe">
-          <span class="purple-text">Ki</span>noko. Productivity.<br><span style="font-size:56px">For what you love.</span>
-        </h1>
-      </div>
-      <p class="light-subtitle">
-        Have the flexibility to work the way you do. A timeboxing app.
-      </p>
-      <div class="d-flex justify-content-start mr-3 mt-5">
-        <%= link_to "I want to start working", dashboard_path, class: "btn btn-primary" %>
-      </div>
-    </div>
-    <div class="red d-flex justify-content-center" style="width: 50%">
-      <div class="orb pb-5">
-      </div>
+<div class="h-screen flex justify-evenly items-center">
+
+
+  <div class="w-1/2">
+    <h1 class="title">
+      <span class="purple">Ki</span>noko. Productivity. For what you love.
+    </h1>
+    <p class="light-subtitle mt-5">
+      Have the flexibility to work the way you do. A timeboxing app.
+    </p>
+    <div class="flex justify-start mr-3 mt-5">
+      <%= link_to "I want to start working", dashboard_path, class: "btn btn-primary" %>
     </div>
   </div>
+
+
+  <div class="relative flex">
+    <div class="orb-title pb-5">
+    </div>
+  </div>
+
 </div>
+
 
 <% if user_signed_in? %>
 

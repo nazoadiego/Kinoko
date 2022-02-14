@@ -6,23 +6,22 @@
 
     <%= display_meta_tags(default_meta_tags) %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-    <div class="page-container">
-      <% if @hide_navbar %>
-          <%= yield %>
-      <% else %>
-        <%= render "shared/navbar" %>
-        <div class="main active">
-          <%= yield %>
-        </div>
-      <% end %>
-    </div>
+    <% if @hide_navbar %>
+      <main class="">
+        <%= yield %>
+      </main>
+    <% else %>
+      <%= render "shared/navbar" %>
+      <main class="main active">
+              <%= yield %>
+      </main>
+    <% end %>
 
     <%= render 'shared/flashes' %>
     <% unless @hide_navbar %>

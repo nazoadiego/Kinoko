@@ -1,0 +1,46 @@
+<%# Work Session - Task info Top %>
+<h1>
+  <%= @work_session.task.title %>
+</h1>
+
+<% @work_session.task.labels.each do |label| %>
+  <button class="labels1">
+      #<%= label.name %>
+  </button>
+<% end %>
+
+<h3>
+  <%= @work_session.task.category %>
+</h3>
+
+<div class="inline-flex">
+    <h4 class="taskmins" >
+      <%= @work_session.task.minutes %> mins
+    </h4>
+    <h4 class="tasksecs" >
+      <%= @work_session.task.seconds %> secs
+    </h4>
+</div>
+
+<p class="taskduration" data-duration="<%= (@work_session.task.duration * 1000) %>" hidden></p>
+<p class="tasktimes" hidden></p>
+
+
+<%# Play and Stop%>
+
+<div class="inline-flex">
+  <div class="btn play-button">
+    <i class="fas fa-play"></i>
+  </div>
+  <div class="btn stop-button">
+    <i class="fas fa-pause"></i>
+  </div>
+</div>
+
+<%# Progress Bar %>
+<%= render 'progress_bar', work_session: @work_session %>
+
+<%# Mark as Done %>
+<div id="doneTask">
+  <%= link_to 'MARK AS DONE', "/work_sessions/#{@work_session.id}/task/#{@work_session.task.id}", class: "btn btn2-primary btn-lg", method: :patch %>
+</div>

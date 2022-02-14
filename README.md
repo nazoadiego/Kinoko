@@ -1,4 +1,3 @@
-
 # Kinoko
 
 <img src="kinoko.jpg" width="100%">
@@ -9,12 +8,12 @@ The tag system allows you to track your work time in a more flexible and intelli
 
 ## Table of Contents
 
-*   [Basic Usage](#basic-usage)
-*   [Tracking your time](#tracking-your-time)
-    *   [Tags](#tags)
-    *   [Goals](#goals)
-    *   [Mushroom Forest](#mushroom-forest)
-*   [Frequently Asked Questions](#frequently-asked-questions)
+- [Basic Usage](#basic-usage)
+- [Tracking your time](#tracking-your-time)
+  - [Tags](#tags)
+  - [Goals](#goals)
+  - [Mushroom Forest](#mushroom-forest)
+- [Frequently Asked Questions](#frequently-asked-questions)
 <!-- *   [Screenshots](#screenshots) -->
 
 ## Basic Usage
@@ -42,8 +41,6 @@ Kinoko tag system precisely tackles that issue. When you are doing a task like "
 ### Goals
 
 When you create a task in your dashboard, you have the option to set a goal for a particular tag. You can see your progress in each of them when you access your statistics page.
-
-
 
 ## Mushroom Forest
 

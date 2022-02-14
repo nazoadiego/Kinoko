@@ -1,27 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Zen+Kurenaido&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Zen+Kurenaido&display=swap");
 
 // .container {
 //   position: relative;
 //   width: 100%;
 // }
 
-.navegation
-{
+.navegation {
   position: fixed;
   width: 300px;
   height: 100%;
-  background-color: $black;
+  background-color: black;
   transition: 0.5s;
   overflow: hidden;
 }
 
-.navegation.active
-{
+.navegation.active {
   width: 300px;
 }
 
-.navegation ul
-{
+.navegation ul {
   position: absolute;
   top: 8px;
   left: 0px;
@@ -30,35 +27,29 @@
   padding: 0;
 }
 
-.navegation ul li
-{
+.navegation ul li {
   position: relative;
   width: 96%;
   list-style: none;
 }
 
-.navegation ul li:hover
-{
-  background: #b8a9c9 ;
+.navegation ul li:hover {
+  background: #b8a9c9;
 }
 
-.navegation ul li:nth-child(1):hover
-{
+.navegation ul li:nth-child(1):hover {
   background: transparent;
 }
 
-.navegation ul li a
-{
+.navegation ul li a {
   position: relative;
   width: 100%;
   display: flex;
   text-decoration: none;
   color: #fff;
-
 }
 
-.navegation ul li a .icon
-{
+.navegation ul li a .icon {
   position: relative;
   display: block;
   min-width: 60px;
@@ -67,41 +58,36 @@
   text-align: center;
 }
 
-.navegation ul li a i
-{
+.navegation ul li a i {
   color: #fff;
   // font-size: 24px;
   font-size: 26px;
   margin: 12px;
   text-align: center;
-
 }
 
-.navegation ul li a .title
-{
+.navegation ul li a .title {
   position: relative;
   display: block;
   padding: 0 10px;
   height: 60px;
   line-height: 60px;
   white-space: nowrap;
-  font-family: 'poppins';
+  font-family: "poppins";
   color: #f5f5f5;
 }
 
-.main
-{
+.main {
   position: absolute;
   width: calc(100% - 300px);
   left: 300px;
   min-height: 100vh;
   background: white;
   transition: 0.5s;
-  top:0
+  top: 0;
 }
 
-.main .topbar
-{
+.main .topbar {
   width: 100%;
   background: #fff;
   height: 60px;
@@ -121,7 +107,6 @@
 }
 
 .burger-container::before {
-
   font-family: fontAwesome;
   position: absolute;
   width: 100%;

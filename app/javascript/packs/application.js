@@ -21,51 +21,48 @@ require("channels");
 // ----------------------------------------------------
 
 // External imports
-import "bootstrap";
 import "chartkick/chart.js";
-
-// Sortable
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initSortable } from "../plugins/init_sortable"; // <-- add this
 import {
-	initTimebox,
-	getTimeDifference,
-	initTaskTimer,
+  initTimebox,
+  getTimeDifference,
+  initTaskTimer,
 } from "../components/timer";
 import { initAnimeJs } from "../plugins/animejs";
 
 document.addEventListener("turbolinks:load", () => {
-	// Call your JS functions here
-	// [...]
-	// initSortable();
-	const workSession = document.getElementById("work-session-window");
+  // Call your JS functions here
+  // [...]
+  // initSortable();
+  const workSession = document.getElementById("work-session");
 
-	if (workSession) {
-		const playButton = document.querySelector(".play-button");
-		const stopButton = document.querySelector(".stop-button");
+  if (workSession) {
+    const playButton = document.querySelector(".play-button");
+    const stopButton = document.querySelector(".stop-button");
 
-		let taskInterval;
-		let timeboxInterval;
+    let taskInterval;
+    let timeboxInterval;
 
-		playButton.addEventListener("click", () => {
-			getTimeDifference;
-			console.log("I am playing!");
-			taskInterval = setInterval(initTaskTimer, 1000);
-			timeboxInterval = setInterval(initTimebox, 1000);
-			// Call your functions here, e.g:
-			// initSelect2();
-		});
-		stopButton.addEventListener("click", () => {
-			// Call your functions here, e.g:
-			console.log("STOOPPP");
-			clearInterval(timeboxInterval);
-			clearInterval(taskInterval);
-			// initSelect2();
-		});
-	}
-	// Pause
+    playButton.addEventListener("click", () => {
+      getTimeDifference;
+      console.log("I am playing!");
+      taskInterval = setInterval(initTaskTimer, 1000);
+      timeboxInterval = setInterval(initTimebox, 1000);
+      // Call your functions here, e.g:
+      // initSelect2();
+    });
+    stopButton.addEventListener("click", () => {
+      // Call your functions here, e.g:
+      console.log("STOOPPP");
+      clearInterval(timeboxInterval);
+      clearInterval(taskInterval);
+      // initSelect2();
+    });
+  }
+  // Pause
 
-	initAnimeJs();
+  initAnimeJs();
 });

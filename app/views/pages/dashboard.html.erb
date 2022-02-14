@@ -1,14 +1,38 @@
-<div class="full-height d-flex justify-content-center align-items-center mt-4">
-  <div class="row blue"style="width: 95%">
-    <div class="col-12 red">
-      <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100 green">
-        <div class="blue d-flex align-items-center justify-content-center" style="height: 35vh">
-          <%= render "dashboard_top" %>
-        </div>
-        <div class="blue" style="height: 65vh">
-          <%= render "dashboard_bottom" %>
-        </div>
-      </div>
-    </div>
+<%# Dashboard Top %>
+
+<div class="flex items-center justify-center mt-12">
+  <div class="flex items-center">
+    <div class="small-orb"></div>
+  </div>
+
+  <div class="flex items-center ml-8">
+    <%= link_to root_path, style: "text-decoration: none" do %>
+      <h1 style="font-size: 110px"><span style="color: #573BC9">Ki</span>noko</h1>
+    <% end %>
   </div>
 </div>
+
+
+<%# Dasboard Bottom %>
+
+<div class="mx-20">
+
+       <div class="flex justify-between">
+          <h3 class="purple">Tasks</h3>
+
+          <button class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+            Add Task
+          </button>
+       </div>
+
+       <%# Grid %>
+
+      <div class="mt-8 grid gap-4 grid-cols-2 lg:grid-cols-4">
+        <% @tasks.each do |task| %>
+          <%= render "tasks_card", task: task %>
+        <% end %>
+      </div>
+
+</div>
+
+<%# render "tasks/new_modal", task: @task %>

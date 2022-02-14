@@ -30,7 +30,7 @@
 
 .skill-per {
   height: 14px;
-  background-color: #573BC9;
+  background-color: #573bc9;
   border-radius: 3px;
   position: relative;
   animation: ease fillBars 2.5s 1;
@@ -65,12 +65,12 @@
   right: 0;
 }
 
-@keyframes fillBars{
-  from{
-    width:0;
+@keyframes fillBars {
+  from {
+    width: 0;
   }
 
-  to{
+  to {
     width: 100%;
   }
 }

@@ -22,10 +22,49 @@
 
 </div>
 
+<div class="h-screen flex justify-evenly items-center">
 
-<% if user_signed_in? %>
 
-<% else %>
-  <%= link_to "Login", new_user_session_path, class: "btn btn-primary login-position d-none" %>
-  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary sign-up-position d-none" %>
-<% end %>
+  <div class="w-1/2">
+    <h1 class="title">
+      <span class="purple">Ki</span>noko. Productivity. For what you love.
+    </h1>
+    <p class="light-subtitle mt-5">
+      Have the flexibility to work the way you do. A timeboxing app.
+    </p>
+    <div class="flex justify-start mr-3 mt-5">
+      <%= link_to "I want to start working", dashboard_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+
+
+  <div class="relative flex">
+    <div class="orb-title pb-5">
+    </div>
+  </div>
+
+
+</div>
+<div class="h-screen flex justify-evenly items-center">
+
+
+  <div class="w-1/2">
+    <h1 class="title">
+      <span class="purple">Ki</span>noko. Productivity. For what you love.
+    </h1>
+    <p class="light-subtitle mt-5">
+      Have the flexibility to work the way you do. A timeboxing app.
+    </p>
+    <div class="flex justify-start mr-3 mt-5">
+      <%= link_to "I want to start working", dashboard_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+
+
+  <div class="relative flex">
+    <div class="orb-title pb-5">
+    </div>
+  </div>
+
+
+</div>

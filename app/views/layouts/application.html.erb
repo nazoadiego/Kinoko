@@ -13,17 +13,13 @@
 
   <body>
     <% if @hide_navbar %>
-      <main class="">
-    <main class="container mx-auto mt-28 px-5 flex">
-          <%= yield %>
-    </main>
+      <main>
+        <%= yield %>
       </main>
     <% else %>
       <%= render "shared/navbar" %>
       <main class="main active">
-    <main class="container mx-auto mt-28 px-5 flex">
-                <%= yield %>
-    </main>
+        <%= yield %>
       </main>
     <% end %>
 

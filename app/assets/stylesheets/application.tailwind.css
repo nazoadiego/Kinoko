@@ -1,23 +1,27 @@
 @tailwind base;
 @layer base {
   h1 {
-    @apply text-6xl font-medium;
+    @apply text-black text-6xl font-medium;
   }
 
   h2 {
-    @apply text-5xl font-medium;
+    @apply text-black text-5xl font-medium;
   }
 
   h3 {
-    @apply text-4xl font-medium;
+    @apply text-black text-4xl font-medium;
   }
 
   h4 {
-    @apply text-3xl font-medium;
+    @apply text-black text-3xl font-medium;
+  }
+
+  h5 {
+    @apply text-black text-2xl font-medium;
   }
 
   p {
-    @apply text-base;
+    @apply text-black text-base;
   }
 }
 

@@ -27,12 +27,12 @@
 <input type="checkbox" id="create-task" class="modal-toggle">
 <div class="modal">
   <div class="modal-box">
-    <h4 class="font-bold text-white mb-4">Create a new task!</h4>
 
 
           <%= simple_form_for(@task) do |f| %>
 
                 <div class="form-inputs space-y-4 px-4">
+                    <h4 class="font-bold text-white mb-4">Create a new task!</h4>
 
 
                     <%= f.input :title, input_html: {class: 'text-black w-full'} %>
@@ -72,7 +72,7 @@
                 </div>
 
 
-              <div class="modal-action py-4">
+              <div class="modal-action px-4">
                 <label for="my-modal" class="btn">Close</label>
                 <%= f.submit 'Save Changes', class: 'btn btn-primary'%>
               </div>

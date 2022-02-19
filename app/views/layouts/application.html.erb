@@ -13,13 +13,13 @@
 
   <body>
     <% if @hide_navbar %>
-      <main class="">
+      <main>
         <%= yield %>
       </main>
     <% else %>
       <%= render "shared/navbar" %>
       <main class="main active">
-              <%= yield %>
+        <%= yield %>
       </main>
     <% end %>
 

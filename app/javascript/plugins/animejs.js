@@ -8,7 +8,6 @@ const initAnimeJs = () => {
       blocks.classList.add("forest-orb");
       forest.appendChild(blocks);
     }
-    console.log(forest.dataset.duration);
 
     let button = document.querySelector("#grow-forest");
     button.addEventListener("click", (event) => {

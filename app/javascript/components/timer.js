@@ -150,10 +150,3 @@ const initTaskTimer = () => {
 };
 
 export { initTimebox, initTaskTimer, getTimeDifference };
-
-let timerSecEl = document.querySelector(".timer-sec");
-let timeboxSec = document.querySelector(".time-seconds").dataset.seconds;
-let timeboxMin = document.querySelector(".time-minutes").dataset.minutes;
-const firstDiv = document.querySelector(".timeboxes-list > .card-timebox");
-document.querySelector(".card-timebox > .remainder");
-const timeboxdiv = document.querySelector(".timelist > .card-timebox");

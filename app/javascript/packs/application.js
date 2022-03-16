@@ -31,7 +31,7 @@ import {
 
 import { toggleMenu } from "../components/navbar";
 
-import { initAnimeJs, mushroomForest } from "../components/forest";
+import { mushroomForest } from "../components/forest";
 
 document.addEventListener("turbolinks:load", () => {
   // WorkSessions

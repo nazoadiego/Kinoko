@@ -22,6 +22,7 @@ const initTimebox = () => {
     let timerMinEl = document.querySelector(".timer-min");
     let timerSecEl = document.querySelector(".timer-sec");
     resetTopTimebox();
+
     // UPDATE TOP TIMER
     updateTimer(timerMinEl, timerSecEl);
   };
@@ -29,8 +30,7 @@ const initTimebox = () => {
   const resetTopTimebox = () => {
     let timerMinEl = document.querySelector(".timer-min");
     let timerSecEl = document.querySelector(".timer-sec");
-    let timeboxSec = document.querySelector(".time-seconds").dataset.seconds;
-    let timeboxMin = document.querySelector(".time-minutes").dataset.minutes;
+
     if (timerMinEl.textContent == 0 && timerSecEl.textContent == 1) {
       moveTopTimeboxToBottom();
       playAudio();
@@ -51,28 +51,29 @@ const initTimebox = () => {
   const updateTimer = (timerMinEl, timerSecEl) => {
     let startDate = new Date();
     let milliseconds = parseInt(
-      document.querySelector(".card-timebox > .remainder").dataset
-        .timeboxduration
+      document.querySelector(".remainder").dataset.timeboxduration
     );
-    let selectedClass = ".card-timebox > .settimes";
 
-    if (!document.querySelector(selectedClass).dataset.startDate) {
-      document.querySelector(selectedClass).dataset.startDate = startDate;
+    let setTimes = document.querySelector(".set-times");
+    console.log(setTimes);
+
+    if (!setTimes.dataset.startDate) {
+      setTimes.dataset.startDate = startDate;
       let endDate = new Date(startDate.getTime() + milliseconds);
-      document.querySelector(selectedClass).dataset.endDate = endDate;
+      setTimes.dataset.endDate = endDate;
     }
 
-    endDate = document.querySelector(selectedClass).dataset.endDate;
+    endDate = setTimes.dataset.endDate;
 
     if (new Date(endDate) < new Date(startDate)) {
-      document.querySelector(selectedClass).dataset.startDate = startDate;
+      setTimes.dataset.startDate = startDate;
       endDate = new Date(startDate.getTime() + milliseconds);
-      document.querySelector(selectedClass).dataset.endDate = endDate;
+      setTimes.dataset.endDate = endDate;
     }
 
-    document.querySelector(selectedClass).dataset.startDate = startDate;
+    setTimes.dataset.startDate = startDate;
 
-    let endDate = document.querySelector(selectedClass).dataset.endDate;
+    let endDate = setTimes.dataset.endDate;
     let timeDifferenceObj = getTimeDifference(startDate, endDate);
     timerMinEl.textContent = timeDifferenceObj.rMinutes
       .toString()
@@ -83,10 +84,11 @@ const initTimebox = () => {
   };
 
   // style methods
-  const activeTimerStyle = () => {
-    const timeboxdiv = document.querySelector(".timelist > .card-timebox");
-    timeboxdiv.classList.add("active-timebox");
-  };
+  // const activeTimerStyle = () => {
+  //   const timeboxdiv = document.querySelector(".timelist > .card-timebox");
+  //   timeboxdiv.classList.add("active-timebox");
+  // };
+  timerCustom();
 };
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

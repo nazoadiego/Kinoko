@@ -36,11 +36,15 @@
   .form-inputs input,
   textarea {
     color: black;
-    @apply border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500;
+    @apply border border-gray-300 rounded-lg
+    shadow-sm focus:outline-none focus:border-cyan-500
+    focus:ring-1 focus:ring-cyan-500;
   }
 
   .form-select {
-    @apply text-black border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500;
+    @apply text-black border-gray-300 rounded-lg
+    shadow-sm focus:outline-none focus:border-cyan-500
+    focus:ring-1 focus:ring-cyan-500;
   }
 
   .form-inputs .form-check-input {
@@ -49,10 +53,6 @@
 
   .form-inputs .form-check {
     @apply mt-2 flex items-center;
-  }
-
-  .file-button {
-    @apply text-sm leading-6 file:mr-2 file:px-4 file:py-2 file:rounded-full file:bg-cyan-200 file:text-cyan-700 file:font-semibold file:border-none hover:file:bg-cyan-100;
   }
 }
 

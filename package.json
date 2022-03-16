@@ -10,7 +10,7 @@
     "autoprefixer": "^10.0.2",
     "chart.js": "^3.7.0",
     "chartkick": "^4.1.1",
-    "daisyui": "^2.0.9",
+    "daisyui": "^2.9.0",
     "jquery": "^3.6.0",
     "postcss": "^8.0.9",
     "sortablejs": "^1.14.0",

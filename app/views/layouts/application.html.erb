@@ -25,21 +25,5 @@
     <% end %>
 
     <%= render 'shared/flashes' %>
-
-    <% unless @hide_navbar %>
-      <script>
-        function toggleMenu() {
-          let burger = document.querySelector('.burger-container');
-          let navegation = document.querySelector('.navegation');
-          let main = document.querySelector('.main');
-          let title = document.querySelector('.navegation h2');
-          title.classList.toggle('d-none');
-          burger.classList.toggle('active');
-          navegation.classList.toggle('active');
-          main.classList.toggle('active');
-        }
-
-      </script>
-    <% end %>
   </body>
 </html>

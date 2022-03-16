@@ -25,18 +25,19 @@ import "chartkick/chart.js";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { initSortable } from "../plugins/init_sortable"; // <-- add this
+
 import {
   initTimebox,
   getTimeDifference,
   initTaskTimer,
 } from "../components/timer";
+
+import { toggleMenu } from "../components/navbar";
+
 import { initAnimeJs } from "../plugins/animejs";
 
 document.addEventListener("turbolinks:load", () => {
-  // Call your JS functions here
-  // [...]
-  // initSortable();
+  // WorkSessions
   const workSession = document.getElementById("work-session");
 
   if (workSession) {
@@ -48,21 +49,20 @@ document.addEventListener("turbolinks:load", () => {
 
     playButton.addEventListener("click", () => {
       getTimeDifference;
-      console.log("I am playing!");
       taskInterval = setInterval(initTaskTimer, 1000);
       timeboxInterval = setInterval(initTimebox, 1000);
-      // Call your functions here, e.g:
-      // initSelect2();
     });
     stopButton.addEventListener("click", () => {
-      // Call your functions here, e.g:
-      console.log("STOOPPP");
       clearInterval(timeboxInterval);
       clearInterval(taskInterval);
-      // initSelect2();
     });
   }
-  // Pause
+  // Nav bar
+  const navbar = document.getElementById("navbar");
+  if (navbar) {
+    const hamburger = document.getElementById("navbar-burger");
+    hamburger.addEventListener("click", toggleMenu);
+  }
 
   initAnimeJs();
 });

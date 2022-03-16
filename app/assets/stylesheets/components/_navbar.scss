@@ -5,7 +5,7 @@
 //   width: 100%;
 // }
 
-.navegation {
+.navigation {
   position: fixed;
   width: 300px;
   height: 100%;
@@ -14,11 +14,11 @@
   overflow: hidden;
 }
 
-.navegation.active {
+.navigation.active {
   width: 300px;
 }
 
-.navegation ul {
+.navigation ul {
   position: absolute;
   top: 8px;
   left: 0px;
@@ -27,21 +27,21 @@
   padding: 0;
 }
 
-.navegation ul li {
+.navigation ul li {
   position: relative;
   width: 96%;
   list-style: none;
 }
 
-.navegation ul li:hover {
+.navigation ul li:hover {
   background: #b8a9c9;
 }
 
-.navegation ul li:nth-child(1):hover {
+.navigation ul li:nth-child(1):hover {
   background: transparent;
 }
 
-.navegation ul li a {
+.navigation ul li a {
   position: relative;
   width: 100%;
   display: flex;
@@ -49,7 +49,7 @@
   color: #fff;
 }
 
-.navegation ul li a .icon {
+.navigation ul li a .icon {
   position: relative;
   display: block;
   min-width: 60px;
@@ -58,7 +58,7 @@
   text-align: center;
 }
 
-.navegation ul li a i {
+.navigation ul li a i {
   color: #fff;
   // font-size: 24px;
   font-size: 26px;
@@ -66,7 +66,7 @@
   text-align: center;
 }
 
-.navegation ul li a .title {
+.navigation ul li a .title {
   position: relative;
   display: block;
   padding: 0 10px;

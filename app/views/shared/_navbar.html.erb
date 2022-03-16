@@ -1,7 +1,7 @@
-<div class="navegation">
+<div class="navigation" id="navbar">
   <ul>
     <li>
-      <div class="burger-container" onclick="toggleMenu();">
+      <div class="burger-container" id="navbar-burger">
         <i class="fas fa-bars"></i>
       </div>
       <span class="title hidden"><h2>Kinoko</h2></span>
@@ -33,22 +33,6 @@
       <span class="title flex items-center">Mushroom Forest</span>
     </a>
   </li>
-
-  <%# <li>
-    <a href="">
-      <span><i class="fas fa-tasks"></i></span>
-      <span class="title flex items-center">Task</span>
-    </a>
-  </li>
-
-  <li>
-    <a href="<%= work_sessions_path(work_session) %>
-      <%# <span><i class="fas fa-tablet-alt"></i></span>
-      <span class="title flex items-center">Work session</span>
-
-    </a>
-  </li> %>
-
 
     <li>
       <%= link_to destroy_user_session_path, method: :delete do %>

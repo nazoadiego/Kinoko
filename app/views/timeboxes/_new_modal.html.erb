@@ -1,0 +1,31 @@
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="create-timebox" class="modal-toggle">
+<label for="create-timebox" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+    <%= simple_form_for [@task, @timebox] do |f| %>
+      <div class="form-inputs text-white space-y-4 flex flex-col">
+        <%= f.input :title, wrapper_html: {class: 'flex flex-col'} %>
+        <%= f.input :minutes, label: 'Minutes/Seconds',
+        input_html: {class: 'block w-1/3 px-4', maxlength: 1},
+        wrapper_html: {class: 'flex flex-col justify-between'} do %>
+          <div class="inline-flex">
+            <%= f.input_field :minutes, value: 0, class: 'text-black w-1/3 mr-1', type: "number" %>
+            <%= f.input_field :seconds, value: 0, class: 'text-black w-1/3', type: "number" %>
+          </div>
+        <% end %>
+        <fieldset class="form-group boolean optional break">
+          <div class="form-check">
+            <input name="break" type="hidden" value="0">
+            <input class="form-check-input boolean optional toggle" type="checkbox" value="1" name="break" id="break">
+            <label class="form-check-label boolean optional" for="break">Break</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="modal-action">
+        <label for="create-timebox" class="btn">Close</label>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </label>
+</label>

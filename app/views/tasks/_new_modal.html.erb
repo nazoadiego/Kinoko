@@ -17,15 +17,20 @@
               input_html: {class: 'block w-1/3 px-4', maxlength: 1},
               wrapper_html: {class: 'flex flex-col justify-between'} do %>
                 <div class="inline-flex">
-                  <%= f.input_field :minutes, value: 0, class: 'text-black w-1/3' %>
-                  <%= f.input_field :seconds, value: 0, class: 'text-black w-1/3' %>
+                  <%= f.input_field :minutes, value: 0,
+                  class: 'text-black w-1/3 mr-1', type: "number" %>
+                  <%= f.input_field :seconds, value: 0,
+                  class: 'text-black w-1/3', type: "number" %>
                 </div>
               <% end %>
 
 
-                <div data-tooltip="Assign labels to your tasks to track your progress">
-                  Assign Labels <span class="assign-label">Info</span>
-                </div>
+                <%# <div data-tooltip="Assign labels to your tasks to track your progress"> %>
+                  <div>
+                    Assign Labels
+                  </div>
+                  <%# <span class="assign-label">Info</span> %>
+                <%# </div> %>
                 <p class="flex justify-evenly">
                   <%= f.collection_check_boxes :label_ids, Label.all, :id, :name do |b| %>
                     <%= b.check_box(class: "tag-selector p-12") %><%= b.label %>
@@ -33,7 +38,7 @@
                 </p>
 
 
-                <div class="newlabel">
+                <div class="newlabel space-y-2">
                   <h5 class="text-white">Add a new label</h5>
                   <div class="flex flex-col justify-between">
                     Name<%= text_field_tag 'task[new_label]',
@@ -50,7 +55,7 @@
 
 
         <div class="modal-action px-4">
-          <label for="my-modal" class="btn">Close</label>
+          <label for="create-task" class="btn">Close</label>
           <%= f.submit 'Save Changes', class: 'btn btn-primary'%>
         </div>
     <% end %>

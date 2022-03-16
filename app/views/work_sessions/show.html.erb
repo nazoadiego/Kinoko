@@ -8,18 +8,16 @@
 
           <div class="flex justify-end w-4/5 mb-4">
             <%= link_to "Back", "/dashboard", class: "btn btn-primary" %>
-            <button type="button" class="btn btn-primary mx-4"
-              data-toggle="modal" data-target="#exampleModal"
-              data-whatever="@mdo">
+            <label for="create-timebox" class="btn btn-primary mx-4 modal-button">
               Add
-            </button>
+            </label>
           </div>
 
           <div class="timeboxes-list w-4/5 space-y-4">
             <%= render "timeboxes" %>
-            <%# render "timeboxes/form" %>
           </div>
     </div>
 </div>
 
 <%= audio_tag "shien.mp3", id: "shien" %>
+<%= render "timeboxes/new_modal" %>

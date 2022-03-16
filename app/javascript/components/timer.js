@@ -21,6 +21,7 @@ const initTimebox = () => {
   const timerCustom = () => {
     let timerMinEl = document.querySelector(".timer-min");
     let timerSecEl = document.querySelector(".timer-sec");
+
     resetTopTimebox();
 
     // UPDATE TOP TIMER
@@ -53,9 +54,7 @@ const initTimebox = () => {
     let milliseconds = parseInt(
       document.querySelector(".remainder").dataset.timeboxduration
     );
-
     let setTimes = document.querySelector(".set-times");
-    console.log(setTimes);
 
     if (!setTimes.dataset.startDate) {
       setTimes.dataset.startDate = startDate;

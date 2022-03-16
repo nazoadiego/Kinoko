@@ -1,15 +1,21 @@
-<div class="h-screen flex mx-20" id="work-session">
-    <div class="basis-1/2 flex flex-col justify-center items-center">
+<div class="h-screen flex flex-col lg:flex-row items-center mx-20 " id="work-session">
+    <div class="basis-1/2 h-full flex flex-col
+    justify-center items-center space-y-4">
           <%= render "work_session_task_info" %>
     </div>
 
     <div class="basis-1/2 flex flex-col justify-center items-center">
-          <%= link_to "Back", "/dashboard", class: "btn btn-primary" %>
-          <button type="button" class="btn btn-primary mx-4" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-            Add
-          </button>
 
-          <div class="timeboxes-list">
+          <div class="flex justify-end w-4/5 mb-4">
+            <%= link_to "Back", "/dashboard", class: "btn btn-primary" %>
+            <button type="button" class="btn btn-primary mx-4"
+              data-toggle="modal" data-target="#exampleModal"
+              data-whatever="@mdo">
+              Add
+            </button>
+          </div>
+
+          <div class="timeboxes-list w-4/5 space-y-4">
             <%= render "timeboxes" %>
             <%# render "timeboxes/form" %>
           </div>

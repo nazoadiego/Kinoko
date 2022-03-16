@@ -23,9 +23,6 @@ require("channels");
 // External imports
 import "chartkick/chart.js";
 
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-
 import {
   initTimebox,
   getTimeDifference,
@@ -34,7 +31,7 @@ import {
 
 import { toggleMenu } from "../components/navbar";
 
-import { initAnimeJs } from "../plugins/animejs";
+import { initAnimeJs, mushroomForest } from "../components/forest";
 
 document.addEventListener("turbolinks:load", () => {
   // WorkSessions
@@ -57,12 +54,19 @@ document.addEventListener("turbolinks:load", () => {
       clearInterval(taskInterval);
     });
   }
+
   // Nav bar
   const navbar = document.getElementById("navbar");
+
   if (navbar) {
     const hamburger = document.getElementById("navbar-burger");
     hamburger.addEventListener("click", toggleMenu);
   }
 
-  initAnimeJs();
+  // Mushroom Forest
+  const forestPage = document.getElementById("mushroom-forest");
+
+  if (forestPage) {
+    mushroomForest();
+  }
 });

@@ -1,7 +1,7 @@
 import anime from "animejs";
 
-const initAnimeJs = () => {
-  let forest = document.querySelector(".forest");
+const mushroomForest = () => {
+  const forest = document.querySelector(".forest");
   if (forest) {
     for (let i = 1; i <= forest.dataset.duration / 3600; i++) {
       const blocks = document.createElement("div");
@@ -27,4 +27,4 @@ const initAnimeJs = () => {
   }
 };
 
-export { initAnimeJs };
+export { mushroomForest };

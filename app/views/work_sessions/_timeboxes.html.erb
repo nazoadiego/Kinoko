@@ -10,7 +10,7 @@
         <%= timebox.title %>
       </h4>
       <%= link_to timeboxes_path(timebox), method: :delete, id: timebox.id, data: {confirm: "Are you sure?"}, class: "card-remove-link" do %>
-        <i class="fas fa-trash"></i>
+        <i class="fas fa-trash text-white"></i>
       <% end %>
     </div>
 
@@ -20,9 +20,9 @@
     <p class="time-seconds" data-seconds="<%= timebox.seconds %>" hidden></p>
 
     <div class="flex justify-end">
-        <span class="timer-min" data-done=""><%= format('%02d', timebox.minutes) %></span>
+        <p class="timer-min" data-done=""><%= format('%02d', timebox.minutes) %></p>
         <span>:</span>
-        <span class="timer-sec" data-done=""><%= format('%02d', timebox.seconds) %></span>
+        <p class="timer-sec" data-done=""><%= format('%02d', timebox.seconds) %></p>
     </div>
 
   </div>

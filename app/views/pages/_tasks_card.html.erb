@@ -1,30 +1,30 @@
-<div class="task-card p-4">
+<div class="task-card bg-white p-4">
 
     <div class="flex justify-between">
-      <h5 class ="font-semibold text-xl">
+      <h5 class ="font-semibold text-xl text-black">
         <%= task.title %>
       </h5>
       <%= render "dropdown_menu", task: task %>
     </div>
 
     <% task.labels.each do |label| %>
-      <p class="font-light">
+      <p class="font-light text-black">
         #<%= label.name %>
       </p>
     <% end %>
 
 
-    <div class="flex justify-between mt-12">
-      <p>
+    <div class="flex justify-between items-center mt-12">
+      <p class="text-black">
         <%= task.minutes %> mins
       </p>
 
       <% if task.work_session != nil %>
-        <%= link_to work_session_path(task.work_session), class: "btn" do %>
+        <%= link_to work_session_path(task.work_session), class: "btn btn-secondary" do %>
           Start Timebox
         <% end %>
       <% else %>
-        <%= link_to task_work_sessions_path(task), method: :post, class: "btn" do %>
+        <%= link_to task_work_sessions_path(task), method: :post, class: "btn btn-secondary" do %>
           Start Timebox
         <% end %>
       <% end %>

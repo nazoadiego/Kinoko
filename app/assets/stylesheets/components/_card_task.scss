@@ -2,16 +2,18 @@
   position: relative;
   border-radius: 8px;
   border: 2px solid #000;
+  animation: grow 1.5s ease;
+}
+
+.task-card .btn {
   animation: appear 1.5s ease;
 }
 
-@keyframes appear {
-  0% {
+@keyframes grow {
+  from {
     opacity: 0;
-    height: 0px;
   }
-  100% {
+  to {
     opacity: 1;
-    height: 150px;
   }
 }

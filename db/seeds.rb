@@ -76,7 +76,7 @@ user = User.create(
 
 user.save!
 
-Task.create(
+task_one = Task.create(
   title: "Water Plants",
   minutes: 10,
   seconds: 0,
@@ -87,7 +87,12 @@ Task.create(
   labels: Label.where(name: "House Chores")
 )
 
-Task.create(
+work_session_one = WorkSession.new
+work_session_one.task = task_one
+work_session_one.session_duration = (work_session_one.task.minutes.to_i * 60) + work_session_one.task.seconds.to_i
+work_session_one.save
+
+task_two = Task.create(
   title: "Cleaning my room",
   minutes: 20,
   seconds: 0,
@@ -98,7 +103,12 @@ Task.create(
   labels: Label.where(name: "House Chores")
 )
 
-Task.create(
+work_session_two = WorkSession.new
+work_session_two.task = task_two
+work_session_two.session_duration = (work_session_two.task.minutes.to_i * 60) + work_session_two.task.seconds.to_i
+work_session_two.save
+
+task_three = Task.create(
   title: "Dirty Dishes",
   minutes: 20,
   seconds: 0,
@@ -109,7 +119,12 @@ Task.create(
   labels: Label.where(name: "House Chores")
 )
 
-Task.create(
+work_session_three = WorkSession.new
+work_session_three.task = task_three
+work_session_three.session_duration = (work_session_three.task.minutes.to_i * 60) + work_session_three.task.seconds.to_i
+work_session_three.save
+
+task_four = Task.create(
   title: "Cleaning Toilet",
   minutes: 10,
   seconds: 0,
@@ -120,7 +135,12 @@ Task.create(
   labels: Label.where(name: "House Chores")
 )
 
-Task.create(
+work_session_four = WorkSession.new
+work_session_four.task = task_four
+work_session_four.session_duration = (work_session_four.task.minutes.to_i * 60) + work_session_four.task.seconds.to_i
+work_session_four.save
+
+task_five = Task.create(
   title: "Reading Korean",
   minutes: 60,
   seconds: 0,
@@ -130,3 +150,8 @@ Task.create(
   timestamp: (Time.now - 600_000),
   labels: Label.where(name: "Languages")
 )
+
+work_session_five = WorkSession.new
+work_session_five.task = task_five
+work_session_five.session_duration = (work_session_five.task.minutes.to_i * 60) + work_session_five.task.seconds.to_i
+work_session_five.save

@@ -18,11 +18,16 @@ class TasksController < ApplicationController
         #   task: @task
         # )
       end
-
       new_label_name = params[:task][:new_label]
       new_label_goal = params[:task][:new_label_goal]
       @task.labels << Label.create!(name: new_label_name, goal: new_label_goal) if new_label_name != ""
       redirect_to '/dashboard'
+
+
+      @work_session = WorkSession.new
+      @work_session.task = @task
+      @work_session.session_duration = (@work_session.task.minutes.to_i * 60) + @work_session.task.seconds.to_i
+      @work_session.save
     else
       flash[:alert] = "#{@task.errors.messages}"
       redirect_to '/dashboard'

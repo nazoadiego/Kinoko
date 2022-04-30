@@ -1,12 +1,9 @@
 .menu-nav {
   background-color: transparent;
-  display: flex;
-  justify-content: space-between;
 }
 
 .menu-item {
   color: #fcc;
-  padding: 3px;
 }
 
 .three-dots:after {
@@ -14,22 +11,15 @@
   color: black;
   content: "\2807";
   font-size: 20px;
-  padding: 0 5px;
-}
-
-a div {
-  padding: 2px;
-  font-size: 6px;
 }
 
 .dropdown {
   position: absolute;
-  right: 10px;
+  right: 25px;
   background-color: white;
   border: black 1px solid;
   opacity: 0;
   // z-index: -1;
-  max-height: 0;
   transition: opacity 0.1s, z-index 0.1s, max-height 5s;
 }
 

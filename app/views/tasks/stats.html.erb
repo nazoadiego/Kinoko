@@ -1,33 +1,17 @@
-<div class="full-height mt-3">
-  <div class="red d-flex justify-content-center h-100">
-    <div class="row blue" style="width: 90vw; height: 100vh">
-      <div class="d-flex flex-column">
-        <div class="row w-100">
-          <div class="red col-12 my-3">
-            <div class="d-flex flex-row">
-              <div class="col-8 green">
-                <h1 class="purple-text">Statistics</h1>
-                <%= render "tasks/graphs/hours_per_day" %>
-              </div>
-              <div class="col-4 green my-5">
-                <%= render "tasks/graphs/labels_progress_bar" %>
-              </div>
-            </div>
-          </div>
-          <div class="red col-12 my-3">
-            <div class="d-flex flex-row">
-              <div class="col-8 green">
-                <%= render "tasks/graphs/hours_per_label" %>
-              </div>
-              <div class="col-4 green">
-                <%= render "tasks/graphs/labels_comparison" %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="mx-20 mt-10 mb-20">
+  <h1 class="purple-text mb-8">Statistics</h1>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-8">
+    <div class="col-span-2 bg-white rounded-xl p-10">
+      <%= render "tasks/graphs/hours_per_day" %>
+    </div>
+    <div class="bg-white rounded-xl p-6">
+      <%= render "tasks/graphs/labels_progress_bar" %>
+    </div>
+    <div class="col-span-2 bg-white rounded-xl p-10">
+      <%= render "tasks/graphs/hours_per_label" %>
+    </div>
+    <div class="bg-white rounded-xl p-6">
+      <%= render "tasks/graphs/labels_comparison" %>
     </div>
   </div>
 </div>
-
-<%# <h1 class="purple-text">Statistics</h1> %>

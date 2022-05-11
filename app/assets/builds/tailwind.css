@@ -2954,6 +2954,10 @@ body[dir="rtl"] .checkbox:checked,
   width: 7rem;
 }
 
+.max-w-\[400px\] {
+  max-width: 400px;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }

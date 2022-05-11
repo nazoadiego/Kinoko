@@ -18,7 +18,7 @@ The tag system allows you to track your work time in a more flexible and intelli
 
 ## Basic Usage
 
-Kinoko can be used as a very straightforward timeboxing application, for those that aren't interested in logging their time. In this case, all you need to do is create a new task, set the duration and go straight in to "Start Timeboxing". After creating your timeboxes, you can start working normally.
+Kinoko can be used as a very straightforward timeboxing application for those that aren't interested in logging their time. In this case, all you need to do is create a new task, set the duration and go straight into "Start Timeboxing". After creating your timeboxes, you can start working normally.
 
 In other words, it's fine to ignore tags completely.
 

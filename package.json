@@ -1,6 +1,9 @@
 {
   "name": "kinoko",
   "private": true,
+  "engines": {
+    "node": "14.17.0"
+  },
   "dependencies": {
     "@rails/actioncable": "^7.0.1",
     "@rails/activestorage": "^7.0.1",

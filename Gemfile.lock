@@ -80,6 +80,8 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dartsass-rails (0.3.0)
+      railties (>= 6.0.0)
     devise (4.8.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -182,16 +184,8 @@ GEM
       railties (>= 5.0)
     rexml (3.2.5)
     rubyzip (2.3.2)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     selenium-webdriver (4.0.3)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -216,7 +210,6 @@ GEM
       railties (>= 6.0.0)
     thor (1.1.0)
     thread_safe (0.3.6)
-    tilt (2.0.10)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -255,6 +248,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   chartkick
+  dartsass-rails (~> 0.3.0)
   devise
   dotenv-rails
   faker
@@ -269,7 +263,6 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.1)
   redis (~> 4.0)
-  sass-rails (>= 6)
   selenium-webdriver
   simple_form
   spring

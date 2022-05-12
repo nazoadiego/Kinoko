@@ -2,7 +2,7 @@
   "name": "kinoko",
   "private": true,
   "engines": {
-    "node": "14.17.0"
+    "node": "16.13.1"
   },
   "dependencies": {
     "@rails/actioncable": "^7.0.1",

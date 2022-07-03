@@ -3,6 +3,10 @@
   <%= @work_session.task.title %>
 </h1>
 
+<h3>
+  <%= @work_session.task.done ? "Completed" : "Uncompleted" %>
+</h3>
+
 <% @work_session.task.labels.each do |label| %>
   <button class="labels1">
       #<%= label.name %>

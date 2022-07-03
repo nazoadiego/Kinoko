@@ -23,11 +23,7 @@ class TasksController < ApplicationController
       @task.labels << Label.create!(name: new_label_name, goal: new_label_goal) if new_label_name != ""
       redirect_to '/dashboard'
 
-
-      @work_session = WorkSession.new
-      @work_session.task = @task
-      @work_session.session_duration = (@work_session.task.minutes.to_i * 60) + @work_session.task.seconds.to_i
-      @work_session.save
+      WorkSession.create!(task: @task, session_duration: (@task.minutes.to_i * 60) + @task.seconds.to_i)
     else
       flash[:alert] = "#{@task.errors.messages}"
       redirect_to '/dashboard'
@@ -50,9 +46,7 @@ class TasksController < ApplicationController
   def mark_as_done
     @task = Task.find(params[:id])
     @work_session = WorkSession.find(params[:work_session_id])
-    @task.timestamp = Time.now
-    @task.done = true
-    @task.save
+    @task.update!(done: true, timestamp: Time.now)
     redirect_to work_session_path(@work_session)
   end
 

@@ -131,7 +131,6 @@ const initTaskTimer = () => {
   }
   //
 
-  const done = document.getElementById("doneTask");
   if (timeDiffSec === 0) {
     taskmins.textContent = `0 mins`;
     tasksecs.textContent = `0 secs`;
@@ -145,9 +144,6 @@ const initTaskTimer = () => {
     skillper.setAttribute("per", `100%`);
     skillper.setAttribute("style", `max-width:100%`);
   }
-  // return timeDiff;
-  // console.log(timeDiff);
-  // console.log(timeDiff === 0);
 };
 
 export { initTimebox, initTaskTimer, getTimeDifference };

@@ -1,11 +1,9 @@
 class TasksController < ApplicationController
-  def show
-    @task = Task.find(params[:id])
-  end
+  # def show
+  #   @task = Task.find(params[:id])
+  # end
 
   def create
-    @user = current_user
-    @tasks = @user.tasks
     @task = Task.new(task_params)
     @task.user = current_user
     @task.durhours = @task.dur_hours
@@ -34,7 +32,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task = Task.update(task_params)
     @task.durhours = @task.dur_hours
-    redirect_to '/dashboard'
+    redirect_to dashboard_path
   end
 
   def destroy
@@ -45,8 +43,9 @@ class TasksController < ApplicationController
 
   def mark_as_done
     @task = Task.find(params[:id])
-    @work_session = WorkSession.find(params[:work_session_id])
     @task.update!(done: true, timestamp: Time.now)
+    # Redirect to show it's completed, should be done with AJAX
+    @work_session = WorkSession.find(params[:work_session_id])
     redirect_to work_session_path(@work_session)
   end
 
@@ -55,19 +54,21 @@ class TasksController < ApplicationController
     @labels = @tasks.map { |task| task.labels }
     @labels = @labels.flatten.uniq
     @task_durations = @tasks.map do |task|
-      if task.done == true
+      if task.done?
         [task.timestamp.strftime("%B %d, %Y"), task.dur_hours]
       else
         ["", 0.0]
       end
     end
-    @labeltasks = @labels.map do |label|
-      [label.name, tasks(label, current_user).sum { |task| task.durhours }]
-    end
-  end
 
-  def tasks(label, user)
-    @labeltasks = label.tasks.filter { |task| task if task.done && (task.user == user) }
+    @labeltasks = @labels.map do |label|
+      [
+        label.name,
+        label.tasks
+             .filter { |task| task if task.done? && (task.user == current_user) }
+             .sum { |task| task.durhours }
+      ]
+    end
   end
 
   private
